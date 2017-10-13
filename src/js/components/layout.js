@@ -1,14 +1,25 @@
 import React from "react";
+import Header from './header'
+import Main from './main'
+
 
 export default class Layout extends React.Component {
   constructor() {
     super();
-    this.name = "will";
+    this.state = {
+      title: 'Echomancy',
+    };
+  }
+
+  changeTitle(title) {
+    this.setState({ title });
   }
 
   render() {
     return (
-      <h1>heelo{this.name}</h1>
+      <div>
+        <Main />
+      </div>
     );
   }
 }

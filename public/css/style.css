@@ -1,0 +1,198 @@
+body {
+  margin: 0px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.article1 {
+  display: flex;
+}
+
+.article-right {
+  width: 50%;
+  height: 700px;
+  background-color: red;
+}
+
+.article-left {
+  justify-content: center;
+  display: flex;
+  width: 50%;
+  height: 700px;
+}
+
+.contain {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 200px;
+  overflow: hidden;
+}
+
+.wrapper1 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.play {
+  top: 66px;
+  left: 66px;
+  border: solid 4px white;
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url('../content/images/cover.png');
+  border-radius: 200px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  outline: none;
+}
+
+.addCircle{
+  border: solid 0.2px black;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  top: 145px;
+  left: 55px;
+  background-color: white
+}
+
+.line1 {
+  top: -40px;
+  left: 79px;
+  position: absolute;
+  background: linear-gradient(#FF0000,white);
+  width: 2px;
+  height: 40px;
+  opacity: 0.6;
+}
+
+p {
+  top: -60px;
+  left: 85px;
+  position: absolute;
+}
+p.buy {
+  color: white;
+  position: absolute;
+  top: 70px;
+  left: 135px;
+}
+
+.svg, .svg1 {
+  width: 25px;
+  height: 25px;
+}
+
+.svg1 {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 30px;
+  height: 30px;
+}
+
+#play, #stop {
+  color: white;
+  top: 57px;
+  left: 57px;
+  border-radius: 200px;
+  position: absolute;
+  height: 46px;
+  width: 46px;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  border: solid 2px white;
+  outline: none;
+}
+#stop{
+  display: none;
+  background-color: transparent;
+  opacity: 0.9
+  ;
+}
+
+div.overlay {
+  background-image: url();
+  height: 160px;
+  width: 160px;
+  border-radius: 200px;
+  top: 70px;
+  left: 70px;
+  opacity: 0.5
+}
+
+.container {
+  margin-top: 15%;
+  margin-left: 40%;
+  margin-right: 50%;
+  display: flex;
+  flex-direction: row;
+}
+
+audio {
+  border-radius: 100px;
+  height: 100px;
+}
+
+.wrapper {
+  margin: 10px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.wrapper1 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.wrapper2 {
+  position: ab;
+  width: 300px;
+  height: 300px;
+}
+
+.pie svg {
+  top: 50px;
+  left: 50px;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+
+.pie1 svg {
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.graph { visibility: hidden;
+  opacity: 0.5; }
+
+.graph > * {
+  visibility: visible;
+  transition: all 200ms ease-in-out;
+}
+
+.graph__percent:hover {
+  opacity: 0.7;
+}
+
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }
+}
