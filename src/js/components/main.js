@@ -1,23 +1,22 @@
 import React from "react";
+import Title from "./header/title"
+import Player from "./player/player"
 
 export default class Main extends React.Component {
 
   constructor() {
     super();
-    this.colors = "";
+    this.state = {
+      title: "Welcome",
+    };
   }
   render() {
+    console.log(this)
     return (
       <div class='article1'>
         <div class='article-left'>
-          <div id ='title'>Echomancy</div>
-          <div class='wrapper'>
-            <div class='wrapper1'>
-              <div class="pie" data-pies={this.colors}></div>
-            </div>
-            <div class="play">
-            </div>
-          </div>
+          <Title />
+          <Player />
         </div>
         <div class='article-right'>
         </div>

@@ -21,20 +21,5 @@ $(document).ready(function() {
       $("#currentTime").text("Current second:" + audioElement.currentTime);
   });
 
-  $('#play').click(function() {
-      audioElement.play();
-      $(".wrapper1").css("animation", 30 + "s rotate360 infinite linear");
-      if($(".svg").attr("src") == "public/pause.svg"){
-        $(".graph").animate({opacity: "0.5"});
-        $(".svg").attr("src","public/play.svg");
-    } else {
-      $(".graph").animate({opacity: "1.0"});
-      $(".svg").attr("src","public/pause.svg");
-    }
-      $("#stop").css("display", "block");
-  });
-  $('.addCircle').click(function(){
-    y += 1;
-    time = (30000)/y;
-  });
+  
 });

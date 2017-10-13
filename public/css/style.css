@@ -25,6 +25,12 @@ body {
   height: 100px;
 }
 
+#play {
+  top:100px;
+  left:100px;
+  position: absolute;
+}
+
 .article-right {
   background-color: red;
 }
@@ -53,6 +59,10 @@ body {
 .wrapper {
   margin: 10px;
   border-radius: 20px;
+}
+
+.wrapper {
+  background-color: #EBEBEB;
 }
 
 .play {
@@ -108,6 +118,10 @@ body {
   position: absolute;
   width: 200px;
   height: 200px;
+}
+
+.btn-play {
+
 }
 
 

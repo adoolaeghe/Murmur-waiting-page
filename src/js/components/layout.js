@@ -5,14 +5,10 @@ import Main from './main'
 
 export default class Layout extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
-      title: 'Echomancy',
+      color: ["#c9538d 1", "#50b9d7 1", "#09254c 1"]
     };
-  }
-
-  changeTitle(title) {
-    this.setState({ title });
   }
 
   render() {

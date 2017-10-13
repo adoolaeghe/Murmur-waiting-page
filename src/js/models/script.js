@@ -1,4 +1,3 @@
-
   var array = ["#c9538d 1", "#50b9d7 1", "#09254c 1"];
 
   var template = {
