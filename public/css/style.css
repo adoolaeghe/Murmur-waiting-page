@@ -4,27 +4,38 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.article1 {
+.article1, .article-right, .article-left {
   display: flex;
 }
 
-.article-right {
+.article-right, .article-left {
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 700px;
+}
+
+.play, #title, .contain, .addCircle {
+  position: absolute;
+}
+
+#title {
+  font-size: 40px;
+  top:100px;
+  height: 100px;
+}
+
+.article-right {
   background-color: red;
 }
 
 .article-left {
-  justify-content: center;
-  display: flex;
-  width: 50%;
-  height: 700px;
+  flex-direction: column;
 }
 
 .contain {
   top: 0px;
   left: 0px;
-  position: absolute;
   height: 160px;
   width: 160px;
   margin: 0px;
@@ -33,17 +44,21 @@ body {
   overflow: hidden;
 }
 
-.wrapper1 {
+.wrapper1, .wrapper {
   position: relative;
   width: 300px;
   height: 300px;
+}
+
+.wrapper {
+  margin: 10px;
+  border-radius: 20px;
 }
 
 .play {
   top: 66px;
   left: 66px;
   border: solid 4px white;
-  position: absolute;
   height: 160px;
   width: 160px;
   margin: 0px;
@@ -57,35 +72,12 @@ body {
 
 .addCircle{
   border: solid 0.2px black;
-  position: absolute;
   width: 50px;
   height: 50px;
   border-radius: 100px;
   top: 145px;
   left: 55px;
   background-color: white
-}
-
-.line1 {
-  top: -40px;
-  left: 79px;
-  position: absolute;
-  background: linear-gradient(#FF0000,white);
-  width: 2px;
-  height: 40px;
-  opacity: 0.6;
-}
-
-p {
-  top: -60px;
-  left: 85px;
-  position: absolute;
-}
-p.buy {
-  color: white;
-  position: absolute;
-  top: 70px;
-  left: 135px;
 }
 
 .svg, .svg1 {
@@ -101,37 +93,6 @@ p.buy {
   height: 30px;
 }
 
-#play, #stop {
-  color: white;
-  top: 57px;
-  left: 57px;
-  border-radius: 200px;
-  position: absolute;
-  height: 46px;
-  width: 46px;
-  margin: 0px;
-  padding: 0px;
-  background: transparent;
-  border: solid 2px white;
-  outline: none;
-}
-#stop{
-  display: none;
-  background-color: transparent;
-  opacity: 0.9
-  ;
-}
-
-div.overlay {
-  background-image: url();
-  height: 160px;
-  width: 160px;
-  border-radius: 200px;
-  top: 70px;
-  left: 70px;
-  opacity: 0.5
-}
-
 .container {
   margin-top: 15%;
   margin-left: 40%;
@@ -140,30 +101,6 @@ div.overlay {
   flex-direction: row;
 }
 
-audio {
-  border-radius: 100px;
-  height: 100px;
-}
-
-.wrapper {
-  margin: 10px;
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 20px;
-}
-
-.wrapper1 {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.wrapper2 {
-  position: ab;
-  width: 300px;
-  height: 300px;
-}
 
 .pie svg {
   top: 50px;
@@ -173,13 +110,6 @@ audio {
   height: 200px;
 }
 
-.pie1 svg {
-  top: 100px;
-  left: 100px;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-}
 
 .graph { visibility: hidden;
   opacity: 0.5; }
