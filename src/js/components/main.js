@@ -4,19 +4,13 @@ import Player from "./player/player"
 
 export default class Main extends React.Component {
 
-  constructor() {
-    super();
-    this.state = {
-      title: "Welcome",
-    };
-  }
   render() {
-    console.log(this)
+    console.log(this.props)
     return (
       <div class='article1'>
         <div class='article-left'>
-          <Title />
-          <Player />
+          <Title colors = {this.props.colors}/>
+          <Player colors = {this.props.colors}/>
         </div>
         <div class='article-right'>
         </div>
