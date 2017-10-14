@@ -29,6 +29,7 @@ body {
   top:100px;
   left:100px;
   position: absolute;
+  background-color: black
 }
 
 .article-right {
