@@ -2,13 +2,13 @@ import React from "react";
 import Pie from "./components/Pie"
 import AlbumCover from "./components/AlbumCover"
 import Play from "./components/play"
-import Palette from 'react-palette'
+import Palette from './components/palette/Palette'
 
 const image=new Image();
     image.onload=function(){
     }
     image.crossOrigin="anonymous";
-    image.src="https://i.imgur.com/ViVhjND.png";
+    image.src="https://i.imgur.com/aaQjXzz.jpg";
 
 
 export default class Player extends React.Component {
@@ -23,13 +23,14 @@ export default class Player extends React.Component {
     this.setState({slices})
   }
 
+
   render() {
     return (
       <div class='wrapper'>
         <Pie slices={this.state.slices}/>
         <AlbumCover />
         <Palette image={image}>{palette => (
-          <Play addSlice={this.addSlice.bind(this)} slices={this.state.slices} color={palette.muted}/>
+          <Play addSlice= {this.addSlice.bind(this)} slices={this.state.slices} color={palette} />
         )}
         </Palette>
       </div>
