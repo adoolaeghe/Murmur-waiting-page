@@ -23,18 +23,12 @@ export default class Play extends React.Component {
     const keys = Object.keys(color)
     const colour = keys[Math.floor(Math.random()*keys.length)]
     const rgb = hexToRgb(color[colour])
-    console.log(rgb)
     const r = (parseInt(rgb.r)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
-    console.log(r.toString())
     const g = (parseInt(rgb.g)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
-    console.log(g.toString())
     const b = (parseInt(rgb.b)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
-    console.log(b.toString())
-    console.log(rgbToHex(r,g,b))
-    this.props.slices.slices.push({color: rgbToHex(r,g,b), value: 0.5})
     const newColor= color[colour]
     const newValue= 0.5
-    this.props.addSlice(newColor, newValue)
+    this.props.addSlice(rgbToHex(r,g,b), newValue)
   }
 
 

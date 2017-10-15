@@ -21,6 +21,7 @@ export default class Player extends React.Component {
   componentWillMount() {
     const previous = this.state.slices
     this.db.on('child_added', snap => {
+      console.log(snap.val())
       previous.push({
         color: snap.val().color,
         value: snap.val().value
