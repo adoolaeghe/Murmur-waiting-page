@@ -12,24 +12,29 @@ image.src="https://i.imgur.com/aaQjXzz.jpg";
 export default class Player extends React.Component {
   constructor(){
     super();
+    this.db = fire.database().ref().child('colors');
     this.state = {
       slices: []
     }
   }
 
   componentWillMount() {
-    var that = this;
-    fire.database().ref('colors').once("value", function(snapshot) {
-      snapshot.forEach(function(data) {
-        that.setState(data.val()[0])
-        console.log(that.state.slices)
+    const previous = this.state.slices
+    this.db.on('child_added', snap => {
+      previous.push({
+        color: snap.val().color,
+        value: snap.val().value
       })
-      console.log(that.state)
+
+      this.setState({
+        slices: previous
+      })
     })
+
   }
 
-  addSlice(slices){
-    this.setState({slices})
+  addSlice(color, value){
+    this.db.push().set({ color: color, value: value})
   }
 
   render() {

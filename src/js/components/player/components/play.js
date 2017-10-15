@@ -8,14 +8,11 @@ export default class Play extends React.Component {
     const keys = Object.keys(color)
     const colour = keys[Math.floor(Math.random()*keys.length)]
     this.props.slices.slices.push({color: color[colour], value: 0.5})
-    this.props.addSlice(this.props.slices.slices)
-    this.addToDatabase(colour)
+    const newColor= color[colour]
+    const newValue= 0.5
+    this.props.addSlice(newColor, newValue)
   }
 
-  addToDatabase(item){
-    fire.database().ref('colors').updates( color );
-    this.inputEl.value = '';
-  }
 
   render() {
     return (
