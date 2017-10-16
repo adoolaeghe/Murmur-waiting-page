@@ -17,8 +17,8 @@ export default class Audio extends React.Component {
   render () {
     return (
       <div>
-        <button onClick={this.MuteOn.bind(this)}> Mute On </button>
-        <button onClick={this.MuteOff.bind(this)}> Mute Off </button>
+        <button onClick={this.MuteOn.bind(this)}> Off </button>
+        <button onClick={this.MuteOff.bind(this)}> On </button>
         <ReactHowler
           src='./public/content/sound/vanishing.mp3'
           playing={true}

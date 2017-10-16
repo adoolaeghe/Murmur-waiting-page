@@ -134,10 +134,6 @@ svg {
   height: 200px;
 }
 
-.btn-play {
-
-}
-
 
 .graph { visibility: hidden;
   opacity: 0.5; }
@@ -149,6 +145,10 @@ svg {
 
 .graph__percent:hover {
   opacity: 0.7;
+}
+
+path:hover {
+  opacity: 0
 }
 
 @keyframes rotate360 {
