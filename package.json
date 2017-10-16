@@ -28,9 +28,11 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "firebase": "^4.5.1",
+    "howler": "^2.0.5",
     "node-vibrant": "^3.0.0-alpha.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-howler": "^3.6.4",
     "react-simple-pie-chart": "^0.4.1",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.1"

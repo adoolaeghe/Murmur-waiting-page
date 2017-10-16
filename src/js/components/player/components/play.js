@@ -1,5 +1,5 @@
 import React from "react";
-import fire from './firebase';
+import fire from '../../firebase';
 
 export default class Play extends React.Component {
   handleChange() {
@@ -18,7 +18,6 @@ export default class Play extends React.Component {
           b: parseInt(result[3], 16)
       } : null;
     }
-    this.props.slices.value = 0.5
     const color = this.props.color
     const keys = Object.keys(color)
     const colour = keys[Math.floor(Math.random()*keys.length)]
