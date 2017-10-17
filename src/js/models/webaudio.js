@@ -1,18 +1,26 @@
-var createPlayer = require('web-audio-player')
-
-var audio = createPlayer('./public/content/sound/vanishing.mp3')
-
-audio.on('load', () => {
-  console.log('Audio loaded...')
-
-  // start playing audio file
-  audio.play()
-
-  // and connect your node somewhere, such as
-  // the AudioContext output so the user can hear it!
-  audio.node.connect(audio.context.destination)
-})
-
-audio.on('ended', () => {
-  console.log('Audio ended...')
-})
+// Create an AudioContext instance for this sound
+var audioContext = new (window.AudioContext || window.webkitAudioContext)();
+// Create a buffer for the incoming sound content
+var source = audioContext.createBufferSource();
+// Create the XHR which will grab the audio contents
+var request = new XMLHttpRequest();
+// Set the audio file src here
+request.open('GET', './public/content/sound/vanishing.mp3', true);
+// Setting the responseType to arraybuffer sets up the audio decoding
+request.responseType = 'arraybuffer';
+request.onload = function() {
+  // Decode the audio once the require is complete
+  audioContext.decodeAudioData(request.response, function(buffer) {
+    source.buffer = buffer;
+    // Connect the audio to source (multiple audio buffers can be connected!)
+    source.connect(audioContext.destination);
+    // Simple setting for the buffer
+    source.loop = true;
+    // Play the sound!
+    source.start(audioContext.currentTime + 1,3,10);
+  }, function(e) {
+    console.log('Audio error! ', e);
+  });
+}
+// Send the request which kicks off
+request.send();
