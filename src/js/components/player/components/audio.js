@@ -24,7 +24,7 @@ export default class Audio extends React.Component {
           playing={true}
           mute={this.props.mute}
           loop={true}
-          volume={0.1}
+          volume={1}
         />
       </div>
     )
