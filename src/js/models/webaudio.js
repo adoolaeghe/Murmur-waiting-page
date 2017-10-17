@@ -9,18 +9,24 @@ request.open('GET', './public/content/sound/vanishing.mp3', true);
 // Setting the responseType to arraybuffer sets up the audio decoding
 request.responseType = 'arraybuffer';
 request.onload = function() {
-  // Decode the audio once the require is complete
-  audioContext.decodeAudioData(request.response, function(buffer) {
-    source.buffer = buffer;
-    // Connect the audio to source (multiple audio buffers can be connected!)
-    source.connect(audioContext.destination);
-    // Simple setting for the buffer
-    source.loop = true;
-    // Play the sound!
-    source.start(audioContext.currentTime + 1,3,10);
-  }, function(e) {
-    console.log('Audio error! ', e);
-  });
-}
+    var audioData = request.response;
+
+    audioContext.decodeAudioData(audioData, function(buffer) {
+        myBuffer = buffer;
+        songLength = buffer.duration;
+        source.buffer = myBuffer;
+        source.playbackRate.value = 1;
+        source.connect(audioContext.destination);
+        source.loop = true;
+        source.loopStart = 82.8;
+        source.loopEnd= 83;
+        source.start(0,80);
+      },
+
+      function(e){"Error with decoding audio data" + e.err});
+
+  }
+
+
 // Send the request which kicks off
 request.send();
