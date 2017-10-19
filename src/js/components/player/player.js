@@ -1,11 +1,15 @@
 import React from "react";
-import Pie from "./components/Pie"
-import AlbumCover from "./components/AlbumCover"
-import Play from "./components/play"
-import Palette from './components/palette/Palette'
+import Pie from "./components/Pie";
+import AlbumCover from "./components/AlbumCover";
+import Play from "./components/play";
+import Palette from './components/palette/Palette';
 import fire from './../firebase';
-import Audio from './components/audio'
+import Audio from './components/audio';
+import BottomButton from './components/button/bottomButton';
+import TopButton from './components/button/topButton';
+import UserName from './components/userName';
 
+const name = 'hello'
 const image = new Image();
 image.crossOrigin = "anonymous";
 image.src = "https://i.imgur.com/aaQjXzz.jpg";
@@ -13,42 +17,44 @@ image.src = "https://i.imgur.com/aaQjXzz.jpg";
 export default class Player extends React.Component {
   constructor(){
     super();
-    this.db = fire.database().ref().child('colors');
+    this.db = fire.database().ref().child('users');
     this.state = {
       slices: [],
+      userNames: [],
       mute: true
     }
   }
 
   componentWillMount() {
-    const previous = this.state.slices
+    const slices = this.state.slices;
+    const userNames = this.state.userNames;
     this.db.on('child_added', snap => {
-      previous.push({
+      slices.push({
         color: snap.val().color,
-        value: snap.val().value
+        value: snap.val().value,
+      })
+      userNames.push({
+        userName: snap.val().userName
       })
       this.setState({
-        slices: previous
+        slices: slices,
+        userNames: userNames
       })
     })
   }
 
   addSlice(color, value){
-    this.db.push().set({ color: color, value: value})
-  }
-
-  handleMute(mute){
-    this.setState({
-      mute: mute
-    })
+    this.db.push().set({ color: color, value: value, userName: Math.random().toString()})
   }
 
   render() {
     return (
       <div class='wrapper'>
-        <Audio mute={this.state.mute} handleMute= {this.handleMute.bind(this)}/>
         <Pie slices={this.state}/>
         <AlbumCover />
+        <BottomButton />
+        <TopButton />
+        <UserName name={this.state.userNames} color={this.state.slices}/>
         <Palette image={image}>{palette => (
           <Play addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} />
         )}

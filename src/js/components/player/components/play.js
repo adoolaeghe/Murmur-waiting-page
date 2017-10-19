@@ -3,6 +3,7 @@ import fire from '../../firebase';
 
 export default class Play extends React.Component {
   handleChange() {
+    $('.wrapper1').css("opacity","1");
     function componentToHex(c) {
       var hex = c.toString(16);
       return hex.length == 1 ? "0" + hex : hex;
@@ -30,11 +31,10 @@ export default class Play extends React.Component {
     this.props.addSlice(rgbToHex(r,g,b), newValue)
   }
 
-
   render() {
     return (
-        <button id='play' onClick={this.handleChange.bind(this)}>
-        </button>
+      <button id='play' onClick={this.handleChange.bind(this)}>
+      </button>
     )
   }
 }

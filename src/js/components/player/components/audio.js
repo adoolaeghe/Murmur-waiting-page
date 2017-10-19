@@ -3,17 +3,6 @@ import ReactHowler from 'react-howler'
 
 export default class Audio extends React.Component {
 
-  MuteOff () {
-    const mute = false
-    this.props.handleMute(mute)
-  }
-
-  MuteOn () {
-    const mute = true
-    this.props.handleMute(mute)
-  }
-
-
   render () {
     return (
       <div>

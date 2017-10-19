@@ -1,7 +1,7 @@
 var audioContext = new (window.AudioContext || window.webkitAudioContext)();
 var source = audioContext.createBufferSource();
 var request = new XMLHttpRequest();
-const time = 10
+const time = 15
 request.open('GET', './public/content/sound/vanishing.mp3', true);
 request.responseType = 'arraybuffer';
 request.onload = function() {
@@ -24,6 +24,5 @@ request.send();
 
 
 $( document ).ready(function() {
-    console.log('here')
     $('.wrapper1').css("animation","rotate360 " + time +"s infinite linear");
 });
