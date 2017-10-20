@@ -8,11 +8,16 @@ body {
   display: flex;
 }
 
+.article2 {
+  height: 1000px;
+  background: url(../content/svg/diagonalBlock.svg) no-repeat top right
+}
+
 .article-right, .article-left {
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 1000px;
+  height: 700px;
 }
 
 .play, #title, .contain, .addCircle {
@@ -25,15 +30,21 @@ body {
   height: 100px;
 }
 
-#play {
-  top:100px;
-  left:100px;
+#addSlice {
+  top:70px;
+  left:143px;
   position: absolute;
   background-color: black
 }
 
+#punchline {
+  color: white;
+  text-align: center;
+}
+
 .article-right {
-  background-image: url('../content/images/backgroundArtwork.jpg');
+  background: url('../content/images/backgroundArtwork.jpg') no-repeat bottom right;
+  background-size: 1300px 800px;
 }
 
 .article-left {
@@ -105,7 +116,6 @@ svg {
 .wrapper {
   margin: 10px;
   border-radius: 20px;
-  background-color: #EBEBEB;
 }
 
 svg {

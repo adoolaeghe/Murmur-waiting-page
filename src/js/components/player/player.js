@@ -1,7 +1,7 @@
 import React from "react";
 import Pie from "./components/Pie";
 import AlbumCover from "./components/AlbumCover";
-import Play from "./components/play";
+import AddSlice from "./components/addSlice";
 import Palette from './components/palette/Palette';
 import fire from './../firebase';
 import Audio from './components/audio';
@@ -56,7 +56,7 @@ export default class Player extends React.Component {
         <TopButton />
         <UserName name={this.state.userNames} color={this.state.slices}/>
         <Palette image={image}>{palette => (
-          <Play addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} />
+          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} />
         )}
         </Palette>
       </div>
