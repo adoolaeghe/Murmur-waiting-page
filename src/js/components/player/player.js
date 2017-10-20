@@ -49,7 +49,7 @@ export default class Player extends React.Component {
 
   render() {
     return (
-      <div class='wrapper'>
+      <div id='wrapper'>
         <Pie slices={this.state}/>
         <AlbumCover />
         <BottomButton />

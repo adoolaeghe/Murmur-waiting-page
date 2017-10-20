@@ -1,0 +1,88 @@
+#wrapper1, #wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+#wrapper1 {
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 200px;
+  opacity: 0.5;
+}
+
+#wrapper {
+  margin: 10px;
+  border-radius: 20px;
+}
+
+#play {
+  top: 66px;
+  left: 66px;
+  border: solid 4px white;
+  height: 160px;
+  width: 160px;
+  margin: 0px;
+  padding: 0px;
+  background-image: url('../content/images/cover.png');
+  border-radius: 200px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  outline: none;
+}
+
+#title {
+  font-size: 40px;
+  top:100px;
+  height: 100px;
+}
+
+#addSlice {
+  top:70px;
+  left:143px;
+  background-color: black
+}
+
+#punchline {
+  color: white;
+  text-align: center;
+}
+
+#navBar {
+  display: flex;
+  top: 10px;
+  left: 20px;
+}
+
+#navElement {
+  margin: 0px 20px 0px 20px;
+  font-size: 12px;
+  outline: none;
+  border: none
+}
+
+#dot {
+  left: 50px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color: white
+}
+
+#eye-top, #eye-bottom {
+  width: 140px;
+  height: 90px;
+  left: 80px;
+  top: 40px;
+}
+
+#eye-bottom {
+  top: 170px;
+}
+
+#username{
+  left: 130px;
+  top: 20px;
+}

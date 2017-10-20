@@ -1,0 +1,21 @@
+body {
+  margin: 0px;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+#play,
+.svg1,
+.pie,
+#wrapper1,
+.contain,
+.addCircle,
+#title,
+#addSlice,
+#navBar,
+#dot,
+#eye,
+#eye1,
+#username {
+  position: absolute;
+}

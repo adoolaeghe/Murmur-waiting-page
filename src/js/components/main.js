@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "./header/title"
 import Player from "./player/player"
+import NavBar from "./navBar/navBar"
 import Explanation from "./explanation/explanation"
 
 export default class Main extends React.Component {
@@ -9,16 +10,17 @@ export default class Main extends React.Component {
     console.log(this.props)
     return (
       <div>
-        <div class='article1'>
-          <div class='article-left'>
+        <div id='article1'>
+          <div id='article-left'>
+            <NavBar />
             <Title />
             <Player colors = {this.props.colors}/>
           </div>
-          <div class='article-right'>
+          <div id='article-right'>
             <Explanation />
           </div>
         </div>
-        <div class='article2'>
+        <div id='article2'>
         </div>
       </div>
     );
