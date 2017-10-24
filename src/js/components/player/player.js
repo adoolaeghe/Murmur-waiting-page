@@ -9,6 +9,7 @@ import BottomButton from './components/button/bottomButton';
 import TopButton from './components/button/topButton';
 import UserName from './components/userName';
 
+// loads image for color palette finding.
 const name = 'hello'
 const image = new Image();
 image.crossOrigin = "anonymous";

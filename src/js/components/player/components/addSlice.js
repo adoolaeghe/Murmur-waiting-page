@@ -1,15 +1,6 @@
 import React from "react";
 import fire from '../../firebase';
 
-const color = this.props.color;
-const keys = Object.keys(color);
-const colour = keys[Math.floor(Math.random()*keys.length)];
-const rgb = hexToRgb(color[colour]);
-const r = randomIndex(r);
-const g = randomIndex(g);
-const b = randomIndex(b);
-const newColor= color[colour]
-const newValue= 0.5
 
 function randomIndex(index) {
   (parseInt(rgb.index)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
@@ -34,8 +25,16 @@ function hexToRgb(hex) {
 }
 
 export default class AddSlice extends React.Component {
-  
   handleChange() {
+    const color = this.props.color;
+    const keys = Object.keys(color);
+    const colour = keys[Math.floor(Math.random()*keys.length)];
+    const rgb = hexToRgb(color[colour]);
+    const r = randomIndex(r);
+    const g = randomIndex(g);
+    const b = randomIndex(b);
+    const newColor= color[colour]
+    const newValue= 0.5
     $('.wrapper1').css("opacity","1");
     this.props.addSlice(rgbToHex(r,g,b), newValue)
   }

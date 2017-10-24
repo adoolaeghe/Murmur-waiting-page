@@ -5,7 +5,7 @@ export default class BottomButton extends React.Component {
   render() {
     return (
       <div>
-        <svg id='eye1' viewBox="0 0 193 53" version="1.1">
+        <svg id='eye-top' viewBox="0 0 193 53" version="1.1">
           <defs></defs>
           <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g id="Desktop-HD" transform="translate(-278.000000, -576.000000)" fill="#FFFFFF">
