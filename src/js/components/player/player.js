@@ -4,7 +4,6 @@ import AlbumCover from "./components/AlbumCover";
 import AddSlice from "./components/addSlice";
 import Palette from './components/palette/Palette';
 import fire from './../firebase';
-import Audio from './components/audio';
 import BottomButton from './components/button/bottomButton';
 import TopButton from './components/button/topButton';
 import UserName from './components/userName';
@@ -51,7 +50,7 @@ export default class Player extends React.Component {
   render() {
     return (
       <div id='wrapper'>
-        <Pie slices={this.state}/>
+        <Pie slices={this.state} time={1}/>
         <AlbumCover />
         <BottomButton />
         <TopButton />
@@ -64,3 +63,7 @@ export default class Player extends React.Component {
     )
   }
 }
+
+$(document).ready(function() {
+  $('.wrapper1').css("animation","rotate360 " + 20 +"s infinite linear");
+});

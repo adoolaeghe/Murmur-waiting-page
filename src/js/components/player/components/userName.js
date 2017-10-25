@@ -16,7 +16,7 @@ export default class UserName extends React.Component {
     this.setState({
       name: this.props.name[this.state.number].userName,
       color: this.props.color[this.state.number].color,
-      number: this.state.number != (time-1) ? this.state.number + 1 : 0,
+      number: this.state.number != (3-1) ? this.state.number + 1 : 0,
     }), 1000);
   }
 

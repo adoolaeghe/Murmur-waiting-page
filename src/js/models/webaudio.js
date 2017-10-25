@@ -1,7 +1,10 @@
 var audioContext = new (window.AudioContext || window.webkitAudioContext)();
 var source = audioContext.createBufferSource();
 var request = new XMLHttpRequest();
-const time = 15
+var gainNode = audioContext.createGain();
+var mute = "none"
+gainNode.gain.value = 0;
+gainNode.connect(audioContext.destination);
 request.open('GET', './public/content/sound/vanishing.mp3', true);
 request.responseType = 'arraybuffer';
 request.onload = function() {
@@ -11,18 +14,23 @@ request.onload = function() {
     songLength = buffer.duration;
     source.buffer = myBuffer;
     source.playbackRate.value = 1;
-    source.connect(audioContext.destination);
     source.loop = true;
     source.loopStart = 300;
-    source.loopEnd= 300 + time;
+    source.loopEnd= 300 + 10;
     source.start(0,300);
+    source.connect(gainNode);
     },
     function(e){"Error with decoding audio data" + e.err});
   }
+
+  function handleMute() {
+    if(mute == "none") {
+    gainNode.gain.value = 1;
+    mute = "activated";
+    mute.innerHTML = "Unmute";
+    } else {
+      mute = "none"
+      gainNode.gain.value = 0;
+    }
+  }
 request.send();
-
-
-
-$( document ).ready(function() {
-  $('.wrapper1').css("animation","rotate360 " + time +"s infinite linear");
-});
