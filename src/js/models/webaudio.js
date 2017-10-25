@@ -1,3 +1,4 @@
+
 var audioContext = new (window.AudioContext || window.webkitAudioContext)();
 var source = audioContext.createBufferSource();
 var request = new XMLHttpRequest();
@@ -16,7 +17,7 @@ request.onload = function() {
     source.playbackRate.value = 1;
     source.loop = true;
     source.loopStart = 300;
-    source.loopEnd= 300 + 10;
+    source.loopEnd= 300 + 4;
     source.start(0,300);
     source.connect(gainNode);
     },

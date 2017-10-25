@@ -12,7 +12,7 @@ import UserName from './components/userName';
 const name = 'hello'
 const image = new Image();
 image.crossOrigin = "anonymous";
-image.src = "https://i.imgur.com/aaQjXzz.jpg";
+image.src = "https://i.imgur.com/lK6hCZu.png";
 
 export default class Player extends React.Component {
   constructor(){
@@ -54,7 +54,7 @@ export default class Player extends React.Component {
         <AlbumCover />
         <BottomButton />
         <TopButton />
-        <UserName name={this.state.userNames} color={this.state.slices}/>
+        <UserName name={this.state.userNames} length={this.state.userNames.length} color={this.state.slices}/>
         <Palette image={image}>{palette => (
           <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} />
         )}
@@ -63,7 +63,3 @@ export default class Player extends React.Component {
     )
   }
 }
-
-$(document).ready(function() {
-  $('.wrapper1').css("animation","rotate360 " + 20 +"s infinite linear");
-});

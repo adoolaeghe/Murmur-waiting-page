@@ -11,17 +11,17 @@
 
 #article-right,
 #article-left {
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  width: 50%;
-  height: 700px;
 }
 
-#article-right {
+/*#article-right {
   background: url('../content/images/backgroundArtwork.jpg') no-repeat bottom right;
   background-size: 1300px 800px;
-}
+}*/
 
 #article-left {
-  flex-direction: column;
+  flex-direction: row;
 }
