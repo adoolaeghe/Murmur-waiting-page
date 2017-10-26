@@ -1,5 +1,5 @@
 import React from "react";
-import fire from '../../firebase';
+
 
 
 
@@ -38,7 +38,6 @@ export default class AddSlice extends React.Component {
   }
 
   render() {
-  
     return (
       <button id='addSlice' onClick={this.handleChange.bind(this)}>
       </button>

@@ -7,6 +7,8 @@ import fire from './../firebase';
 import BottomButton from './components/button/bottomButton';
 import TopButton from './components/button/topButton';
 import UserName from './components/userName';
+import Audio from './components/audio';
+
 
 // loads image for color palette finding.
 const name = 'hello'
@@ -15,13 +17,15 @@ image.crossOrigin = "anonymous";
 image.src = "https://i.imgur.com/lK6hCZu.png";
 
 export default class Player extends React.Component {
+
   constructor(){
     super();
     this.db = fire.database().ref().child('users');
     this.state = {
       slices: [],
       userNames: [],
-      mute: true
+      mute: 0,
+      audioContext: new (window.AudioContext || window.webkitAudioContext)()
     }
   }
 
@@ -38,7 +42,7 @@ export default class Player extends React.Component {
       })
       this.setState({
         slices: slices,
-        userNames: userNames
+        userNames: userNames,
       })
     })
   }
@@ -47,19 +51,33 @@ export default class Player extends React.Component {
     this.db.push().set({ color: color, value: value, userName: Math.random().toString()})
   }
 
+  handleClick() {
+    if(this.state.mute === 1){
+      this.setState({
+        mute: 0
+      })
+    } else {
+      this.setState({
+        mute: 1
+      })
+    }
+  }
+
   render() {
+    console.log(this.state.mute)
     return (
       <div id='wrapper'>
-        <Pie slices={this.state} time={1}/>
+        <Pie slices={this.state}/>
         <AlbumCover />
-        <BottomButton />
-        <TopButton />
         <UserName name={this.state.userNames} length={this.state.userNames.length} color={this.state.slices}/>
+        <Audio mute = {this.state.mute} audioContext = {this.state.audioContext} />
         <Palette image={image}>{palette => (
           <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} />
         )}
         </Palette>
+        <button onClick={this.handleClick.bind(this)}>Mute button</button>
       </div>
     )
+
   }
 }
