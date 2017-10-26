@@ -18,7 +18,7 @@ export default class UserName extends React.Component {
     this.db.on('value', snap => {
       if (this.interval) {
         clearInterval(this.interval);
-        console.log('here')
+        console.log('helloUserName')
       }
       this.interval = setInterval(() =>
       this.setState({
@@ -26,14 +26,12 @@ export default class UserName extends React.Component {
         length: this.props.name,
         color: this.props.color[this.state.number].color,
         number: this.state.number != (3-1) ? this.state.number + 1 : 0,
-      }), 4000/(snap.numChildren()));
-      console.log(snap.numChildren())
+      }), 4000/(snap.numChildren())); 
     })
   }
 
   componentDidMount() {
    clearInterval(this.interval);
-   console.log('here1')
   }
 
  render() {

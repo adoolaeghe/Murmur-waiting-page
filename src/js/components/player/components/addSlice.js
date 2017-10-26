@@ -1,9 +1,14 @@
 import React from "react";
 
-
-
-
 export default class AddSlice extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      source: this.props.audioContext.createBufferSource(),
+      gainNode: this.props.audioContext.createGain(),
+      mute: this.props.mute
+    }
+  }
 
   handleChange() {
 
@@ -35,6 +40,78 @@ export default class AddSlice extends React.Component {
     const newValue= 0.5
     this.props.addSlice(rgbToHex(r,g,b), newValue)
     clearInterval(this.interval);
+  }
+
+  componentWillMount(AudioBuffer) {
+    console.log(' helllo Component')
+
+    const loop = this.props.loop
+    var audioContext = this.props.audioContext
+    var source = this.state.source
+    var gainNode = this.state.gainNode
+    var request = new XMLHttpRequest();
+    request.open('GET', './public/content/sound/vanishing.mp3', true);
+    request.responseType = 'arraybuffer';
+    request.onload = function(props) {
+    var audioData = request.response;
+    audioContext.decodeAudioData(audioData, function(AudioBuffer) {
+        source.buffer = AudioBuffer;
+        source.playbackRate.value = 1;
+        source.loop = true;
+        source.loopStart = 300;
+        source.loopEnd= 300 + (loop);
+        source.start(0,300);
+        console.log(loop)
+      },
+      function(e){"Error with decoding audio data" + e.err});
+    }
+    request.send();
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.mute !== nextProps.mute) {
+      console.log(' helllo mute')
+      console.log(this.props.mute)
+      const loop = this.props.loop
+      var audioContext = this.props.audioContext
+      var source = this.state.source
+      var gainNode = this.state.gainNode
+      var request = new XMLHttpRequest();
+      gainNode.gain.value = this.props.mute;
+      gainNode.connect(audioContext.destination);
+      request.open('GET', './public/content/sound/vanishing.mp3', true);
+      request.responseType = 'arraybuffer';
+      request.onload = function() {
+      var audioData = request.response;
+      audioContext.decodeAudioData(audioData, function() {
+          source.connect(gainNode);
+        },
+        function(e){"Error with decoding audio data" + e.err});
+      }
+      request.send();
+     }
+
+     if (this.props.loop !== nextProps.loop) {
+       console.log(' helllo loop')
+       console.log(this.props.loop)
+       const loop = this.props.loop
+       var audioContext = this.props.audioContext
+       var source = this.state.source
+       var gainNode = this.state.gainNode
+       var request = new XMLHttpRequest();
+       gainNode.connect(audioContext.destination);
+       request.open('GET', './public/content/sound/vanishing.mp3', true);
+       request.responseType = 'arraybuffer';
+       request.onload = function() {
+       var audioData = request.response;
+       audioContext.decodeAudioData(audioData, function() {
+           source.loopEnd= 300 + loop;
+           source.connect(gainNode);
+         },
+         function(e){"Error with decoding audio data" + e.err});
+       }
+       request.send();
+      }
   }
 
   render() {
