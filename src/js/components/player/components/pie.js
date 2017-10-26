@@ -17,16 +17,23 @@ export default class Pie extends React.Component {
       this.setState({
         length: snap.numChildren()
       })
-      console.log(this.state.length)
     })
   }
 
   render() {
-    console.log(this.props.loop.toString())
-    return (
-      <div id='wrapper1' style={{animation: 'rotate360 '+ this.props.loop.toString() +'s infinite linear'}}>
-        <PieChart slices = {this.props.slices.slices} />
-      </div>
-    )
+    console.log(this.props.loop)
+    if(this.props.loop !== null) {
+      return (
+        <div id='wrapper1' style={{animation: 'rotate360 '+ this.props.loop.toString() +'s infinite linear'}}>
+          <PieChart slices = {this.props.slices.slices} />
+        </div>
+      )
+    } else {
+      return (
+        <div id='wrapper1'>
+          <PieChart slices = {this.props.slices.slices} />
+        </div>
+      )
+    }
   }
 }

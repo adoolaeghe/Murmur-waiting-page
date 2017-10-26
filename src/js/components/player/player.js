@@ -9,14 +9,12 @@ import TopButton from './components/button/topButton';
 import UserName from './components/userName';
 
 
-// loads image for color palette finding.
 const name = 'hello'
 const image = new Image();
 image.crossOrigin = "anonymous";
 image.src = "https://i.imgur.com/lK6hCZu.png";
 
 export default class Player extends React.Component {
-
   constructor(){
     super();
     this.db = fire.database().ref().child('users');
@@ -24,7 +22,7 @@ export default class Player extends React.Component {
       slices: [],
       userNames: [],
       mute: 1,
-      loop: 4,
+      loop: null,
       audioContext: new (window.AudioContext || window.webkitAudioContext)()
     }
   }
@@ -45,13 +43,15 @@ export default class Player extends React.Component {
         userNames: userNames,
       })
     })
+    this.db.on('value', snap => {
+      this.setState({
+        loop: snap.numChildren()
+      })
+    })
   }
 
   addSlice(color, value){
     this.db.push().set({ color: color, value: value, userName: Math.random().toString()})
-    this.setState({
-      loop: this.state.loop + 1
-    })
   }
 
   handleClick() {
@@ -68,14 +68,12 @@ export default class Player extends React.Component {
 
 
   render() {
-    console.log(this.state.loop)
     return (
       <div id='wrapper'>
         <Pie slices={this.state} loop={this.state.loop}/>
         <AlbumCover />
-        <UserName name={this.state.userNames} length={this.state.userNames.length} color={this.state.slices}/>
         <Palette image={image}>{palette => (
-          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop = {this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext}/>
+          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop={this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext}/>
         )}
         </Palette>
         <button onClick={this.handleClick.bind(this)}>Mute button</button>

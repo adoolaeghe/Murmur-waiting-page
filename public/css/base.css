@@ -19,3 +19,7 @@ body {
 #username {
   position: absolute;
 }
+
+path:hover {
+  opacity: 0.5
+}

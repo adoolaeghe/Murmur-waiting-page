@@ -1,29 +1,46 @@
+function setAudioNode(request, audioContext, source, loop) {
+  console.log(loop)
+  console.log('setAudio')
+  request.open('GET', './public/content/sound/vanishing.mp3', true);
+  request.responseType = 'arraybuffer';
+  request.onload = function(props) {
+  var audioData = request.response;
+  audioContext.decodeAudioData(audioData, function(AudioBuffer) {
+      source.buffer = AudioBuffer;
+      source.playbackRate.value = 1;
+      source.loop = true;
+      source.loopStart = 100;
+      source.loopEnd= 100 + loop;
+      source.start(0,100);
+    },
+    function(e){"Error with decoding audio data" + e.err});
+  }
+  request.send();
+}
 
-function webAudio(audioContext, gainNode, source, value) {
-  var request = new XMLHttpRequest();
-  gainNode.gain.value = value;
-  gainNode.connect(audioContext.destination);
+function updateAudioNode(request, audioContext, source, gainNode) {
   request.open('GET', './public/content/sound/vanishing.mp3', true);
   request.responseType = 'arraybuffer';
   request.onload = function() {
-    var audioData = request.response;
-    audioContext.decodeAudioData(audioData, function(buffer) {
-        myBuffer = buffer;
-        songLength = buffer.duration;
-        source.buffer = myBuffer;
-        source.playbackRate.value = 1;
-        source.loop = true;
-        source.loopStart = 300;
-        source.loopEnd= 300 + 4;
-        source.start(0,300);
-        source.connect(gainNode);
-      },
-      function(e){"Error with decoding audio data" + e.err});
-    }
-    request.send();
+  var audioData = request.response;
+  audioContext.decodeAudioData(audioData, function() {
+      source.connect(gainNode);
+    },
+    function(e){"Error with decoding audio data" + e.err});
   }
+  request.send();
+}
 
-  function handleMute() {
-      console.log("heere")
-      gainNode.gain.value = 1;
+function updateAudioLoop(request, audioContext, source, loop, gainNode) {
+  request.open('GET', './public/content/sound/vanishing.mp3', true);
+  request.responseType = 'arraybuffer';
+  request.onload = function() {
+  var audioData = request.response;
+  audioContext.decodeAudioData(audioData, function() {
+      source.loopEnd= 100 + loop;
+      source.connect(gainNode);
+    },
+    function(e){"Error with decoding audio data" + e.err});
   }
+  request.send();
+}
