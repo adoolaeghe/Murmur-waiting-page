@@ -58,9 +58,9 @@ export default class AddSlice extends React.Component {
         source.buffer = AudioBuffer;
         source.playbackRate.value = 1;
         source.loop = true;
-        source.loopStart = 300;
-        source.loopEnd= 300 + (loop);
-        source.start(0,300);
+        source.loopStart = 100;
+        source.loopEnd= 100 + (loop);
+        source.start(0,100);
         console.log(loop)
       },
       function(e){"Error with decoding audio data" + e.err});
@@ -105,7 +105,7 @@ export default class AddSlice extends React.Component {
        request.onload = function() {
        var audioData = request.response;
        audioContext.decodeAudioData(audioData, function() {
-           source.loopEnd= 300 + loop;
+           source.loopEnd= 100 + loop;
            source.connect(gainNode);
          },
          function(e){"Error with decoding audio data" + e.err});
@@ -116,7 +116,8 @@ export default class AddSlice extends React.Component {
 
   render() {
     return (
-      <button id='addSlice' onClick={this.handleChange.bind(this)}>
+      <button onClick={this.handleChange.bind(this)}>
+        Add Slice
       </button>
     )
   }

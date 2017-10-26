@@ -71,7 +71,7 @@ export default class Player extends React.Component {
     console.log(this.state.loop)
     return (
       <div id='wrapper'>
-        <Pie slices={this.state}/>
+        <Pie slices={this.state} loop={this.state.loop}/>
         <AlbumCover />
         <UserName name={this.state.userNames} length={this.state.userNames.length} color={this.state.slices}/>
         <Palette image={image}>{palette => (

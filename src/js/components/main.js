@@ -10,14 +10,11 @@ export default class Main extends React.Component {
       <div>
         <div id='article1'>
           <div id='article-left'>
-            <NavBar />
             <Player colors = {this.props.colors}/>
           </div>
           <div id='article-right'>
             <Explanation />
           </div>
-        </div>
-        <div id='article2'>
         </div>
       </div>
     );

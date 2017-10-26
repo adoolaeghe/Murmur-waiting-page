@@ -22,9 +22,9 @@ export default class Pie extends React.Component {
   }
 
   render() {
+    console.log(this.props.loop.toString())
     return (
-      <div id='wrapper1' style={{animation: 'rotate360 4s infinite linear'}}>
-        <div id='dot'></div>
+      <div id='wrapper1' style={{animation: 'rotate360 '+ this.props.loop.toString() +'s infinite linear'}}>
         <PieChart slices = {this.props.slices.slices} />
       </div>
     )
