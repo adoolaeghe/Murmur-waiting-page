@@ -1,5 +1,7 @@
 import React from "react";
+import Pie from "./pie";
 import fire from '../../firebase';
+import PieChart from 'react-simple-pie-chart';
 
 export default class AddSlice extends React.Component {
   constructor(props) {
@@ -9,6 +11,7 @@ export default class AddSlice extends React.Component {
       color: this.props.color,
       source: this.props.audioContext.createBufferSource(),
       gainNode: this.props.audioContext.createGain(),
+      time: this.props.time,
       mute: this.props.mute,
     }
   }
@@ -33,7 +36,9 @@ export default class AddSlice extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('newprops')
+    this.setState({
+      time: this.props.time,
+    })
     const loop = this.props.loop
     const mute = this.props.mute
     var audioContext = this.props.audioContext
@@ -51,11 +56,24 @@ export default class AddSlice extends React.Component {
   }
 
   render() {
-    console.log(this.props.loop)
-    return (
-      <button onClick={this.handleChange.bind(this)}>
-        Add Slice
-      </button>
-    )
+    if(this.props.loop !== null) {
+      return (
+        <div>
+          <Pie  slices = {this.props.slices} time= {this.state.time}/>
+          <button onClick={this.handleChange.bind(this)}>
+            Add Slice
+          </button>
+        </div>
+      )
+    } else {
+      return (
+        <div id='wrapper1'>
+          <PieChart slices = {this.props.slices.slices} />
+          <button onClick={this.handleChange.bind(this)}>
+            Add Slice
+          </button>
+        </div>
+      )
+    }
   }
 }

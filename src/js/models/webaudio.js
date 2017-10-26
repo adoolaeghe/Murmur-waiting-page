@@ -19,10 +19,15 @@ function setAudioNode(request, audioContext, source, loop) {
 }
 
 function updateAudioNode(request, audioContext, source, gainNode) {
+  console.log(audioContext.currentTime)
   request.open('GET', './public/content/sound/vanishing.mp3', true);
   request.responseType = 'arraybuffer';
   request.onload = function() {
   var audioData = request.response;
+  console.log(audioData)
+  console.log(source)
+  console.log(gainNode)
+  console.log(request)
   audioContext.decodeAudioData(audioData, function() {
       source.connect(gainNode);
     },

@@ -22,12 +22,20 @@ export default class Player extends React.Component {
       slices: [],
       userNames: [],
       mute: 1,
-      loop: null,
-      audioContext: new (window.AudioContext || window.webkitAudioContext)()
+      loop: 1,
+      audioContext: new (window.AudioContext || window.webkitAudioContext)(),
+      sometime: (new Date().getDate() - 1) / 1000,
+      time: 0
     }
   }
 
   componentWillMount() {
+    setInterval( () => {
+      var time = ((this.state.sometime - new Date().getTime() / 1000)*360)/this.state.loop
+      this.setState({
+        time : time
+      })
+    },10)
     const slices = this.state.slices;
     const userNames = this.state.userNames;
     this.db.on('child_added', snap => {
@@ -54,6 +62,7 @@ export default class Player extends React.Component {
     this.db.push().set({ color: color, value: value, userName: Math.random().toString()})
   }
 
+
   handleClick() {
     if(this.state.mute === 1){
       this.setState({
@@ -70,13 +79,12 @@ export default class Player extends React.Component {
   render() {
     return (
       <div id='wrapper'>
-        <Pie slices={this.state} loop={this.state.loop}/>
-        <AlbumCover />
         <Palette image={image}>{palette => (
-          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop={this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext}/>
+          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop={this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext} time = {this.state.time}/>
         )}
         </Palette>
         <button onClick={this.handleClick.bind(this)}>Mute button</button>
+        <AlbumCover />
       </div>
     )
   }
