@@ -36,7 +36,6 @@
     "express-handlebars": "^3.0.0",
     "firebase": "^4.5.1",
     "howler": "^2.0.5",
-    "koa": "^2.3.0",
     "morgan": "^1.9.0",
     "node-vibrant": "^3.0.0-alpha.2",
     "path": "^0.12.7",

@@ -14,7 +14,8 @@ export default class AddSlice extends React.Component {
       gainNode: this.props.audioContext.createGain(),
       time: this.props.time,
       mute: this.props.mute,
-      events: 1
+      events: 1,
+      add: ""
     }
   }
 
@@ -41,13 +42,16 @@ export default class AddSlice extends React.Component {
     this.setState({
       time: this.props.time,
     })
+
     const elements = Array.from(document.querySelectorAll('path'))
     if ((this.props.loop == elements.length) && (this.state.events === 1)){
       elements.forEach(function(el) {
         el.addEventListener("click", function(){
-          console.log('here')
-        })
-      })
+          this.setState({
+            add: el.getAttribute("fill")
+          })
+        }.bind(this))
+      }.bind(this))
       this.setState({
         events: this.state.events + 1
       })
@@ -78,7 +82,7 @@ export default class AddSlice extends React.Component {
         <div>
           <Pie slices = {this.props.slices} time= {this.state.time}/>
           <button onClick={this.handleChange.bind(this)}>
-            Add Slice
+            {this.state.add}
           </button>
         </div>
       )
