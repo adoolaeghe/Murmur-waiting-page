@@ -15,21 +15,15 @@ export default class AddSlice extends React.Component {
       time: this.props.time,
       mute: this.props.mute,
       events: 1,
-      add: ""
+      add: "",
     }
   }
-
   handleChange() {
-    const keys = Object.keys(this.state.color);
-    const colour = keys[Math.floor(Math.random()*keys.length)];
-    const rgb = hexToRgb(this.state.color[colour]);
-    const newValue= 0.5
-    this.props.addSlice(generatePalette(rgb), newValue)
+    this.props.addSlice(generatePalette(this.state.color), 0.5)
   }
 
   componentWillMount(AudioBuffer) {
     this.db.on('value', snap => {
-      const loop = this.props.loop
       var audioContext = this.props.audioContext
       var source = this.state.source
       var gainNode = this.state.gainNode
@@ -42,20 +36,7 @@ export default class AddSlice extends React.Component {
     this.setState({
       time: this.props.time,
     })
-
-    const elements = Array.from(document.querySelectorAll('path'))
-    if ((this.props.loop == elements.length) && (this.state.events === 1)){
-      elements.forEach(function(el) {
-        el.addEventListener("click", function(){
-          this.setState({
-            add: el.getAttribute("fill")
-          })
-        }.bind(this))
-      }.bind(this))
-      this.setState({
-        events: this.state.events + 1
-      })
-    }
+    eventListenerForEachSlice.bind(this)()
 
 
 

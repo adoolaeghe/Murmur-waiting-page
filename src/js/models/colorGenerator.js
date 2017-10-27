@@ -28,10 +28,12 @@ function randomColorBlue(rgb) {
   return (parseInt(rgb.b)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
 }
 
-
-function generatePalette(rgb) {
-  const r = randomColorRed(rgb);
-  const g = randomColorGreen(rgb);
-  const b = randomColorBlue(rgb);
+function generateRgb(newColor) {
+  var keys = Object.keys(newColor);
+  var colour = keys[Math.floor(Math.random()*keys.length)];
+  var rgb = hexToRgb(this.state.color[colour]);
+  var r = randomColorRed(rgb);
+  var g = randomColorGreen(rgb);
+  var b = randomColorBlue(rgb);
   return rgbToHex(r,g,b)
 }

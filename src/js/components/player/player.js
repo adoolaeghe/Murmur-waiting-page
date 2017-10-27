@@ -4,8 +4,6 @@ import AlbumCover from "./components/AlbumCover";
 import AddSlice from "./components/addSlice";
 import Palette from './components/palette/Palette';
 import fire from './../firebase';
-import BottomButton from './components/button/bottomButton';
-import TopButton from './components/button/topButton';
 import UserName from './components/userName';
 import UserInfo from './components/userInfo';
 
