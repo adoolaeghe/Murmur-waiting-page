@@ -7,6 +7,7 @@ import fire from './../firebase';
 import BottomButton from './components/button/bottomButton';
 import TopButton from './components/button/topButton';
 import UserName from './components/userName';
+import UserInfo from './components/userInfo';
 
 
 const name = 'hello'
@@ -31,7 +32,7 @@ export default class Player extends React.Component {
 
   componentWillMount() {
     setInterval( () => {
-      var time = ((this.state.sometime - new Date().getTime() / 1000)*360)/this.state.loop
+      var time = (((new Date().getTime() / 1000) - this.state.sometime)*360)/this.state.loop
       this.setState({
         time : time
       })
@@ -80,11 +81,12 @@ export default class Player extends React.Component {
     return (
       <div id='wrapper'>
         <Palette image={image}>{palette => (
-          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop={this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext} time = {this.state.time}/>
+          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop={this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext} time = {this.state.time} />
         )}
         </Palette>
         <button onClick={this.handleClick.bind(this)}>Mute button</button>
         <AlbumCover />
+        <UserInfo />
       </div>
     )
   }

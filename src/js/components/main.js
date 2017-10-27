@@ -2,6 +2,7 @@ import React from "react"
 import Player from "./player/player"
 import NavBar from "./navBar/navBar"
 import Explanation from "./explanation/explanation"
+import fire from './firebase';
 
 export default class Main extends React.Component {
 

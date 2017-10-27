@@ -24,10 +24,6 @@ function updateAudioNode(request, audioContext, source, gainNode) {
   request.responseType = 'arraybuffer';
   request.onload = function() {
   var audioData = request.response;
-  console.log(audioData)
-  console.log(source)
-  console.log(gainNode)
-  console.log(request)
   audioContext.decodeAudioData(audioData, function() {
       source.connect(gainNode);
     },

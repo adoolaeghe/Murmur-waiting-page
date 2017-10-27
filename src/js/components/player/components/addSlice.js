@@ -7,12 +7,14 @@ export default class AddSlice extends React.Component {
   constructor(props) {
     super(props)
     this.db = fire.database().ref().child('users');
+    this.storage = fire.storage()
     this.state = {
       color: this.props.color,
       source: this.props.audioContext.createBufferSource(),
       gainNode: this.props.audioContext.createGain(),
       time: this.props.time,
       mute: this.props.mute,
+      events: 1
     }
   }
 
@@ -31,7 +33,7 @@ export default class AddSlice extends React.Component {
       var source = this.state.source
       var gainNode = this.state.gainNode
       var request = new XMLHttpRequest();
-      setAudioNode(request, audioContext, source, snap.numChildren())
+      setAudioNode(request, audioContext, source, snap.numChildren(), this.props.audio)
     })
   }
 
@@ -39,6 +41,20 @@ export default class AddSlice extends React.Component {
     this.setState({
       time: this.props.time,
     })
+    const elements = Array.from(document.querySelectorAll('path'))
+    if ((this.props.loop == elements.length) && (this.state.events === 1)){
+      elements.forEach(function(el) {
+        el.addEventListener("click", function(){
+          console.log('here')
+        })
+      })
+      this.setState({
+        events: this.state.events + 1
+      })
+    }
+
+
+
     const loop = this.props.loop
     const mute = this.props.mute
     var audioContext = this.props.audioContext
@@ -55,20 +71,12 @@ export default class AddSlice extends React.Component {
     }
   }
 
+
   render() {
     if(this.props.loop !== null) {
       return (
         <div>
-          <Pie  slices = {this.props.slices} time= {this.state.time}/>
-          <button onClick={this.handleChange.bind(this)}>
-            Add Slice
-          </button>
-        </div>
-      )
-    } else {
-      return (
-        <div id='wrapper1'>
-          <PieChart slices = {this.props.slices.slices} />
+          <Pie slices = {this.props.slices} time= {this.state.time}/>
           <button onClick={this.handleChange.bind(this)}>
             Add Slice
           </button>
