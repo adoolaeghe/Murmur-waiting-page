@@ -5,7 +5,6 @@ import AddSlice from "./components/addSlice";
 import Palette from './components/palette/Palette';
 import fire from './../firebase';
 import UserName from './components/userName';
-import UserInfo from './components/userInfo';
 
 
 const name = 'hello'
@@ -29,12 +28,7 @@ export default class Player extends React.Component {
   }
 
   componentWillMount() {
-    setInterval( () => {
-      var time = (((new Date().getTime() / 1000) - this.state.sometime)*360)/this.state.loop
-      this.setState({
-        time : time
-      })
-    },10)
+    setTime.bind(this)()
     const slices = this.state.slices;
     const userNames = this.state.userNames;
     this.db.on('child_added', snap => {
@@ -64,10 +58,17 @@ export default class Player extends React.Component {
 
   handleClick() {
     if(this.state.mute === 1){
+      document.getElementById("off").classList.toggle('on');
+      document.getElementById("on").classList.remove('on');
+      document.getElementById("on").classList.add('off');
       this.setState({
         mute: 0,
       })
     } else {
+      document.getElementById("off").classList.remove('on');
+      document.getElementById("off").classList.add('off');
+      document.getElementById("on").classList.remove('off');
+      document.getElementById("on").classList.add('on');
       this.setState({
         mute: 1,
       })
@@ -82,9 +83,16 @@ export default class Player extends React.Component {
           <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop={this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext} time = {this.state.time} />
         )}
         </Palette>
-        <button onClick={this.handleClick.bind(this)}>Mute button</button>
         <AlbumCover />
-        <UserInfo />
+        <svg id ="circle" expanded = "true" height = "260px" width = "240px">
+          <circle id ="circle1"  cx = "50%" cy = "50%" r = "37.5%" fill = "white" opacity='0.5'/>
+          <animate xlinkHref="#circle1" attributeName="r" values="37.5% ; 0% ;15%; 18%; 20% ; 21% ; 22% " keyTimes="0 ;0.23; 0.25 ; 0.35; 0.5 ; 0.75 ; 1" dur="1s" begin="click" fill="freeze" />
+          <animate xlinkHref="#circle1" attributeName="opacity" values="0.5 ; 0 ;0.5; 0.5 ; 0.3 ; 0.1 ; 0 " keyTimes="0 ;0.23; 0.25 ; 0.35; 0.5 ; 0.75 ; 1" dur="1s" begin="click" fill="freeze" />
+        </svg>
+        <button id='on' class='on' onClick={this.handleClick.bind(this)}>
+        </button>
+        <button id='off' class='off' onClick={this.handleClick.bind(this)}>
+        </button>
       </div>
     )
   }

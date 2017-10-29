@@ -34,11 +34,10 @@ export default class UserName extends React.Component {
   }
 
  render() {
-   var style = {
-     background: this.state.color
-   };
    return (
-     <div id='username'style={style}>{this.state.name}</div>
+     <div id='username'style={style}>
+      <p id='name'>{this.state.name}</p>
+     </div>
    );
  }
 }

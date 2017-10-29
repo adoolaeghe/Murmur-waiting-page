@@ -31,7 +31,7 @@ function randomColorBlue(rgb) {
 function generateRgb(newColor) {
   var keys = Object.keys(newColor);
   var colour = keys[Math.floor(Math.random()*keys.length)];
-  var rgb = hexToRgb(this.state.color[colour]);
+  var rgb = hexToRgb(newColor[colour]);
   var r = randomColorRed(rgb);
   var g = randomColorGreen(rgb);
   var b = randomColorBlue(rgb);

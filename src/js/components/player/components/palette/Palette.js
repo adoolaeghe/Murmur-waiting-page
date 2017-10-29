@@ -12,7 +12,6 @@ class Palette extends PureComponent {
     return getImagePalette(image)
       .then(palette => this.setState({ palette, loaded: true }))
       .catch(error => {
-        console.error(error);
         this.setState({ palette: {}, loaded: true, error })
       });
   }
