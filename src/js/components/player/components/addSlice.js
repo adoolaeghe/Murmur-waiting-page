@@ -25,7 +25,6 @@ export default class AddSlice extends React.Component {
     }
   }
   handleChange() {
-    console.log(this.state.color)
     this.props.addSlice(generateRgb(this.state.color), 0.5)
   }
 
@@ -39,9 +38,7 @@ export default class AddSlice extends React.Component {
     this.setState({
       time: this.props.time,
     })
-
     eventListenerForEachSlice.bind(this)()
-
     if (this.props.mute !== nextProps.mute) {
       updateAudioNode.bind(this)()
     } else if (this.props.loop !== nextProps.loop) {

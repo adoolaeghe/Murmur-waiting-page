@@ -15,7 +15,18 @@
 #circle {
   position: absolute;
   top: 0px;
-  left: 0px;
+}
+
+#timer {
+  position: absolute;
+  top: 77%;
+  left: 43%;
+  display: none;
+}
+
+.reducerCircle {
+  height: 30px;
+  width: 20px;
 }
 
 #wrapper {
@@ -108,21 +119,4 @@
   position: absolute;
   top: 40px;
   left: 120px;
-}
-
-@keyframes buttonTransition {
-    from {
-        r: 0%;
-    }
-    to {
-        r: 25%;
-    }
-}
-
-.off {
-    display: none
-}
-
-.on {
-    display: block;
 }

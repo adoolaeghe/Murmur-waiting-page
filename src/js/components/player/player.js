@@ -4,10 +4,11 @@ import AlbumCover from "./components/AlbumCover";
 import AddSlice from "./components/addSlice";
 import Palette from './components/palette/Palette';
 import fire from './../firebase';
+import Timer from './components/timer'
 import UserName from './components/userName';
+import PlayButton from './components/playButton/playButton'
+import BackCircle from './components/playButton/BackCircle'
 
-
-const name = 'hello'
 const image = new Image();
 image.crossOrigin = "anonymous";
 image.src = "https://i.imgur.com/lK6hCZu.png";
@@ -23,7 +24,8 @@ export default class Player extends React.Component {
       loop: 1,
       audioContext: new (window.AudioContext || window.webkitAudioContext)(),
       sometime: (new Date().getDate() - 1) / 1000,
-      time: 0
+      time: 0,
+      timer: 1509487147.963
     }
   }
 
@@ -55,44 +57,48 @@ export default class Player extends React.Component {
     this.db.push().set({ color: color, value: value, userName: Math.random().toString()})
   }
 
-
   handleClick() {
     if(this.state.mute === 1){
-      document.getElementById("off").classList.toggle('on');
-      document.getElementById("on").classList.remove('on');
-      document.getElementById("on").classList.add('off');
+      handleCircleReducer()
       this.setState({
         mute: 0,
       })
     } else {
-      document.getElementById("off").classList.remove('on');
-      document.getElementById("off").classList.add('off');
-      document.getElementById("on").classList.remove('off');
-      document.getElementById("on").classList.add('on');
+      handleCircleEnlarger()
       this.setState({
         mute: 1,
       })
     }
   }
 
-
   render() {
     return (
       <div id='wrapper'>
         <Palette image={image}>{palette => (
-          <AddSlice addSlice= {this.addSlice.bind(this)} slices={this.state} color={palette} loop={this.state.loop} mute = {this.state.mute} audioContext = {this.state.audioContext} time = {this.state.time} />
+          <div>
+            <AddSlice addSlice= {this.addSlice.bind(this)}
+                      slices={this.state}
+                      color={palette}
+                      loop={this.state.loop}
+                      mute = {this.state.mute}
+                      audioContext = {this.state.audioContext}
+                      time = {this.state.time} />
+
+            <BackCircle color={"white"}
+                        opacity={'1'}
+                        size={'37.5%'} />
+
+            <AlbumCover />
+
+            <Timer time={this.state.timer}/>
+
+            <PlayButton color={palette.muted}
+                        opacity={'0.7'}
+                        size={'34%'} />
+            <button onClick={this.handleClick.bind(this)} id='on' class='on'></button>
+          </div>
         )}
         </Palette>
-        <AlbumCover />
-        <svg id ="circle" expanded = "true" height = "260px" width = "240px">
-          <circle id ="circle1"  cx = "50%" cy = "50%" r = "37.5%" fill = "white" opacity='0.5'/>
-          <animate xlinkHref="#circle1" attributeName="r" values="37.5% ; 0% ;15%; 18%; 20% ; 21% ; 22% " keyTimes="0 ;0.23; 0.25 ; 0.35; 0.5 ; 0.75 ; 1" dur="1s" begin="click" fill="freeze" />
-          <animate xlinkHref="#circle1" attributeName="opacity" values="0.5 ; 0 ;0.5; 0.5 ; 0.3 ; 0.1 ; 0 " keyTimes="0 ;0.23; 0.25 ; 0.35; 0.5 ; 0.75 ; 1" dur="1s" begin="click" fill="freeze" />
-        </svg>
-        <button id='on' class='on' onClick={this.handleClick.bind(this)}>
-        </button>
-        <button id='off' class='off' onClick={this.handleClick.bind(this)}>
-        </button>
       </div>
     )
   }
