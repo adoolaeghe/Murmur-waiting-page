@@ -1,7 +1,8 @@
 function eventListenerForEachSlice() {
-  const elements = Array.from(document.querySelectorAll('path'))
+  const elements = Array.from(document.querySelectorAll('#wrapper1 path'))
   if ((this.props.loop == elements.length) && (this.state.events === 1)){
     elements.forEach(function(el) {
+      el.classList.add('path');
       el.addEventListener("click", function(){
         this.setState({
           add: el.getAttribute("fill")

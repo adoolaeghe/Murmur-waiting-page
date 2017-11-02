@@ -21,7 +21,7 @@ export default class AddSlice extends React.Component {
       time: this.props.time,
       mute: this.props.mute,
       events: 1,
-      add: 'which color?',
+      add: 'User Name',
     }
   }
   handleChange() {

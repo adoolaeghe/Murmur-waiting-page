@@ -17,15 +17,15 @@ function hexToRgb(hex) {
 }
 
 function randomColorRed(rgb) {
-  return (parseInt(rgb.r)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
+  return (parseInt(rgb.r)+Math.floor(Math.random() * (5 - 1 + 1)) + 1);
 }
 
 function randomColorGreen(rgb) {
-  return (parseInt(rgb.g)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
+  return (parseInt(rgb.g)+Math.floor(Math.random() * (5 - 1 + 1)) + 1);
 }
 
 function randomColorBlue(rgb) {
-  return (parseInt(rgb.b)+Math.floor(Math.random() * (50 - 1 + 1)) + 1);
+  return (parseInt(rgb.b)+Math.floor(Math.random() * (5 - 1 + 1)) + 1);
 }
 
 function generateRgb(newColor) {

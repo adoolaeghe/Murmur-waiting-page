@@ -9,9 +9,8 @@ import UserName from './components/userName';
 import PlayButton from './components/playButton/playButton'
 import BackCircle from './components/playButton/BackCircle'
 
-const image = new Image();
-image.crossOrigin = "anonymous";
-image.src = "https://i.imgur.com/lK6hCZu.png";
+
+
 
 export default class Player extends React.Component {
   constructor(){
@@ -20,8 +19,9 @@ export default class Player extends React.Component {
     this.state = {
       slices: [],
       userNames: [],
-      mute: 1,
+      mute: 0,
       loop: 1,
+      image: new Image(),
       audioContext: new (window.AudioContext || window.webkitAudioContext)(),
       sometime: (new Date().getDate() - 1) / 1000,
       time: 0,
@@ -30,6 +30,8 @@ export default class Player extends React.Component {
   }
 
   componentWillMount() {
+    this.state.image.crossOrigin = "anonymous";
+    this.state.image.src = this.props.image;
     setTime.bind(this)()
     const slices = this.state.slices;
     const userNames = this.state.userNames;
@@ -74,7 +76,7 @@ export default class Player extends React.Component {
   render() {
     return (
       <div id='wrapper'>
-        <Palette image={image}>{palette => (
+        <Palette image={this.state.image}>{palette => (
           <div>
             <AddSlice addSlice= {this.addSlice.bind(this)}
                       slices={this.state}
@@ -95,6 +97,7 @@ export default class Player extends React.Component {
             <PlayButton color={palette.muted}
                         opacity={'0.7'}
                         size={'34%'} />
+
             <button onClick={this.handleClick.bind(this)} id='on' class='on'></button>
           </div>
         )}

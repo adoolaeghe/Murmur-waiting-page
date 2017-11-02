@@ -12,28 +12,23 @@
   opacity: 1;
 }
 
-#circle {
+#circle, #timer, #on, #off {
   position: absolute;
+}
+
+#circle {
   top: 0px;
 }
 
 #timer {
-  position: absolute;
   top: 77%;
   left: 43%;
   display: none;
 }
 
-.reducerCircle {
-  height: 30px;
-  width: 20px;
-}
-
 #wrapper {
   margin: 10%;
-  border-radius: 10px;
-  background-color: white;
-  border: lightgrey solid 2px;
+  
 }
 
 #play {
@@ -58,12 +53,18 @@
 }
 
 #on {
-  position: absolute;
+  background: url(../content/svg/on.svg) no-repeat;
+}
+
+#off {
+  background: url(../content/svg/off.svg) no-repeat;
+}
+
+#on, #off {
   top: 115px;
   left: 106px;
   height: 40px;
   width: 40px;
-  background: url(../content/svg/on.svg) no-repeat;
   background-size: contain;
   background-color: transparent;
   border: none;
@@ -73,20 +74,6 @@
 #on:hover {
   top: 113px;
   height: 44px;
-}
-
-
-#off {
-  position: absolute;
-  top: 115px;
-  left: 106px;
-  height: 40px;
-  width: 40px;
-  background: url(../content/svg/off.svg) no-repeat;
-  background-size: contain;
-  background-color: transparent;
-  border: none;
-  outline: none;
 }
 
 #add {
@@ -108,7 +95,6 @@
   height: 140px;
   left: -2px;
   top: 240px;
-  background: url(../content/svg/curveDown.svg);
   background-size: cover;
   background-color: transparent;
   border-bottom-left-radius: 10px;
@@ -116,7 +102,20 @@
 }
 
 #name {
+  color: white;
   position: absolute;
   top: 40px;
   left: 120px;
+}
+
+#price {
+  color: white;
+  position: absolute;
+  top: 70px;
+  left: 120px;
+}
+
+.reducerCircle {
+  height: 30px;
+  width: 20px;
 }

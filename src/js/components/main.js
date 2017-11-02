@@ -9,7 +9,15 @@ export default class Main extends React.Component {
       <div>
         <div id='article1'>
           <div id='article-left'>
-            <Player colors = {this.props.colors}/>
+            <div>
+              <Player key='dz' image={'https://i.imgur.com/N8iL0h5.jpg'} />
+              <Player key='hdz' image={'https://i.imgur.com/lK6hCZu.png'} />
+              <Player key='hdz' image={'https://i.imgur.com/lK6hCZu.png'} />
+              <Player key='hdz' image={'https://i.imgur.com/lK6hCZu.png'} />
+              <Player key='hdz' image={'https://i.imgur.com/lK6hCZu.png'} />
+              <Player key='hdz' image={'https://i.imgur.com/lK6hCZu.png'} />
+
+            </div>
           </div>
         </div>
       </div>

@@ -20,6 +20,6 @@ body {
   position: absolute;
 }
 
-path:hover {
+.path:hover {
   opacity: 0.5
 }
