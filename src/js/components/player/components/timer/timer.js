@@ -22,8 +22,6 @@ export default class Timer extends React.Component {
   }
 
   timer() {
-    console.log(this.props.loop)
-    console.log(this.state.start)
     if(this.state.start === this.props.loop-1) {
       this.setState({
         start: 0,
@@ -38,7 +36,7 @@ export default class Timer extends React.Component {
 
   render() {
     return (
-      <section id='timer'>
+      <section id='timer' class={'timer' + this.props.index}>
         {this.state.start}
       </section>
     );

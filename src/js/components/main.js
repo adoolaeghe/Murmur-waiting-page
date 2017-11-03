@@ -17,7 +17,13 @@ export default class Main extends React.Component {
             <div>
               <Player db={this.db}
                       image={'https://i.imgur.com/N8iL0h5.jpg'}
-                      audioContext={this.props.audioContext} />
+                      audioContext={this.props.audioContext}
+                      index={1}/>
+
+              <Player db={this.db}
+                      image={'https://i.imgur.com/N8iL0h5.jpg'}
+                      audioContext={this.props.audioContext}
+                      index={3}/>
             </div>
           </div>
         </div>

@@ -44,10 +44,10 @@ export default class Slice extends React.Component {
     if(this.props.loop !== null) {
       return (
         <div>
-          <Pie slices = {this.props.slices} time= {this.state.time}/>
-            <button id='add' style={{background: 'linear-gradient('+this.state.color.muted+', '+this.state.color.lightMuted+')'}} onClick={this.handleChange.bind(this)}>
-              Add
-            </button>
+          <Pie slices = {this.props.slices} time= {this.state.time} index = {this.props.index}/>
+          <button id='add' style={{background: 'linear-gradient('+this.state.color.muted+', '+this.state.color.lightMuted+')'}} onClick={this.handleChange.bind(this)}>
+            Add
+          </button>
         </div>
       )
     }

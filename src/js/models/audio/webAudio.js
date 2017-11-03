@@ -11,12 +11,15 @@ function setAudioNode(snap) {
   gainNode.gain.value = this.props.mute;
   gainNode.connect(audioContext.destination);
   this.props.audioContext.decodeAudioData(audioData, function(AudioBuffer) {
-      this.state.source.buffer = AudioBuffer;
+      if(this.state.source.buffer == undefined) {
+        this.state.source.buffer = AudioBuffer;
+        this.state.source.loopStart = 100;
+        this.state.source.start(0,100);
+      }
       this.state.source.playbackRate.value = 1;
       this.state.source.loop = true;
-      this.state.source.loopStart = 100;
+
       this.state.source.loopEnd= 100 + sp.numChildren();
-      this.state.source.start(0,100);
       this.state.source.connect(gainNode);
     }.bind(this),
     function(e){"Error with decoding audio data" + e.err});

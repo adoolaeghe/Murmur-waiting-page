@@ -25,7 +25,10 @@ export default class Player extends React.Component {
       audioContext: this.props.audioContext,
       sometime: new Date().getTime(),
       time: 0,
-      timer: Math.round((new Date()).getTime()/1000)
+      timer: Math.round((new Date()).getTime()/1000),
+      index: this.props.index,
+      smallCircleIndex: this.props.index,
+      largeCircleIndex: this.props.index + 1
     }
   }
 
@@ -61,12 +64,24 @@ export default class Player extends React.Component {
 
   handleClick() {
     if(this.state.mute === 1){
-      handleCircleEnlarger()
+      handleCircleEnlarger(('wrapper' + this.state.index),
+                           ('circle' + this.state.index),
+                           ('on' + this.state.index),
+                           ('play' + this.state.index),
+                           ('timer' + this.state.index),
+                            this.state.smallCircleIndex,
+                            this.state.largeCircleIndex)
       this.setState({
         mute: 0,
       })
     } else {
-      handleCircleReducer()
+      handleCircleReducer(('wrapper' + this.state.index),
+                          ('circle' + this.state.index),
+                          ('on' + this.state.index),
+                          ('play' + this.state.index),
+                          ('timer' + this.state.index),
+                            this.state.smallCircleIndex,
+                            this.state.largeCircleIndex)
       this.setState({
         mute: 1
       })
@@ -78,28 +93,34 @@ export default class Player extends React.Component {
       <div id='wrapper'>
         <Palette image={this.state.image}>{palette => (
           <div>
-            <Slice addSlice= {this.addSlice.bind(this)}
-                      slices={this.state}
-                      color={palette}
+            <Slice addSlice = {this.addSlice.bind(this)}
+                      slices = {this.state}
+                      color = {palette}
                       loop={this.state.loop}
                       mute = {this.state.mute}
                       audioContext = {this.state.audioContext}
                       time = {this.state.time}
-                      db= {this.db} />
+                      db = {this.db}
+                      index = {this.state.index} />
 
-            <BackCircle color={"white"}
-                        opacity={'1'}
-                        size={'37.5%'} />
+            <BackCircle color = {"white"}
+                        opacity = {'1'}
+                        size = {'37.5%'}
+                        largeCircleIndex = {this.state.largeCircleIndex} />
 
-            <AlbumCover />
+            <AlbumCover index = {this.state.index} />
 
-            <Timer time={this.state.timer} loop = {this.state.loop}/>
+            <Timer time = {this.state.timer}
+                   loop = {this.state.loop}
+                   index = {this.state.index} />
 
-            <PlayButton color={palette.muted}
-                        opacity={'0.7'}
-                        size={'34%'} />
+            <PlayButton color = {palette.muted}
+                        opacity = {'0.7'}
+                        size = {'34%'}
+                        smallCircleIndex = {this.state.smallCircleIndex}
+                        index = {this.state.index} />
 
-            <button onClick={this.handleClick.bind(this)} id='on' class='on'></button>
+            <button onClick = {this.handleClick.bind(this)} id='on' class={'on' + this.props.index} ></button>
           </div>
         )}
         </Palette>
