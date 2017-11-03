@@ -1,11 +1,11 @@
 import React from "react";
-import Pie from "./components/Pie";
-import AlbumCover from "./components/AlbumCover";
-import AddSlice from "./components/addSlice";
+import Pie from "./components/pie/Pie";
+import AlbumCover from "./components/albumCover/AlbumCover";
+import Slice from "./components/pie/slice";
 import Palette from './components/palette/Palette';
 import fire from './../firebase';
-import Timer from './components/timer'
-import UserName from './components/userName';
+import Timer from './components/timer/timer'
+import UserName from './components/userInfo/userName';
 import PlayButton from './components/playButton/playButton'
 import BackCircle from './components/playButton/BackCircle'
 
@@ -13,19 +13,19 @@ import BackCircle from './components/playButton/BackCircle'
 
 
 export default class Player extends React.Component {
-  constructor(){
-    super();
-    this.db = fire.database().ref().child('users');
+  constructor(props){
+    super(props);
+    this.db = this.props.db.child('users');
     this.state = {
       slices: [],
       userNames: [],
       mute: 0,
       loop: 1,
       image: new Image(),
-      audioContext: new (window.AudioContext || window.webkitAudioContext)(),
-      sometime: (new Date().getDate() - 1) / 1000,
+      audioContext: this.props.audioContext,
+      sometime: new Date().getTime(),
       time: 0,
-      timer: 1509487147.963
+      timer: Math.round((new Date()).getTime()/1000)
     }
   }
 
@@ -61,14 +61,14 @@ export default class Player extends React.Component {
 
   handleClick() {
     if(this.state.mute === 1){
-      handleCircleReducer()
+      handleCircleEnlarger()
       this.setState({
         mute: 0,
       })
     } else {
-      handleCircleEnlarger()
+      handleCircleReducer()
       this.setState({
-        mute: 1,
+        mute: 1
       })
     }
   }
@@ -78,13 +78,14 @@ export default class Player extends React.Component {
       <div id='wrapper'>
         <Palette image={this.state.image}>{palette => (
           <div>
-            <AddSlice addSlice= {this.addSlice.bind(this)}
+            <Slice addSlice= {this.addSlice.bind(this)}
                       slices={this.state}
                       color={palette}
                       loop={this.state.loop}
                       mute = {this.state.mute}
                       audioContext = {this.state.audioContext}
-                      time = {this.state.time} />
+                      time = {this.state.time}
+                      db= {this.db} />
 
             <BackCircle color={"white"}
                         opacity={'1'}
@@ -92,7 +93,7 @@ export default class Player extends React.Component {
 
             <AlbumCover />
 
-            <Timer time={this.state.timer}/>
+            <Timer time={this.state.timer} loop = {this.state.loop}/>
 
             <PlayButton color={palette.muted}
                         opacity={'0.7'}

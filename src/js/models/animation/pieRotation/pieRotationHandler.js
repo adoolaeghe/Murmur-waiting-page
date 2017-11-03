@@ -16,10 +16,10 @@ function eventListenerForEachSlice() {
 }
 
 function setTime() {
-  setInterval( () => {
-    var time = (((new Date().getTime() / 1000) - this.state.sometime)*360)/this.state.loop
+  var animInterval = setInterval( () => {
+    var time = ((((new Date().getTime()) - this.state.sometime)/1000)*360)/this.state.loop
     this.setState({
       time : time
     })
-  },10)
+  },50)
 }
