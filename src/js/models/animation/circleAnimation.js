@@ -5,10 +5,12 @@ function handleCircleReducer(wrapperIndex,
                             timerIndex,
                             smallCircleIndex,
                             largeCircleIndex) {
-  document.getElementById(largeCircleIndex).classList.remove('CircleEnlarger');
-  document.getElementById(largeCircleIndex).classList.add('CircleReducer');
-  document.getElementById(smallCircleIndex).classList.add('smallCircleReducer');
-  document.getElementById(smallCircleIndex).classList.remove('smallCircleEnlarger');
+                              console.log(largeCircleIndex)
+  console.log(document.getElementsByClassName(largeCircleIndex))
+  document.getElementsByClassName(largeCircleIndex)["0"].classList.remove('CircleEnlarger');
+  document.getElementsByClassName(largeCircleIndex)["0"].classList.add('CircleReducer');
+  document.getElementsByClassName(smallCircleIndex)["0"].classList.add('smallCircleReducer');
+  document.getElementsByClassName(smallCircleIndex)["0"].classList.remove('smallCircleEnlarger');
   setTimeout(function(nb){
     document.getElementsByClassName(circleIndex)["0"].style.zIndex = "-1";
     document.getElementsByClassName(wrapperIndex)["0"].style.zIndex = "1";
@@ -25,10 +27,10 @@ function handleCircleEnlarger(wrapperIndex,
                               timerIndex,
                               smallCircleIndex,
                               largeCircleIndex) {
-  document.getElementById(smallCircleIndex).classList.remove('CircleReducer');
-  document.getElementById(largeCircleIndex).classList.add('CircleEnlarger');
-  document.getElementById(smallCircleIndex).classList.add('smallCircleEnlarger');
-  document.getElementById(largeCircleIndex).classList.remove('smallCircleReducer');
+  document.getElementsByClassName(smallCircleIndex)["0"].classList.remove('CircleReducer');
+  document.getElementsByClassName(largeCircleIndex)["0"].classList.add('CircleEnlarger');
+  document.getElementsByClassName(smallCircleIndex)["0"].classList.add('smallCircleEnlarger');
+  document.getElementsByClassName(largeCircleIndex)["0"].classList.remove('smallCircleReducer');
   document.getElementsByClassName(circleIndex)["0"].style.zIndex = "0";
   document.getElementsByClassName(circleIndex)["0"].style.display = "block";
   document.getElementsByClassName(wrapperIndex)["0"].style.zIndex = "0";

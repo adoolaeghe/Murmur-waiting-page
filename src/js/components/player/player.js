@@ -9,9 +9,6 @@ import UserName from './components/userInfo/userName';
 import PlayButton from './components/playButton/playButton'
 import BackCircle from './components/playButton/BackCircle'
 
-
-
-
 export default class Player extends React.Component {
   constructor(props){
     super(props);
@@ -19,7 +16,7 @@ export default class Player extends React.Component {
     this.state = {
       slices: [],
       userNames: [],
-      mute: 0,
+      mute: this.props.mute,
       loop: 1,
       image: new Image(),
       audioContext: this.props.audioContext,
@@ -35,7 +32,9 @@ export default class Player extends React.Component {
   componentWillMount() {
     this.state.image.crossOrigin = "anonymous";
     this.state.image.src = this.props.image;
+
     setTime.bind(this)()
+
     const slices = this.state.slices;
     const userNames = this.state.userNames;
     this.db.on('child_added', snap => {
@@ -63,28 +62,53 @@ export default class Player extends React.Component {
   }
 
   handleClick() {
-    if(this.state.mute === 1){
-      handleCircleEnlarger(('wrapper' + this.state.index),
-                           ('circle' + this.state.index),
-                           ('on' + this.state.index),
-                           ('play' + this.state.index),
-                           ('timer' + this.state.index),
-                            this.state.smallCircleIndex,
-                            this.state.largeCircleIndex)
-      this.setState({
-        mute: 0,
-      })
+    if(this.props.turnedOn === this.props.index) {
+      if(this.state.mute === 1){
+        this.props.switchPlayer(this.state.index)
+        handleCircleEnlarger(('wrapper' + this.state.index),
+                             ('circle' + this.state.index),
+                             ('on' + this.state.index),
+                             ('play' + this.state.index),
+                             ('timer' + this.state.index),
+                             ('smallCircleIndex' + this.state.index),
+                             ('largeCircleIndex' + this.state.index))
+        this.setState({
+          mute: 0,
+        })
+      } else {
+        handleCircleReducer(('wrapper' + this.state.index),
+                            ('circle' + this.state.index),
+                            ('on' + this.state.index),
+                            ('play' + this.state.index),
+                            ('timer' + this.state.index),
+                            ('smallCircleIndex' + this.state.index),
+                            ('largeCircleIndex' + this.state.index))
+        this.setState({
+          mute: 1
+        })
+      }
     } else {
+      console.log(this.props.turnedOn)
+      console.log(this.props.index)
+      handleCircleEnlarger(('wrapper' + this.props.turnedOn),
+                           ('circle' + this.props.turnedOn),
+                           ('on' + this.props.turnedOn),
+                           ('play' + this.props.turnedOn),
+                           ('timer' + this.props.turnedOn),
+                           ('smallCircleIndex' + this.props.turnedOn),
+                           ('largeCircleIndex' + this.props.turnedOn))
+
       handleCircleReducer(('wrapper' + this.state.index),
                           ('circle' + this.state.index),
                           ('on' + this.state.index),
                           ('play' + this.state.index),
                           ('timer' + this.state.index),
-                            this.state.smallCircleIndex,
-                            this.state.largeCircleIndex)
+                          ('smallCircleIndex' + this.state.index),
+                          ('largeCircleIndex' + this.state.index))
       this.setState({
         mute: 1
       })
+      this.props.switchPlayer(this.state.index)
     }
   }
 
@@ -106,7 +130,8 @@ export default class Player extends React.Component {
             <BackCircle color = {"white"}
                         opacity = {'1'}
                         size = {'37.5%'}
-                        largeCircleIndex = {this.state.largeCircleIndex} />
+                        largeCircleIndex = {this.state.largeCircleIndex}
+                        index = {this.state.index} />
 
             <AlbumCover index = {this.state.index} />
 
