@@ -5,8 +5,6 @@ function handleCircleReducer(wrapperIndex,
                             timerIndex,
                             smallCircleIndex,
                             largeCircleIndex) {
-                              console.log(largeCircleIndex)
-  console.log(document.getElementsByClassName(largeCircleIndex))
   document.getElementsByClassName(largeCircleIndex)["0"].classList.remove('CircleEnlarger');
   document.getElementsByClassName(largeCircleIndex)["0"].classList.add('CircleReducer');
   document.getElementsByClassName(smallCircleIndex)["0"].classList.add('smallCircleReducer');

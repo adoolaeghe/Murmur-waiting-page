@@ -16,7 +16,7 @@ export default class Player extends React.Component {
     this.state = {
       slices: [],
       userNames: [],
-      mute: this.props.mute,
+      mute: 0,
       loop: 1,
       image: new Image(),
       audioContext: this.props.audioContext,
@@ -61,6 +61,18 @@ export default class Player extends React.Component {
     this.db.push().set({ color: color, value: value, userName: Math.random().toString()})
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(this.props.turnedOn === this.props.index){
+      this.setState({
+        mute: 1,
+      })
+    } else {
+      this.setState({
+        mute: 0,
+      })
+    }
+  }
+
   handleClick() {
     if(this.props.turnedOn === this.props.index) {
       if(this.state.mute === 1){
@@ -88,8 +100,6 @@ export default class Player extends React.Component {
         })
       }
     } else {
-      console.log(this.props.turnedOn)
-      console.log(this.props.index)
       handleCircleEnlarger(('wrapper' + this.props.turnedOn),
                            ('circle' + this.props.turnedOn),
                            ('on' + this.props.turnedOn),

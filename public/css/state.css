@@ -7,19 +7,19 @@
 }
 
 .CircleReducer {
-  animation: circleTransitionReducer 6s ease forwards
+  animation: circleTransitionReducer 3s ease forwards
 }
 
 .smallCircleReducer {
-  animation: smallCircleTransitionReducer 6s ease forwards
+  animation: smallCircleTransitionReducer 3s ease forwards
 }
 
 .CircleEnlarger {
-  animation: circleTransitionEnlarger 1s ease forwards
+  animation: circleTransitionEnlarger 0.5s ease forwards
 }
 
 .smallCircleEnlarger {
-  animation: smallCircleTransitionEnlarger 1.2s ease forwards
+  animation: smallCircleTransitionEnlarger 0.6s ease forwards
 }
 
 @keyframes circleTransitionReducer {
