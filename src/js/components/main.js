@@ -5,15 +5,15 @@ export default class Main extends React.Component {
 
   constructor() {
     super()
-    this.switchPlayer = this.switchPlayer.bind(this)
+    this.switchPlayingIndex = this.switchPlayingIndex.bind(this)
     this.state = {
-      turnedOn: 1
+      playingIndex: 1
     }
   }
 
-  switchPlayer(index) {
+  switchPlayingIndex(index) {
     this.setState({
-      turnedOn: index
+      playingIndex: index
     })
   }
 
@@ -24,21 +24,21 @@ export default class Main extends React.Component {
         <div id='article1'>
           <div id='article-left'>
             <div id='container'>
-              <Player db={this.props.database}
-                      storage={this.props.storage}
-                      image={'https://i.imgur.com/N8iL0h5.jpg'}
-                      audioContext={this.props.audioContext}
-                      index={1}
-                      switchPlayer = {this.switchPlayer}
-                      turnedOn = {this.state.turnedOn} />
+                <Player db = {this.props.database}
+                        storage = {this.props.storage.ref('vanishing.mp3').getDownloadURL()}
+                        imageSource = {'https://i.imgur.com/N8iL0h5.jpg'}
+                        audioContext = {this.props.audioContext}
+                        index = {1}
+                        switchPlayingIndex = {this.switchPlayingIndex}
+                        playingIndex = {this.state.playingIndex} />
 
-              <Player db={this.props.database}
-                      storage= {this.props.storage}
-                      image={'https://i.imgur.com/N8iL0h5.jpg'}
-                      audioContext={this.props.audioContext}
-                      index={3}
-                      switchPlayer = {this.switchPlayer}
-                      turnedOn = {this.state.turnedOn} />
+                <Player db = {this.props.database}
+                        storage = {this.props.storage.ref('vanishing.mp3').getDownloadURL()}
+                        imageSource = {'https://i.imgur.com/N8iL0h5.jpg'}
+                        audioContext = {this.props.audioContext}
+                        index = {3}
+                        switchPlayingIndex = {this.switchPlayingIndex}
+                        playingIndex = {this.state.playingIndex} />
             </div>
           </div>
         </div>

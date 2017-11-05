@@ -16,7 +16,12 @@ body {
 #dot,
 #eye,
 #eye1,
-#username {
+#username,
+#circle,
+#timer,
+#on,
+#off,
+#dot {
   position: absolute;
 }
 

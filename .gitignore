@@ -1,2 +1,7 @@
-\log911Bleu
-**node_modules
+googleCloud
+./node_modules
+./webpack.config.js
+./package.json
+./firebase.json
+./cors-config.json
+./src/js/components/firebase.js

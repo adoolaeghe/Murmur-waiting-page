@@ -1,10 +1,8 @@
 import React from "react";
 import AlbumCover from "./components/albumCover/AlbumCover";
-import PieChart from "./components/PieChart/pieChart";
+import TrackChart from "./components/PieChart/trackChart";
 import Palette from './components/palette/Palette';
-import fire from './../firebase';
 import Timer from './components/timer/timer'
-import UserName from './components/userInfo/userName';
 import PlayButton from './components/playButton/playButton'
 import BackCircle from './components/playButton/BackCircle'
 
@@ -15,42 +13,30 @@ export default class Player extends React.Component {
     this.state = {
       slices: [],
       userNames: [],
-      mute: 0,
-      loop: 1,
+      audioContext: this.props.audioContext,
+      index: this.props.index,
       image: new Image(),
       sometime: new Date().getTime(),
-      time: 0,
-      audioContext: this.props.audioContext,
       timer: Math.round((new Date()).getTime()/1000),
-      index: this.props.index,
+      loop: 1,
+      mute: 0,
+      time: 0,
     }
   }
 
   componentWillMount() {
     this.state.image.crossOrigin = "anonymous";
-    this.state.image.src = this.props.image;
+    this.state.image.src = this.props.imageSource;
 
     setTimeInterval.bind(this)()
 
-    addSliceToDatabase.bind(this)()
+    loadSlicesFromDatabase.bind(this)()
 
     updateLoopFromDatabase.bind(this)()
   }
 
-  addSlice(color, value){
-    this.db.push().set({ color: color, value: value, userName: Math.random().toString()})
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if(this.props.turnedOn === this.props.index){
-      this.setState({
-        mute: 1,
-      })
-    } else {
-      this.setState({
-        mute: 0,
-      })
-    }
+  addSlice(color, value) {
+    addSliceToDatabase(color, value).bind(this)
   }
 
   handleClick() {
@@ -60,8 +46,8 @@ export default class Player extends React.Component {
   render() {
     return (
         <Palette image={this.state.image}>{palette => (
-          <div id='wrapper'>
-            <PieChart addSlice = {this.addSlice.bind(this)}
+          <div id='wrapper' class = {"container" + this.state.index}>
+            <TrackChart addSlice = {this.addSlice.bind(this)}
                       storage = {this.props.storage}
                       db = {this.db}
                       slices = {this.state}

@@ -1,3 +1,5 @@
+/// need to be refactored... 
+
 function setAudioNode(snap, storage) {
   const sp = snap
   const mute = this.props.mute
@@ -66,4 +68,16 @@ function updateAudioLoop() {
     function(e){"Error with decoding audio data" + e.err});
   }
   request.send();
+}
+
+function muteSwitch() {
+  if(this.props.turnedOn === this.props.index){
+    this.setState({
+      mute: 1,
+    })
+  } else {
+    this.setState({
+      mute: 0,
+    })
+  }
 }
