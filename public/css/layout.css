@@ -2,7 +2,7 @@
 #article-right,
 #article-left {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -21,5 +21,10 @@
 }
 
 #article-left {
+  flex-direction: row;
+}
+
+#container {
+  display: flex;
   flex-direction: row;
 }

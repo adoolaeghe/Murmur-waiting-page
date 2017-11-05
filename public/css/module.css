@@ -1,3 +1,15 @@
+#wrapper {
+  -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+}
+
 #wrapper1, #wrapper {
   position: relative;
   width: 300px;
@@ -14,13 +26,13 @@
 
 #dot {
   position: absolute;
-
-  top: 0px;
+  top: -3px;
   left: 90Px;
-  background-color: red;
+  background-color: lightgrey;
   border-radius: 50px;
   height: 10px;
   width: 10px;
+  z-index: -1;
 }
 
 #circle, #timer, #on, #off {

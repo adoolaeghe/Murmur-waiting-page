@@ -1,9 +1,9 @@
-function setAudioNode(snap) {
+function setAudioNode(snap, storage) {
   const sp = snap
-    const mute = this.props.mute
-    var audioContext = this.props.audioContext
+  const mute = this.props.mute
+  var audioContext = this.props.audioContext
   var request = new XMLHttpRequest();
-  request.open('GET', '/public/content/sound/vanishing.mp3', true);
+  request.open('GET', storage, true);
   request.responseType = 'arraybuffer';
   request.onload = function(props) {
   var audioData = request.response;

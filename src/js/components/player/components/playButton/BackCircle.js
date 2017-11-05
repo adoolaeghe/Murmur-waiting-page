@@ -6,12 +6,11 @@ export default class BackCircle extends React.Component {
     return (
       <svg id ="circle" expanded = "true" height = "260px" width = "240px">
         <circle class={'largeCircleIndex' + this.props.index}
-          id = {this.props.largeCircleIndex}
           cx = "50%"
           cy = "50%"
           r = {this.props.size}
-          fill = {this.props.color}
-          opacity={this.props.opacity} />
+          fill = "white"
+          opacity="1" />
       </svg>
     )
   }
