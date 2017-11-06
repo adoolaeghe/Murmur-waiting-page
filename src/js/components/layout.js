@@ -16,7 +16,7 @@ export default class Layout extends React.Component {
       <div>
         <Main audioContext = {this.audioContext}
               database = {this.database}
-              storage = {this.storage}/>
+              storage = {this.storage} />
       </div>
     );
   }

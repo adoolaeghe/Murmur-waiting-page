@@ -10,12 +10,12 @@ function handleCircleReducer(wrapperIndex,
   document.getElementsByClassName(largeCircleIndex)["0"].classList.add('CircleReducer');
   document.getElementsByClassName(smallCircleIndex)["0"].classList.add('smallCircleReducer');
   document.getElementsByClassName(smallCircleIndex)["0"].classList.remove('smallCircleEnlarger');
-  document.getElementsByClassName(backgroundIndex)["0"].style.backgroundColor = "red";
+  // document.getElementsByClassName(backgroundIndex)["0"].style.backgroundColor = "red";
 
   setTimeout(function(nb){
     document.getElementsByClassName(circleIndex)["0"].style.zIndex = "-1";
     document.getElementsByClassName(wrapperIndex)["0"].style.zIndex = "1";
-    document.getElementsByClassName(onIndex)["0"].style.zIndex = "2";
+    document.getElementsByClassName(onIndex)["0"].style.zIndex = "100";
     document.getElementsByClassName(playIndex)["0"].style.zIndex = "2";
     document.getElementsByClassName(timerIndex)["0"].style.display = "block";
   }, 1000);

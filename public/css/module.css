@@ -70,29 +70,20 @@
   background-color: black
 }
 
-#on {
-  background: url(../content/svg/on.svg) no-repeat;
-}
 
 #off {
   background: url(../content/svg/off.svg) no-repeat;
 }
 
 #on, #off {
-  top: 115px;
-  left: 106px;
-  height: 40px;
-  width: 40px;
+  height: 100%;
+  width: 100%;
   background-size: contain;
   background-color: transparent;
   border: none;
   outline: none;
 }
 
-#on:hover {
-  top: 113px;
-  height: 44px;
-}
 
 #add {
   position: absolute;
@@ -136,4 +127,11 @@
 .reducerCircle {
   height: 30px;
   width: 20px;
+}
+
+.react-bodymovin-container {
+  position: absolute;
+  width: 70%;
+  top: 50px;
+  left: 55px;
 }

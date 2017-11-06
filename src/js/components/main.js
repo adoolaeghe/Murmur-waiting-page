@@ -1,14 +1,28 @@
 import React from "react"
 import Player from "./player/player"
+import ReactBodymovin from 'react-bodymovin'
+import animation from '../models/data.json'
+
+
+
 
 export default class Main extends React.Component {
 
-  constructor() {
-    super()
+
+  constructor(props) {
+    super(props)
     this.switchPlayingIndex = this.switchPlayingIndex.bind(this)
+    this.switchAutoPlay = this.switchAutoPlay.bind(this)
     this.state = {
+      autoPlay: false,
       playingIndex: 1
     }
+  }
+
+  switchAutoPlay() {
+    this.setState({
+      autoPlay: true
+    })
   }
 
   switchPlayingIndex(index) {
@@ -30,7 +44,9 @@ export default class Main extends React.Component {
                         audioContext = {this.props.audioContext}
                         index = {1}
                         switchPlayingIndex = {this.switchPlayingIndex}
-                        playingIndex = {this.state.playingIndex} />
+                        playingIndex = {this.state.playingIndex}
+                        autoPlay = {this.state.autoPlay}
+                        switchAutoPlay = {this.switchAutoPlay} />
 
                 <Player db = {this.props.database}
                         storage = {this.props.storage.ref('vanishing.mp3').getDownloadURL()}
@@ -38,7 +54,9 @@ export default class Main extends React.Component {
                         audioContext = {this.props.audioContext}
                         index = {3}
                         switchPlayingIndex = {this.switchPlayingIndex}
-                        playingIndex = {this.state.playingIndex} />
+                        playingIndex = {this.state.playingIndex}
+                        autoPlay = {this.state.autoPlay}
+                        switchAutoPlay = {this.switchAutoPlay}/>
             </div>
           </div>
         </div>
