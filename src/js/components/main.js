@@ -2,6 +2,8 @@ import React from "react"
 import Player from "./player/player"
 import ReactBodymovin from 'react-bodymovin'
 import animation from '../models/data.json'
+import {Doughnut} from 'react-chartjs-2';
+
 
 
 
@@ -57,16 +59,8 @@ export default class Main extends React.Component {
                         playingIndex = {this.state.playingIndex}
                         autoPlay = {this.state.autoPlay}
                         switchAutoPlay = {this.switchAutoPlay}/>
-                        <Player db = {this.props.database}
-                                storage = {this.props.storage.ref('James Brown - Its A Mans Mans Mans World.mp3').getDownloadURL()}
-                                imageSource = {'https://i.imgur.com/N8iL0h5.jpg'}
-                                audioContext = {this.props.audioContext}
-                                index = {5}
-                                switchPlayingIndex = {this.switchPlayingIndex}
-                                playingIndex = {this.state.playingIndex}
-                                autoPlay = {this.state.autoPlay}
-                                switchAutoPlay = {this.switchAutoPlay}/>
 
+                        <Doughnut data={{}} />
             </div>
           </div>
         </div>
