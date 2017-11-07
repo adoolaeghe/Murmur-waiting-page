@@ -1,9 +1,0 @@
-@import './module.css';
-@import './base.css';
-@import './layout.css';
-@import './theme.css';
-@import './state.css';
-
-@keyframes rotate360 {
-  to { transform: rotate(360deg); }
-}

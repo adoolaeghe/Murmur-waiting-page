@@ -59,8 +59,6 @@ export default class Main extends React.Component {
                         playingIndex = {this.state.playingIndex}
                         autoPlay = {this.state.autoPlay}
                         switchAutoPlay = {this.switchAutoPlay}/>
-
-                        <Doughnut data={{}} />
             </div>
           </div>
         </div>

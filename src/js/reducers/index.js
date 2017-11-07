@@ -5,5 +5,5 @@ import user from "./userReducer"
 
 export default combineReducers({
   tweets,
-  user,
+  user, 
 })
