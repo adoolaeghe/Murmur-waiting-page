@@ -1,4 +1,4 @@
-/// need to be refactored... 
+/// to be refactored.
 
 function setAudioNode(snap, storage) {
   const sp = snap
@@ -34,9 +34,9 @@ function updateAudioNode() {
   var audioContext = this.props.audioContext
   var source = this.state.source
   var gainNode = this.state.gainNode
+  var request = new XMLHttpRequest();
   gainNode.gain.value = this.props.mute;
   gainNode.connect(audioContext.destination);
-  var request = new XMLHttpRequest();
   request.open('GET', './public/content/sound/vanishing.mp3', true);
   request.responseType = 'arraybuffer';
   request.onload = function() {
@@ -55,12 +55,12 @@ function updateAudioLoop() {
   var audioContext = this.props.audioContext
   var source = this.state.source
   var gainNode = this.state.gainNode
-  gainNode.connect(audioContext.destination);
   var request = new XMLHttpRequest();
+  var audioData = request.response;
+  gainNode.connect(audioContext.destination);
   request.open('GET', './public/content/sound/vanishing.mp3', true);
   request.responseType = 'arraybuffer';
   request.onload = function() {
-  var audioData = request.response;
   audioContext.decodeAudioData(audioData, function() {
       source.loopEnd= 100 + loop;
       source.connect(gainNode);

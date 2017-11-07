@@ -1,19 +1,15 @@
 #wrapper {
-  -webkit-order: 0;
-    -ms-flex-order: 0;
-    order: 0;
-    -webkit-flex: 0 1 auto;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    -webkit-align-self: auto;
-    -ms-flex-item-align: auto;
-    align-self: auto;
+    border-radius: 20px;
+}
+
+#element {
+    position: relative;
 }
 
 #wrapper1, #wrapper {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 400px;
 }
 
 #wrapper1 {
@@ -131,7 +127,7 @@
 
 .react-bodymovin-container {
   position: absolute;
-  width: 70%;
+  width: 54%;
   top: 50px;
   left: 55px;
 }

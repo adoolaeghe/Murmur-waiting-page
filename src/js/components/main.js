@@ -39,7 +39,7 @@ export default class Main extends React.Component {
           <div id='article-left'>
             <div id='container'>
                 <Player db = {this.props.database}
-                        storage = {this.props.storage.ref('vanishing.mp3').getDownloadURL()}
+                        storage = {this.props.storage.ref('James Brown - Its A Mans Mans Mans World.mp3').getDownloadURL()}
                         imageSource = {'https://i.imgur.com/N8iL0h5.jpg'}
                         audioContext = {this.props.audioContext}
                         index = {1}
@@ -49,7 +49,7 @@ export default class Main extends React.Component {
                         switchAutoPlay = {this.switchAutoPlay} />
 
                 <Player db = {this.props.database}
-                        storage = {this.props.storage.ref('vanishing.mp3').getDownloadURL()}
+                        storage = {this.props.storage.ref('James Brown - Its A Mans Mans Mans World.mp3').getDownloadURL()}
                         imageSource = {'https://i.imgur.com/N8iL0h5.jpg'}
                         audioContext = {this.props.audioContext}
                         index = {3}
@@ -57,6 +57,16 @@ export default class Main extends React.Component {
                         playingIndex = {this.state.playingIndex}
                         autoPlay = {this.state.autoPlay}
                         switchAutoPlay = {this.switchAutoPlay}/>
+                        <Player db = {this.props.database}
+                                storage = {this.props.storage.ref('James Brown - Its A Mans Mans Mans World.mp3').getDownloadURL()}
+                                imageSource = {'https://i.imgur.com/N8iL0h5.jpg'}
+                                audioContext = {this.props.audioContext}
+                                index = {5}
+                                switchPlayingIndex = {this.switchPlayingIndex}
+                                playingIndex = {this.state.playingIndex}
+                                autoPlay = {this.state.autoPlay}
+                                switchAutoPlay = {this.switchAutoPlay}/>
+
             </div>
           </div>
         </div>

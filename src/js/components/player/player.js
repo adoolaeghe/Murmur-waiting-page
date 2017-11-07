@@ -7,6 +7,7 @@ import PlayButton from './components/playButton/playButton'
 import BackCircle from './components/playButton/BackCircle'
 import ReactBodymovin from 'react-bodymovin'
 import animation from '../../models/data.json'
+import animation1 from '../../models/data1.json'
 
 export default class Player extends React.Component {
   constructor(props){
@@ -29,7 +30,7 @@ export default class Player extends React.Component {
       loop: false,
       autoplay: false,
       prerender: false,
-      animationData: animation
+      animationData: animation1
     }
     this.bodymovinOptions1 = {
       loop: false,
@@ -51,13 +52,19 @@ export default class Player extends React.Component {
   }
 
   addSlice(color, value) {
-    addSliceToDatabase(color, value).bind(this)
+    addSliceToDatabase.bind(this)(color, value)
   }
 
   handleClick() {
+  if(this.state.autoPlay == true) {
   this.setState({
     autoPlay: false
   })
+} else {
+  this.setState({
+    autoPlay: true
+  })
+}
     playerSwitch.bind(this)()
   }
 
@@ -66,6 +73,7 @@ export default class Player extends React.Component {
 
     return (
         <Palette image={this.state.image}>{palette => (
+          <div id='element'>
           <div id='wrapper' class = {"container" + this.state.index}>
             <TrackChart addSlice = {this.addSlice.bind(this)}
                       storage = {this.props.storage}
@@ -94,7 +102,7 @@ export default class Player extends React.Component {
             <button onClick = {this.handleClick.bind(this)} id='on'  class={'on' + this.props.index} >
               <ReactBodymovin options={this.bodymovinOptions} />
             </button>
-
+            </div>
           </div>
         )}
       </Palette>
@@ -103,6 +111,7 @@ export default class Player extends React.Component {
 
       return (
           <Palette image={this.state.image}>{palette => (
+            <div id='element'>
             <div id='wrapper' class = {"container" + this.state.index}>
               <TrackChart addSlice = {this.addSlice.bind(this)}
                         storage = {this.props.storage}
@@ -132,6 +141,7 @@ export default class Player extends React.Component {
               <button onClick = {this.handleClick.bind(this)} id='on'  class={'on' + this.props.index} >
                 <ReactBodymovin options={this.bodymovinOptions1} />
               </button>
+            </div>
             </div>
           )}
         </Palette>
