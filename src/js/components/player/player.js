@@ -111,37 +111,37 @@ export default class Player extends React.Component {
 
       return (
           <Palette image={this.state.image}>{palette => (
-            <div id='element'>
-            <div id='wrapper' class = {"container" + this.state.index}>
-              <TrackChart addSlice = {this.addSlice.bind(this)}
-                        storage = {this.props.storage}
-                        db = {this.db}
-                        slices = {this.state}
-                        color = {palette}
-                        loop={this.state.loop}
-                        mute = {this.state.mute}
-                        audioContext = {this.state.audioContext}
-                        time = {this.state.time}
-                        index = {this.state.index} />
-
-              <BackCircle size = {'37.5%'}
+            <div id='player'>
+              <div id='wrapper' class = {"container" + this.state.index}>
+                <TrackChart addSlice = {this.addSlice.bind(this)}
+                          storage = {this.props.storage}
+                          db = {this.db}
+                          slices = {this.state}
+                          color = {palette}
+                          loop={this.state.loop}
+                          mute = {this.state.mute}
+                          audioContext = {this.state.audioContext}
+                          time = {this.state.time}
                           index = {this.state.index} />
 
-              <AlbumCover index = {this.state.index} />
+                <BackCircle size = {'37.5%'}
+                            index = {this.state.index} />
 
-              <Timer time = {this.state.timer}
-                     loop = {this.state.loop}
-                     index = {this.state.index} />
+                <AlbumCover index = {this.state.index} />
 
-              <PlayButton color = {palette.muted}
-                          opacity = {'0.7'}
-                          size = {'34%'}
-                          index = {this.state.index} />
-              <div></div>
-              <button onClick = {this.handleClick.bind(this)} id='on'  class={'on' + this.props.index} >
-                <ReactBodymovin options={this.bodymovinOptions1} />
-              </button>
-            </div>
+                <Timer time = {this.state.timer}
+                       loop = {this.state.loop}
+                       index = {this.state.index} />
+
+                <PlayButton color = {palette.muted}
+                            opacity = {'0.7'}
+                            size = {'34%'}
+                            index = {this.state.index} />
+                <div></div>
+                <button onClick = {this.handleClick.bind(this)} id='on'  class={'on' + this.props.index} >
+                  <ReactBodymovin options={this.bodymovinOptions1} />
+                </button>
+              </div>
             </div>
           )}
         </Palette>

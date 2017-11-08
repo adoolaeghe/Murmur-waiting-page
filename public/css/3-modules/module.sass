@@ -1,0 +1,84 @@
+#wrapper
+  border-radius: 20px
+
+#player
+  position: relative
+
+#wrapper1, #wrapper
+  +Position(relative, 30px, 20px, 200px, 200px)
+  position: relative
+  width: 250px
+  height: 400px
+
+#wrapper
+  margin: 10%
+
+#wrapper1
+  +Position(absolute, 30px, 20px, 200px, 200px)
+  opacity: 1
+
+#dot
+  +Position(absolute, -3px, 90px, 10px, 10px)
+  background-color: lightgrey
+  border-radius: 50px
+  z-index: -1
+
+#circle
+  top: 0px
+
+#timer
+  top: 77%
+  left: 43%
+  display: none
+
+#play
+  +Position(absolute, 46px, 36px, 160px, 160px)
+  +borderAndRadius(4px, solid, white, 200px)
+  margin: 0px
+  padding: 0px
+  background-repeat: no-repeat
+  background-size: cover
+  outline: none
+
+#addSlice
+  top: 70px
+  left: 143px
+  background-color: black
+
+#on, #off
+  height: 100%
+  width: 100%
+  background-size: contain
+  background-color: transparent
+  border: none
+  outline: none
+
+#add
+  +Position(absolute, 245px, 186px, 40px, 40px)
+  background-color: grey
+  color: white
+  border-radius: 50px
+  border: none
+  outline: none
+
+#username
+  +Position(absolute, 240px, -2px, 140px, 101.9%)
+  text-align: center
+  background-size: cover
+  background-color: transparent
+
+#name
+  +Position(absolute, 240px, -2px, " " , " ")
+  color: white
+
+
+#price
+  +Position(absolute, 70px, 120px, " " , " ")
+  color: white
+
+.reducerCircle
+  height: 30px
+  width: 20px
+
+.react-bodymovin-container
+  +Position(absolute, 50px, 55px, " " , 54%)

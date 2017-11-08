@@ -10,7 +10,7 @@ function handleCircleReducer(wrapperIndex,
   document.getElementsByClassName(largeCircleIndex)["0"].classList.add('CircleReducer');
   document.getElementsByClassName(smallCircleIndex)["0"].classList.add('smallCircleReducer');
   document.getElementsByClassName(smallCircleIndex)["0"].classList.remove('smallCircleEnlarger');
-  document.getElementsByClassName(backgroundIndex)["0"].style.border = "lightgrey solid 2px";
+  document.getElementsByClassName(backgroundIndex)["0"].classList.add('activeBackground');
 
   setTimeout(function(nb){
     document.getElementsByClassName(circleIndex)["0"].style.zIndex = "-1";
@@ -39,5 +39,5 @@ function handleCircleEnlarger(wrapperIndex,
   document.getElementsByClassName(onIndex)["0"].style.zIndex = "0";
   document.getElementsByClassName(playIndex)["0"].style.zIndex = "0";
   document.getElementsByClassName(timerIndex)["0"].style.display = "none";
-  // document.getElementsByClassName(backgroundIndex)["0"].style.border = "none";
+  document.getElementsByClassName(backgroundIndex)["0"].classList.remove('activeBackground');
 }
