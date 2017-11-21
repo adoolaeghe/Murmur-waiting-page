@@ -2,16 +2,20 @@
   border-radius: 20px
 
 #player
-  position: relative
+  width: 100%
+  flex: 1 33%
+  border-right: 1px solid lightgrey
 
 #wrapper1, #wrapper
-  +Position(relative, 30px, 20px, 200px, 200px)
+  +Position(relative, 0px, 0px, 200px, 200px)
   position: relative
   width: 250px
   height: 400px
 
 #wrapper
-  margin: 10%
+  background: transparent
+
+  border-radius: 0px
 
 #wrapper1
   +Position(absolute, 30px, 20px, 200px, 200px)
@@ -25,6 +29,7 @@
 
 #circle
   top: 0px
+  left: 0px
 
 #timer
   top: 77%
@@ -45,7 +50,8 @@
   left: 143px
   background-color: black
 
-#on, #off
+#on
+  +Position(absolute, 0px, 0px, 40px, 40px)
   height: 100%
   width: 100%
   background-size: contain
@@ -75,6 +81,33 @@
 #price
   +Position(absolute, 70px, 120px, " " , " ")
   color: white
+
+#top-right
+  position: absolute
+  top: -5px
+  left: -5px
+  background-color: lightgrey
+  width: 10px
+  height: 10px
+  border-radius: 20px
+
+#top-left
+  position: absolute
+  top: 99%
+  left: -5px
+  background-color: lightgrey
+  width: 10px
+  height: 10px
+  border-radius: 20px
+
+#top-right
+  position: absolute
+  top: 99%
+  left: 99%
+  background-color: lightgrey
+  width: 10px
+  height: 10px
+  border-radius: 20px
 
 .reducerCircle
   height: 30px
