@@ -13,11 +13,11 @@ export default class Layout extends React.Component {
 
   render() {
     return (
-      <Main
-        audioContext={this.audioContext}
-        database={this.database}
-        storage={this.storage}
-      />
+        <Main
+          audioContext={this.audioContext}
+          database={this.database}
+          storage={this.storage}
+        />
     );
   }
 }

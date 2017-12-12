@@ -29,182 +29,70 @@ export default class Main extends React.Component {
 
   render() {
     return (
-
-        <div id="container">
-        <div id="list">
-          <div id="row">
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={1}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
+      <main>
+        <section className="navBar row">
+          <div className="dot-left" id="1"></div>
+          <div className="dot-right" id="2"></div>
+          <img className="navBar-logo col s1">
+          </img>
+          <div className="navBar-logo-title col s5">
+            Echomancy
+          </div>
+          <div className="navBar-grid-left col s2">
+            <div className="dot-left" id="3"></div>
+          </div>
+          <div className="navBar-grid-center col s2">
+            <div className="dot-left" id="4"></div>
+          </div>
+          <div className="navBar-grid-right col s2">
+            <div className="dot-left" id="5"></div>
+          </div>
+        </section>
+        <section className="article1 row">
+          <div className="dot-left" id="6"></div>
+          <div className="dot-right" id="7"></div>
+          <div className="article1-main col s6">
+            <div className="dot-left" id="8"></div>
+          </div>
+          <div className="article1-grid-left col s2">
+            <div className="dot-left" id="9"></div>
+          </div>
+          <div className="article1-grid-center col s2">
+            <div className="dot-left" id="10"></div>
+          </div>
+          <div className="article1-grid-right col s2">
+            <div className="dot-left" id="11"></div>
+          </div>
+        </section>
+        <section className="article2 row">
+          <div className="dot-left" id="12"></div>
+          <div className="dot-right" id="13"></div>
+          <div className="article2-main col s8"></div>
+          <div className="article2-grid-left col s2">
+            <div className="dot-left" id="14"></div>
+          </div>
+          <div className="article2-grid-right col s2">
+            <div className="dot-left" id="15"></div>
+            <div className="article2-media-button-twitter cols12">
+              <div className="dot-left" id="16"></div>
+              <div className="dot-right" id="17"></div>
+            </div>
+            <div className="article2-media-button-medium cols12">
+              <div className="dot-left" id="18"></div>
             </div>
           </div>
-          <div id="list">
-          <div id="row">
-            <Player
-            db={this.props.database}
-            storage={this.props.storage
-              .ref("James Brown - Its A Mans Mans Mans World.mp3")
-              .getDownloadURL()}
-            imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-            audioContext={this.props.audioContext}
-            index={2}
-            switchPlayingIndex={this.switchPlayingIndex}
-            playingIndex={this.state.playingIndex}
-            autoPlay={this.state.autoPlay}
-            switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-          </div>
-          </div>
-          <div id="list">
-          <div id="row">
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={1}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-          </div>
-          </div>
-          <div id="list">
-          <div id="row">
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-            <Player
-              db={this.props.database}
-              storage={this.props.storage
-                .ref("James Brown - Its A Mans Mans Mans World.mp3")
-                .getDownloadURL()}
-              imageSource={"https://i.imgur.com/N8iL0h5.jpg"}
-              audioContext={this.props.audioContext}
-              index={2}
-              switchPlayingIndex={this.switchPlayingIndex}
-              playingIndex={this.state.playingIndex}
-              autoPlay={this.state.autoPlay}
-              switchAutoPlay={this.switchAutoPlay}
-            />
-          </div>
-            </div>  
-        </div>
-
+        </section>
+        <section className="article3 row">
+          <div className="dot-left" id="19"></div>
+          <div className="dot-right" id="20"></div>
+          <div className="article3-main col s12"></div>
+        </section>
+        <section className="article4 row">
+          <div className="dot-left" id="21"></div>
+          <div className="dot-right" id="22"></div>
+          <div className="article4-main col s12"></div>
+        </section>
+      </main>
     );
   }
 }

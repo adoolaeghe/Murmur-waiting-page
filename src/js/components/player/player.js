@@ -1,5 +1,6 @@
 import React from "react";
 import AlbumCover from "./components/albumCover/AlbumCover";
+import Marker from "./components/marker/marker";
 import TrackChart from "./components/PieChart/trackChart";
 import Palette from "./components/palette/Palette";
 import Timer from "./components/timer/timer";
@@ -7,6 +8,7 @@ import PlayButton from "./components/playButton/playButton";
 import BackCircle from "./components/playButton/BackCircle";
 import PlayerBackground from "./components/playerBackground";
 import ReactBodymovin from "react-bodymovin";
+import TrackInfo from "./components/trackInfo/trackInfo"
 import animation from "../../models/data.json";
 import animation1 from "../../models/data1.json";
 
@@ -110,12 +112,10 @@ export default class Player extends React.Component {
                   id="on"
                   class={"on" + this.props.index}
                 >
-                <ReactBodymovin options={this.bodymovinOptions} />
+                  <ReactBodymovin options={this.bodymovinOptions} />
                 </button>
-                <div id="top-left"></div>
-                <div id="top-right"></div>
-                <div id="bottom-left"></div>
-                <div id="bottom-right"></div>
+                <Marker />
+                <TrackInfo />
               </div>
             </div>
           )}
@@ -165,10 +165,8 @@ export default class Player extends React.Component {
                 >
                   <ReactBodymovin options={this.bodymovinOptions1} />
                 </button>
-                <div id="top-left">helo</div>
-                <div id="top-right">h</div>
-                <div id="bottom-left"></div>
-                <div id="bottom-right"></div>
+                <Marker />
+                <TrackInfo />
               </div>
             </div>
           )}

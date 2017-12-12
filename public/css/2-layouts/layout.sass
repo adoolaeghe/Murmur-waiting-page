@@ -1,18 +1,21 @@
-#container
-  +flex(row, center, center)
-  width: 100%
-  flex-flow: row wrap
-  justify-content: center
+@import "./articles/article1.sass"
+@import "./articles/article2.sass"
+@import "./articles/article3.sass"
+@import "./articles/article4.sass"
 
-#list
-  display: flex
+.navBar
+  height: 100px
   width: 100%
-  justify-content: center
-  text-align: center
   border-bottom: 1px solid lightgrey
+  position: relative
 
-#row
-  border-left: 1px solid lightgrey
-  display: flex
-  flex-direction: column wrap
-  width: 750px
+  .navBar-logo-title
+    text-align: center
+
+  .navBar-grid-right,
+  .navBar-grid-center,
+  .navBar-grid-left
+    border-left: 1px solid lightgrey
+    height: 100px
+    position: relative
+    width: 200px
