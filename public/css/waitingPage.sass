@@ -1,0 +1,124 @@
+.waiting-main-wrapper
+  position: absolute
+  z-index: 90000
+  height: 700px
+  animation: fontbulger 3s infinite
+
+.waitingWrapper1
+  +Position(absolute, 80px, 30%, 450px, 450px)
+  opacity: 1
+  filter: blur(40px)
+
+#waitingPlay
+  +Position(absolute, 105px, 33%, 425px, 425px)
+  +borderAndRadius(4px, solid, white, 400px)
+  margin: 0px
+  padding: 0px
+  background-repeat: no-repeat
+  background-size: cover
+  outline: none
+  filter: blur(20px)
+
+.waiting-title
+  position: absolute
+  margin-top: 230px
+  font-size: 28px
+  width: 72vw
+  left: 22vw
+  color: black
+  text-align: left
+  font-family: 'Asul', sans-serif
+  font-weight: 400
+  z-index: 999999
+
+  .main-title
+    font-weight: 700
+
+.waiting-title-line
+  position: absolute
+  margin-top: 280px
+  background: linear-gradient(90deg, black, #4891D9)
+  height: 2px
+  width: 80vw
+
+.waiting-brand-name-line
+  position: absolute
+  margin-top: 350px
+  background: linear-gradient(45deg, red, yellow)
+  height: 2px
+  width: 100%
+  left: 60vw
+
+.waiting-brand-name
+  position: absolute
+  margin-top: 300px
+  left: 70vw
+  font-size: 24px
+  width: 30vw
+  color: #777676
+  text-align: left
+  font-family: 'chivo', sans-serif
+  font-weight: 700
+  z-index: 999999
+
+.waiting-sign-up
+  position: absolute
+  margin-top: 365px
+  font-size: 24px
+  width: 72vw
+  left: 22vw
+  color: #777676
+  text-align: left
+  font-family: 'chivo', sans-serif
+  font-weight: light
+  z-index: 999999
+
+.waiting-date
+  position: absolute
+  margin-top: 550px
+  font-size: 20px
+  width: 100vw
+  color: white
+  text-align: center
+  font-family: 'Asul', sans-serif
+  font-weight: 400
+  z-index: 999999
+  span
+    padding: 5px 20px
+    border-radius: 20px
+    background-color: red
+    animation: shockwave 2s infinite
+
+.waiting-sign-up-line
+  position: absolute
+  margin-top: 420px
+  background: grey
+  height: 1px
+  width: 80vw
+  left: 20vw
+
+
+@keyframes fontbulger
+  0%
+    font-size: 1
+
+  50%
+    opacity: 0
+
+  75%
+    opacity: 0.2
+  100%
+    opacity: 1
+
+
+@keyframes shockwave
+  0%
+    transform: scale(1)
+    box-shadow: 0 0 2px red
+    opacity: 1
+
+
+  100%
+    transform: scale(1)
+
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0), inset 0 0 10px red

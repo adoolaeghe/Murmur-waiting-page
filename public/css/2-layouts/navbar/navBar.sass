@@ -1,0 +1,24 @@
+.navBar
+  height: 100px
+  width: 100%
+  border-bottom: 1px solid $light-grey
+  position: relative
+
+  .navBar-logo-title
+    text-align: center
+
+    h3
+      text-align: center
+      +configFont(28px, lighter, null)
+      font-family: 'Chivo', sans-serif
+
+  .navBar-grid-right,
+  .navBar-grid-center,
+  .navBar-grid-left
+    border-left: 1px solid $light-grey
+    height: 100px
+    position: relative
+    width: 200px
+
+  .navBar-grid-right
+    background-color: $murmur-primary-yellow

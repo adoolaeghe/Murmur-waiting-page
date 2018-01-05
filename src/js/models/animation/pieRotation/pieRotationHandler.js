@@ -17,7 +17,7 @@ function eventListenerForEachSlice() {
 
 function setTimeInterval() {
   var animInterval = setInterval( () => {
-    var time = ((((new Date().getTime()) - this.state.sometime)/1000)*360)/this.state.loop
+    var time = ((((new Date().getTime()) - this.state.sometime)/1000)*360)/4
     this.setState({
       time : time
     })

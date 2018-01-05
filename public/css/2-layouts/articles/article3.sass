@@ -1,4 +1,37 @@
 .article3
-  border-bottom: 1px solid lightgrey
+  border-bottom: 1px solid $light-grey
   height: 500px
   position: relative
+
+  .article3-content-background
+    +Position(absolute, 0px, 0px, 100%, 0px)
+    padding: 0px
+
+  .article3-text-content
+    +flex(null, center, center)
+    top: 0px
+
+
+  .article3-header
+    margin-top: 190px
+    margin-left: 13%
+
+  .text-background
+    margin-top: 120px
+    margin-left: 45%
+    position: absolute
+
+  h1
+    +configFont(120px, bolder, null)
+
+  h2
+    +configFont(40px, lighter, null)
+
+  .line-background-1
+    background-color: $light-grey
+    +Position(absolute, 0px, 66.66%, 0px, 1px)
+
+
+  .line-background-2
+    background-color: $light-grey
+    +Position(absolute, 0px, 83.33%, 0px, 1px)

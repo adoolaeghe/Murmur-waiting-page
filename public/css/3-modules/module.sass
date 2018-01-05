@@ -1,43 +1,53 @@
-#wrapper
+.wrapper
   border-radius: 20px
-
-#player
   width: 100%
-  flex: 1 33%
-  border-right: 1px solid lightgrey
+  text-align: center
 
-#wrapper1, #wrapper
-  +Position(relative, 0px, 0px, 200px, 200px)
+.wrapper1,
+  +Position(relative, 0px, 0px, 300px, 300px)
   position: relative
   width: 250px
   height: 400px
 
-#wrapper
-  background: transparent
+.player
+  width: 100%
+  display: flex
+  position: relative
+  align-items: center
+  justify-content: center
 
+.wrapper
+  margin-top: 8vh
+  position: relative
+  width: 100vw
+  background: transparent
   border-radius: 0px
 
-#wrapper1
-  +Position(absolute, 30px, 20px, 200px, 200px)
+.wrapper1
+  margin-left: auto
+  margin-right: auto
+  +Position(absolute, 20px, 0px, 300px, 300px)
   opacity: 1
 
-#dot
+
+.dot
   +Position(absolute, -3px, 90px, 10px, 10px)
   background-color: lightgrey
   border-radius: 50px
   z-index: -1
 
-#circle
-  top: 0px
-  left: 0px
+.circle
+  padding: 15px
+  left: -5px
+  z-index: $z-top
 
-#timer
+.timer
   top: 77%
   left: 43%
   display: none
 
 #play
-  +Position(absolute, 46px, 36px, 160px, 160px)
+  +Position(absolute, 39px, -2px, 265px, 265px)
   +borderAndRadius(4px, solid, white, 200px)
   margin: 0px
   padding: 0px
@@ -45,12 +55,13 @@
   background-size: cover
   outline: none
 
-#addSlice
+
+.addSlice
   top: 70px
   left: 143px
   background-color: black
 
-#on
+.on
   +Position(absolute, 0px, 0px, 40px, 40px)
   height: 100%
   width: 100%
@@ -59,7 +70,7 @@
   border: none
   outline: none
 
-#add
+.add
   +Position(absolute, 245px, 186px, 40px, 40px)
   background-color: grey
   color: white
@@ -67,22 +78,22 @@
   border: none
   outline: none
 
-#username
+.username
   +Position(absolute, 240px, -2px, 140px, 101.9%)
   text-align: center
   background-size: cover
   background-color: transparent
 
-#name
+.name
   +Position(absolute, 240px, -2px, " " , " ")
   color: white
 
 
-#price
+.price
   +Position(absolute, 70px, 120px, " " , " ")
   color: white
 
-#top-right
+.top-right
   background-color: lightgrey
   border-radius: 20px
   position: absolute
@@ -91,7 +102,7 @@
   width: 10px
   height: 10px
 
-#top-left
+.top-left
   position: absolute
   top: 99%
   left: -5px
@@ -100,7 +111,7 @@
   height: 10px
   border-radius: 20px
 
-#bottom-right
+.bottom-right
   position: absolute
   top: 99%
   left: 98.5%
@@ -109,21 +120,21 @@
   height: 10px
   border-radius: 20px
 
-#track-name
+.track-name
   position: absolute
   width: 100%
   height: 30px
   top: 65%
   border-bottom: 1px solid #EAEAEA
 
-#artist-name
+.artist-name
   position: absolute
   width: 100%
   height: 30px
   top: 75%
   border-bottom: 1px solid #EAEAEA
 
-#marker-small-left
+.marker-small-left
   position: absolute
   width: 10px
   height: 10px
@@ -132,7 +143,7 @@
   top: 25px
   background-color: #EAEAEA
 
-#marker-small-right
+.marker-small-right
   position: absolute
   width: 10px
   height: 10px

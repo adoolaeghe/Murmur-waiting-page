@@ -1,0 +1,24 @@
+.article5
+  height: 1000px
+  border-top: 1px solid $light-grey
+  position: relative
+
+  .article5-slider
+    position: absolute
+    left: 0px
+    height: 100%
+
+    &.small
+      height: 85%
+
+  .slider-button
+    +Position(absolute, 700px, 0, 15%, null)
+
+  .article5-header
+    margin-top: 220px
+
+  h1
+    +configFont(120px, bolder, null)
+
+  h2
+    +configFont(40px, lighter, null)

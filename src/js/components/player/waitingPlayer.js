@@ -4,14 +4,7 @@ import AlbumCover from "./components/albumCover/waitingAlbumCover";
 import Palette from "./components/palette/Palette";
 import PieChart from "./components/PieChart/waitingPieChart";
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Link,
-  hashHistory,
- withRouter
-} from 'react-router-dom'
+
 
 export default class Player extends React.Component {
   constructor(props) {
@@ -65,7 +58,7 @@ export default class Player extends React.Component {
     this.state.image.src = this.props.imageSource;
 
     /// DEFINE NEW ROTATION ANGLE EVERY AMOUNT OF TIME
-    setPieRotationAngle.bind(this)();
+
 
     /// LOAD ALL THE SLICE FROM DATABASE => SHOULD BE REFACTORED TO REDUX
     // loadSlicesFromDatabase.bind(this)();
