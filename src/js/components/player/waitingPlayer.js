@@ -1,7 +1,6 @@
 import React from "react";
 
 import AlbumCover from "./components/albumCover/waitingAlbumCover";
-import Palette from "./components/palette/Palette";
 import PieChart from "./components/PieChart/waitingPieChart";
 
 
@@ -53,18 +52,6 @@ export default class Player extends React.Component {
     };
   }
 
-  componentWillMount() {
-    this.state.image.crossOrigin = "anonymous";
-    this.state.image.src = this.props.imageSource;
-
-    /// DEFINE NEW ROTATION ANGLE EVERY AMOUNT OF TIME
-
-
-    /// LOAD ALL THE SLICE FROM DATABASE => SHOULD BE REFACTORED TO REDUX
-    // loadSlicesFromDatabase.bind(this)();
-
-    updateLoopFromDatabase.bind(this)();
-  }
 
   addSlice(color, value) {
     addSliceToDatabase.bind(this)(color, value);
@@ -72,14 +59,13 @@ export default class Player extends React.Component {
 
   /// ON/OFF SWITCH TRIGERED BY PLAY BUTTON PLUS ANIMATION
   onOffSwitch() {
-    playerSwitch.bind(this)();
+    playerSwitch.bind(this)()
     browserHistory.push('/details1')
   }
 
   render() {
     return (
-      <Palette image={this.state.image}>
-        {palette => (
+
           <div className="player">
 
             <div className="wrapper"
@@ -89,7 +75,6 @@ export default class Player extends React.Component {
               storage={this.props.storage}
               db={this.db}
               slices={this.state.slices}
-              color={palette}
               loop={this.state.loop}
               mute={this.state.mute}
               audioContext={this.state.audioContext}
@@ -102,22 +87,35 @@ export default class Player extends React.Component {
             <p className="waiting-title">
               <span><b>WELCOME</b> TO A NEW ECONOMY OF MUSIC PUBLICATION</span>
             </p>
-            <div className="waiting-title-line"></div>
+            <div className="waiting-title-line">
+              <div className="waiting-title-line-dot"></div>
+            </div>
             <p className="waiting-brand-name">
-              <span>MURMUR.FM</span>
+              <span>murmur</span>
             </p>
-            <div className="waiting-brand-name-line"></div>
+            <div className="waiting-brand-name-line">
+              <div className="waiting-brand-name-dot"></div>
+              <div className="waiting-brand-name-dot right"></div>
+              <div className="waiting-brand-name-dot current-time">
+                <p>05 January 2018</p>
+              </div>
+            </div>
             <p className="waiting-sign-up">
               <span>Sign Up Now</span>
             </p>
-            <div className="waiting-sign-up-line"></div>
+            <div className="waiting-sign-up-line">
+              <div className="waiting-sign-up-line-dot"></div>
+                <div className="waiting-sign-up-line-dot right"></div>
+              <div className="waiting-vertical-line"></div>
+              <div className="waiting-vertical-line right"></div>
+            </div>
             <div className="waiting-date">
               <span>April 2018</span>
             </div>
           </div>
         </div>
       )}
-      </Palette>
-    );
-  }
+
+
+
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import PieChart from "react-simple-pie-chart";
-import AddSlice from "../addSlice/addSlice";
+
 
 export default class TrackChart extends React.Component {
   constructor(props) {
@@ -44,9 +44,7 @@ export default class TrackChart extends React.Component {
     if (this.props.loop !== null) {
       return (
         <div>
-          <div className="waitingWrapper1"
-               className={"waitingWrapper" + this.props.index}
-               style={{WebkitTransform: rotation}}>
+          <div className="waitingWrapper1 rotating">
             <PieChart slices={this.props.slices} />
           </div>
         </div>

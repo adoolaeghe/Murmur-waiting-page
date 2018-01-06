@@ -2,7 +2,7 @@
   position: absolute
   z-index: 90000
   height: 700px
-  animation: fontbulger 3s infinite
+  animation: fontbulger 2s infinite
 
 .waitingWrapper1
   +Position(absolute, 80px, 30%, 450px, 450px)
@@ -21,43 +21,76 @@
 
 .waiting-title
   position: absolute
-  margin-top: 230px
-  font-size: 28px
+  margin-top: 160px
+  font-size: 32px
   width: 72vw
   left: 22vw
   color: black
   text-align: left
-  font-family: 'Asul', sans-serif
+  font-family: 'Chivo', sans-serif
   font-weight: 400
   z-index: 999999
 
   .main-title
-    font-weight: 700
+    font-weight: 400
 
 .waiting-title-line
   position: absolute
-  margin-top: 280px
+  top: 200px
   background: linear-gradient(90deg, black, #4891D9)
   height: 2px
   width: 80vw
 
+  .waiting-title-line-dot
+    height: 10px
+    width: 10px
+    background-color: black
+    position: absolute
+    left: 80vw
+    top: -4px
+    border-radius: 10px
+    animation: shockwave 2s infinite
+
+
 .waiting-brand-name-line
   position: absolute
-  margin-top: 350px
+  top: 300px
   background: linear-gradient(45deg, red, yellow)
   height: 2px
-  width: 100%
-  left: 60vw
+  width: 80vw
+  left: 20vw
+
+  .waiting-brand-name-dot
+    height: 10px
+    width: 10px
+    background-color: black
+    position: absolute
+    left: 0vw
+    top: -4px
+    border-radius: 10px
+    animation: shockwave 2s infinite
+
+    &.right
+      left: 60vw
+
+    &.current-time
+      left: 24vw
+
+      p
+        position: absolute
+        left: -100px
+        top: -50px
+        width: 200px
 
 .waiting-brand-name
   position: absolute
-  margin-top: 300px
-  left: 70vw
-  font-size: 24px
+  margin-top: 220px
+  left: 75vw
+  font-size: 36px
   width: 30vw
-  color: #777676
+  color: black
   text-align: left
-  font-family: 'chivo', sans-serif
+  font-family: 'Asul', sans-serif
   font-weight: 700
   z-index: 999999
 
@@ -77,9 +110,9 @@
   position: absolute
   margin-top: 550px
   font-size: 20px
-  width: 100vw
+  width: 85vw
   color: white
-  text-align: center
+  text-align: right
   font-family: 'Asul', sans-serif
   font-weight: 400
   z-index: 999999
@@ -91,24 +124,45 @@
 
 .waiting-sign-up-line
   position: absolute
-  margin-top: 420px
+  top: 400px
   background: grey
   height: 1px
   width: 80vw
-  left: 20vw
+
+  .waiting-sign-up-line-dot
+    height: 10px
+    width: 10px
+    background-color: black
+    position: absolute
+    left: 20vw
+    top: -4px
+    border-radius: 10px
+    animation: shockwave 2s infinite
+
+    &.right
+      left: 80vw
+
+  .waiting-vertical-line
+    height: 100vh
+    width: 1px
+    background-color: grey
+    position: absolute
+    left: 20.3vw
+    top: -480px
+
+    &.right
+      left: 80.3vw
+      height: 50vh
+      margin-top: 50vh
 
 
 @keyframes fontbulger
   0%
-    font-size: 1
-
-  50%
     opacity: 0
-
-  75%
-    opacity: 0.2
-  100%
+  50%
     opacity: 1
+  100%
+    opacity: 0
 
 
 @keyframes shockwave
@@ -122,3 +176,40 @@
     transform: scale(1)
 
     box-shadow: 0 0 50px rgba(255, 0, 0, 0), inset 0 0 10px red
+
+
+@keyframes rotating
+  from
+    -webkit-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  to
+    -webkit-transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+
+@keyframes rotating
+  from
+    -ms-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -webkit-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+
+  to
+    -ms-transform: rotate(360deg)
+    -moz-transform: rotate(360deg)
+    -webkit-transform: rotate(360deg)
+    -o-transform: rotate(360deg)
+    transform: rotate(360deg)
+
+
+.rotating
+  animation: fontbulger 2s infinite
+  -webkit-animation: rotating 15s linear infinite
+  -moz-animation: rotating 15s linear infinite
+  -ms-animation: rotating 15s linear infinite
+  -o-animation: rotating 15s linear infinite
+  animation: rotating 15s linear infinite

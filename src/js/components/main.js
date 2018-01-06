@@ -1,5 +1,4 @@
 import React from "react";
-import Player from "./player/player";
 import ReactBodymovin from "react-bodymovin";
 import animation from "../models/data.json";
 import { Doughnut } from "react-chartjs-2";

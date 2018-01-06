@@ -37,4 +37,4 @@ app.use("/src", express.static(path.join(__dirname, "src")));
 app.use(allowCrossDomain);
 app.use("/", routes);
 
-module.exports = app.listen(3000);
+module.exports = app.listen(process.env.PORT || 5000)

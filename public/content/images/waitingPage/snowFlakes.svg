@@ -56,6 +56,24 @@
                 <path d="M225.618805,346.909089 C227.437954,346.909089 227.150544,343.373871 226.50377,341.95743 C225.856996,340.540989 223.89543,338.147728 222.459558,338.563539 C221.023685,338.979351 220.522387,341.89161 221.097824,343.183976 C221.67326,344.476342 223.799656,346.909089 225.618805,346.909089 Z" id="Oval-2" fill-opacity="0.52" fill="#48617A"></path>
                 <path d="M228.502544,742 C231.425078,742 230.963343,736.320533 229.924275,734.044965 C228.885206,731.769398 225.733874,727.924529 223.427089,728.592547 C221.120304,729.260565 220.314949,733.939222 221.23941,736.01546 C222.163871,738.091697 225.580009,742 228.502544,742 Z" id="Oval-2" fill-opacity="0.595476676" fill="#FE1921"></path>
                 <path d="M62.0781341,722.286021 C64.8352683,720.388318 62.028456,713.450151 58.8316707,710.832736 C55.6348854,708.215322 48.4986273,703.778447 46.6741993,705.501656 C44.8497714,707.224865 49.4863943,714.618884 50.721101,716.14705 C51.9558077,717.675216 59.3209999,724.183724 62.0781341,722.286021 Z" id="Oval-2" fill-opacity="0.267974411" fill="#FDC612"></path>
+                <text id="r" transform="translate(173.500000, 623.000000) rotate(4.000000) translate(-173.500000, -623.000000) " font-family="Chivo-Bold, Chivo" font-size="18" font-weight="bold" fill="#393939">
+                    <tspan x="161" y="616">r</tspan>
+                </text>
+                <text id="r" transform="translate(73.500000, 133.000000) rotate(-32.000000) translate(-73.500000, -133.000000) " font-family="Chivo-Bold, Chivo" font-size="18" font-weight="bold" fill="#393939">
+                    <tspan x="61" y="126">r</tspan>
+                </text>
+                <text id="r" transform="translate(390.500000, 151.000000) rotate(16.000000) translate(-390.500000, -151.000000) " font-family="Chivo-Bold, Chivo" font-size="18" font-weight="bold" fill="#393939">
+                    <tspan x="378" y="144">r</tspan>
+                </text>
+                <text id="r" transform="translate(1036.631068, 147.515748) rotate(64.000000) translate(-1036.631068, -147.515748) " font-family="Chivo-Bold, Chivo" font-size="18" font-weight="bold" fill="#393939">
+                    <tspan x="1024.13107" y="140.515748">r</tspan>
+                </text>
+                <text id="r" transform="translate(1089.631068, 699.515748) rotate(-31.000000) translate(-1089.631068, -699.515748) " font-family="Chivo-Bold, Chivo" font-size="20" font-weight="bold" fill="#393939">
+                    <tspan x="1077.13107" y="694.515748">r</tspan>
+                </text>
+                <text id="r" transform="translate(849.631068, 805.515748) rotate(-63.000000) translate(-849.631068, -805.515748) " font-family="Chivo-Bold, Chivo" font-size="24" font-weight="bold" fill="#393939">
+                    <tspan x="837.131068" y="804.515748">r</tspan>
+                </text>
             </g>
         </g>
     </g>
