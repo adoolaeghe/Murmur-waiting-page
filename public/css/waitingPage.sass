@@ -1,8 +1,11 @@
 .waiting-main-wrapper
   position: absolute
   z-index: 90000
-  height: 700px
-  animation: fontbulger 2s infinite
+  height: 100vh
+  width: 100vw
+  animation: fontbulger 4s infinite
+  &.bis
+    animation: fontbulger 2s infinite
 
 .waitingWrapper1
   +Position(absolute, 80px, 30%, 450px, 450px)
@@ -21,8 +24,8 @@
 
 .waiting-title
   position: absolute
-  margin-top: 160px
-  font-size: 32px
+  margin-top: 75px
+  font-size: 40px
   width: 72vw
   left: 22vw
   color: black
@@ -31,8 +34,16 @@
   font-weight: 400
   z-index: 999999
 
-  .main-title
-    font-weight: 400
+  .waiting-title-welcome
+    font-weight: 700
+    font-size: 40px
+    font-family: 'Asul', sans-serif
+    line-height: 0px
+
+  .waiting-title-main
+    font-weight: 300
+    font-size: 36px
+    line-height: 25px
 
 .waiting-title-line
   position: absolute
@@ -46,10 +57,13 @@
     width: 10px
     background-color: black
     position: absolute
-    left: 80vw
+    left: 20vw
     top: -4px
     border-radius: 10px
-    animation: shockwave 2s infinite
+    z-index: 99
+
+    &.right
+      left: 80vw
 
 
 .waiting-brand-name-line
@@ -63,17 +77,20 @@
   .waiting-brand-name-dot
     height: 10px
     width: 10px
-    background-color: black
+    background-color: red
     position: absolute
     left: 0vw
     top: -4px
     border-radius: 10px
     animation: shockwave 2s infinite
+    z-index: 999
 
     &.right
+      background-color: yellow
       left: 60vw
 
     &.current-time
+      background-color: black
       left: 24vw
 
       p
@@ -85,14 +102,18 @@
 .waiting-brand-name
   position: absolute
   margin-top: 220px
-  left: 75vw
-  font-size: 36px
-  width: 30vw
+  left: 80vw
+  font-size: 40px
+  width: 25vw
   color: black
   text-align: left
   font-family: 'Asul', sans-serif
   font-weight: 700
   z-index: 999999
+  .brand-name
+    position: absolute
+    left: -195px
+
 
 .waiting-sign-up
   position: absolute
@@ -108,19 +129,22 @@
 
 .waiting-date
   position: absolute
-  margin-top: 550px
+  margin-top: 87.8Vh
+  margin-left: 80.3vw
   font-size: 20px
-  width: 85vw
+  width: 19.7vw
   color: white
   text-align: right
-  font-family: 'Asul', sans-serif
-  font-weight: 400
+  background-color: red
+  text-align: center
+  font-family: 'chivo', sans-serif
+  font-weight: 300
   z-index: 999999
   span
-    padding: 5px 20px
-    border-radius: 20px
-    background-color: red
     animation: shockwave 2s infinite
+
+.red-text
+  font-family: 'chivo', sans-serif
 
 .waiting-sign-up-line
   position: absolute
@@ -137,23 +161,23 @@
     left: 20vw
     top: -4px
     border-radius: 10px
-    animation: shockwave 2s infinite
+    z-index: 99
 
     &.right
       left: 80vw
 
   .waiting-vertical-line
-    height: 100vh
+    height: 99vh
     width: 1px
     background-color: grey
     position: absolute
     left: 20.3vw
-    top: -480px
+    top: -450px
 
     &.right
       left: 80.3vw
-      height: 50vh
-      margin-top: 50vh
+      height: 60vh
+      margin-top: 35vh
 
 
 @keyframes fontbulger
@@ -213,3 +237,59 @@
   -ms-animation: rotating 15s linear infinite
   -o-animation: rotating 15s linear infinite
   animation: rotating 15s linear infinite
+
+@media (max-width: 1400px)
+  .waiting-title
+    font-size: 29px
+
+@media (max-width: 1350px)
+  .waiting-title
+    font-size: 28px
+
+@media (max-width: 1300px)
+  .waiting-title
+    font-size: 27px
+
+@media (max-width: 1250px)
+  .waiting-title
+    font-size: 26px
+
+@media (max-width: 1200px)
+  .waiting-title
+    font-size: 25px
+
+@media (max-width: 1150px)
+  .waiting-title
+    font-size: 24px
+
+@media (max-width: 1100px)
+  .waiting-title
+    font-size: 23px
+
+@media (max-width: 1050px)
+  .waiting-title
+    font-size: 22px
+
+@media (max-width: 1000px)
+  .waiting-title
+    font-size: 21px
+
+@media (max-width: 950px)
+  .waiting-title
+    font-size: 20px
+
+@media (max-width: 900px)
+  .waiting-title
+    font-size: 19px
+
+@media (max-width: 850px)
+  .waiting-title
+    font-size: 18px
+
+@media (max-width: 800px)
+  .waiting-title
+    font-size: 17px
+
+@media (max-width: 750px)
+  .waiting-title
+    font-size: 16px

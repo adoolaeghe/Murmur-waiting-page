@@ -85,23 +85,25 @@ export default class Player extends React.Component {
             <AlbumCover index={this.state.index} />
 
             <p className="waiting-title">
-              <span><b>WELCOME</b> TO A NEW ECONOMY OF MUSIC PUBLICATION</span>
+              <p className="waiting-title-welcome">WELCOME</p>
+              <p className="waiting-title-main">TO A NEW ECONOMY OF MUSIC PUBLICATION</p>
             </p>
             <div className="waiting-title-line">
               <div className="waiting-title-line-dot"></div>
+              <div className="waiting-title-line-dot right"></div>
             </div>
             <p className="waiting-brand-name">
-              <span>murmur</span>
+              <div className="  brand-name">MURMUR.fm</div>
             </p>
             <div className="waiting-brand-name-line">
               <div className="waiting-brand-name-dot"></div>
               <div className="waiting-brand-name-dot right"></div>
               <div className="waiting-brand-name-dot current-time">
-                <p>05 January 2018</p>
+                <p className="red-text">05/01/2018</p>
               </div>
             </div>
             <p className="waiting-sign-up">
-              <span>Sign Up Now</span>
+              <span>SIGN UP</span>
             </p>
             <div className="waiting-sign-up-line">
               <div className="waiting-sign-up-line-dot"></div>
