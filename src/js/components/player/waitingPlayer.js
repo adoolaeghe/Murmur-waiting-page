@@ -8,7 +8,6 @@ import PieChart from "./components/PieChart/waitingPieChart";
 export default class Player extends React.Component {
   constructor(props) {
     super(props);
-    this.db = this.props.database.child(this.props.index);
     this.handleChangeEvent = this.handleChangeEvent.bind(this);
     this.state = {
       data: "",
@@ -71,7 +70,6 @@ export default class Player extends React.Component {
             <div className="wrapper"
                  id={"container" + this.state.index}>
             <PieChart
-              db={this.db}
               slices={this.state.slices}
               loop={this.state.loop}
               mute={this.state.mute}

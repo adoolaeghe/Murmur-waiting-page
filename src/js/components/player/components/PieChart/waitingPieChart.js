@@ -11,7 +11,7 @@ export default class TrackChart extends React.Component {
   }
 
   render() {
-    const rotation = "rotate(" + "45" + "deg)"
+  
     if (this.props.loop !== null) {
       return (
         <div>
