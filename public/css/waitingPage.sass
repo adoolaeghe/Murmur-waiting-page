@@ -8,9 +8,9 @@
     animation: fontbulger 2s infinite
 
 .waitingWrapper1
-  +Position(absolute, 80px, 33vw, 450px, 450px)
+  +Position(absolute, 18vh, 33vw, 60vh, 60vh)
   opacity: 1
-  filter: blur(40px)
+  // filter: blur(40px)
 
 .form-subscribe
   width: 59.3vw
@@ -48,14 +48,14 @@
   border-left: 2px solid #26A599
 
 #waitingPlay
-  +Position(absolute, 105px, 35vw, 425px, 425px)
-  +borderAndRadius(4px, solid, white, 400px)
+  +Position(absolute, 20vh, 35vw, 55vh, 55vh)
+  +borderAndRadius(4px, solid, white, 1000px)
   margin: 0px
   padding: 0px
   background-repeat: no-repeat
   background-size: cover
   outline: none
-  filter: blur(20px)
+  // filter: blur(20px)
 
 .waiting-title
   position: absolute
@@ -283,296 +283,144 @@
   -o-animation: rotating 15s linear infinite
   animation: rotating 15s linear infinite
 
-@media (max-width: 1400px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 450px, 450px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 425px, 425px)
-  .waiting-title
-    margin-top: 77px
-    .waiting-title-main
-      font-size: 33px
-    .waiting-title-welcome
-      font-size: 39px
-  .waiting-brand-name
-    font-size: 39px
-    .brand-name
-      left: -195px
-  .form-subscribe
-    .email
-      font-size: 24px !important
-  .waiting-sign-up
-      font-size: 24px
 
-@media (max-width: 1350px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 440px, 440px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 415px, 415px)
-  .waiting-title
-    margin-top: 79px
-    .waiting-title-main
-      font-size: 32px
-    .waiting-title-welcome
-      font-size: 38px
-  .waiting-brand-name
-    font-size: 38px
-    .brand-name
-      left: -188px
-  .form-subscribe
-    .email
-      font-size: 23px !important
-  .waiting-sign-up
-      font-size: 23px
 
-@media (max-width: 1300px)
+@media screen and (max-width:768px) 
+  .waiting-main-wrapper
+    overflow: hidden
   .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 430px, 430px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 405px, 405px)
-  .waiting-title
-    margin-top: 81px
-    .waiting-title-main
-      font-size: 31px
-    .waiting-title-welcome
-      font-size: 37px
-  .waiting-brand-name
-    font-size: 37px
-    .brand-name
-      left: -182px
+    +Position(absolute, 20vh, 18vw, 65vw, 65vw)
   .form-subscribe
-    .email
-      font-size: 23px !important
-  .waiting-sign-up
-      font-size: 23px
-
-@media (max-width: 1250px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 420px, 420px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 395px, 395px)
-  .waiting-title
-    margin-top: 83px
-    .waiting-title-main
-      font-size: 30px
-    .waiting-title-welcome
-      font-size: 36px
-  .waiting-brand-name
-    font-size: 36px
-    .brand-name
-      left: -175px
-  .form-subscribe
-    .email
-      font-size: 22px !important
-  .waiting-sign-up
-      font-size: 22px
-
-@media (max-width: 1200px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 410px, 410px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 385px, 385px)
-  .waiting-title
-    margin-top: 85px
-    .waiting-title-main
-      font-size: 29px
-    .waiting-title-welcome
-      font-size: 35px
-  .waiting-brand-name
-    font-size: 35px
-    .brand-name
-      left: -168px
-  .form-subscribe
-    .email
-      font-size: 22px !important
-  .waiting-sign-up
-      font-size: 22px
-
-@media (max-width: 1150px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 400px, 400px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 375px, 375px)
-  .waiting-title
-    margin-top: 87px
-    .waiting-title-main
-      font-size: 28px
-    .waiting-title-welcome
-      font-size: 34px
-  .waiting-brand-name
-    font-size: 34px
-    .brand-name
-      left: -163px
-  .form-subscribe
-    .email
-      font-size: 21px !important
-  .waiting-sign-up
-      font-size: 21px
-
-@media (max-width: 1100px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 390px, 390px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 365px, 365px)
-  .waiting-title
-    margin-top: 89px
-    .waiting-title-main
-      font-size: 27px
-    .waiting-title-welcome
-      font-size: 33px
-  .waiting-brand-name
-    font-size: 33px
-    .brand-name
-      left: -160px
-  .form-subscribe
-    .email
-      font-size: 21px !important
-  .waiting-sign-up
-      font-size: 21px
-
-@media (max-width: 1050px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 380px, 380px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 355px, 355px)
-  .waiting-title
-    margin-top: 91px
-    .waiting-title-main
-      font-size: 26px
-    .waiting-title-welcome
-      font-size: 32px
-  .waiting-brand-name
-    font-size: 32px
-    .brand-name
-      left: -157px
-  .form-subscribe
-    .email
-      font-size: 20px !important
-  .waiting-sign-up
-      font-size: 20px
-
-@media (max-width: 1000px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 370px, 370px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 345px, 345px)
-  .waiting-title
-    margin-top: 93px
-    .waiting-title-main
-      font-size: 25px
-    .waiting-title-welcome
-      font-size: 31px
-  .waiting-brand-name
-    font-size: 31px
-    .brand-name
-      left: -152px
-  .form-subscribe
-    .email
-      font-size: 20px !important
-  .waiting-sign-up
-      font-size: 20px
-
-@media (max-width: 950px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 360px, 360px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 335px, 335px)
-  .waiting-title
-    margin-top: 95px
-    .waiting-title-main
-      font-size: 24px
-    .waiting-title-welcome
-      font-size: 30px
-  .waiting-brand-name
-    font-size: 30px
-    .brand-name
-      left: -148px
-  .form-subscribe
-    .email
-      font-size: 19px !important
-  .waiting-sign-up
-      font-size: 19px
-
-@media (max-width: 900px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 350px, 350px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 325px, 325px)
-  .waiting-title
-    margin-top: 97px
-    .waiting-title-main
-      font-size: 23px
-    .waiting-title-welcome
-      font-size: 29px
-  .waiting-brand-name
-    font-size: 30px
-    .brand-name
-      left: -143px
-  .form-subscribe
-    .email
-      font-size: 19px !important
-  .waiting-sign-up
-      font-size: 19px
-
-@media (max-width: 850px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 340px, 340px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 315px, 315px)
-  .waiting-title
-    margin-top: 99px
-    .waiting-title-main
-      font-size: 22px
-    .waiting-title-welcome
-      font-size: 28px
-  .waiting-brand-name
-    font-size: 29px
-    .brand-name
-      left: -139px
-  .form-subscribe
-    .email
-      font-size: 18px !important
-  .waiting-sign-up
-      font-size: 18px
-
-@media (max-width: 800px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 330px, 330px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 305px, 305px)
-  .waiting-title
-    margin-top: 101px
-    .waiting-title-main
-      font-size: 21px
-    .waiting-title-welcome
-      font-size: 27px
-  .waiting-brand-name
-    font-size: 27px
-    .brand-name
-      left: -134px
-  .form-subscribe
-    .email
-      font-size: 18px !important
-  .waiting-sign-up
-      font-size: 18px
-
-@media (max-width: 750px)
-  .waitingWrapper1
-    +Position(absolute, 80px, 33vw, 320px, 320px)
-  #waitingPlay
-    +Position(absolute, 105px, 35vw, 295px, 295px)
-  .waiting-title
-    margin-top: 103px
-    .waiting-title-main
-      font-size: 20px
-    .waiting-title-welcome
-      font-size: 26px
-  .waiting-brand-name
-    font-size: 26px
-    .brand-name
-      left: -130px
-  .form-subscribe
+    width: 79.3vw
+    margin-left: 10vw
     .email
       font-size: 17px !important
+    .email::placeholder
+
+  .subscribe-btn
+
+  .subscribe-btn:focus
+
+  .subscribe-btn:hover
+
+  #waitingPlay
+    +Position(absolute, 22.3vh, 20.3vw, 60vw, 60vw)
+  .waiting-title
+    margin-top: 103px
+    width: 92vw
+    left: 12vw
+    .waiting-title-welcome
+      font-size: 80px
+      position: absolute
+      top: -50px
+    .waiting-title-main
+      color: red
+      position: absolute
+      top: 100px
+      font-size: 20px
+  .waiting-title-line
+    width: 90vw
+    .waiting-title-line-dot
+      left: 10vw
+      &.right
+        left: 90vw
+
+  .waiting-brand-name-line
+    left: 10vw
+    margin-top: 20vh
+    .waiting-brand-name-dot
+      left: 0
+      &.right
+        left: 80vw
+      &.current-time
+
+        p
+
+  .waiting-brand-name
+    top: -4vh
+    margin-top: 0
+    font-size: 26px
+    height: 100px
+    width: 100vw
+    margin-left: 0
+    left: 0
+    text-align: center
+    .brand-name
+      left: 35vw
+      font-size: 60px
   .waiting-sign-up
-      font-size: 17px
+    font-size: 17px
+    color: red
+  .waiting-date
+
+    span
+
+
+  .red-text
+
+
+  .waiting-sign-up-line
+    position: absolute
+    margin-top: 45vh
+    .waiting-sign-up-line-dot
+      left: 10vw
+
+      &.right
+        left: 90vw
+
+    .waiting-vertical-line
+      left: 10.3vw
+      top: -1100px
+      &.right
+        left: 90.3vw
+
+
+// /// IPHONE 7 PLUS
+// @media (min-width : 736px)
+//   .waitingWrapper1
+//     +Position(absolute, 20vh, 18vw, 20vh, 20vh)
+//   #waitingPlay
+//     +Position(absolute, 23vh, 20vw, 23vh, 23vh)
+//   .waiting-title
+//     margin-top: 103px
+//     .waiting-title-main
+//       color: yellow
+//       font-size: 20px
+//     .waiting-title-welcome
+//       font-size: 26px
+//   .waiting-brand-name
+//     font-size: 26px
+//     .brand-name
+//       color: red
+//       left: -130px
+//   .form-subscribe
+//     .email
+//       font-size: 17px !important
+//   .waiting-sign-up
+//       font-size: 17px
+//       color: red
+//
+// /// IPHONE X
+// @media (min-width : 812px)
+//   .waitingWrapper1
+//     +Position(absolute, 20vh, 18vw, 20vh, 20vh)
+//   #waitingPlay
+//     +Position(absolute, 23vh, 20vw, 23vh, 23vh)
+//   .waiting-title
+//     margin-top: 103px
+//     .waiting-title-main
+//       color: pink
+//       font-size: 20px
+//     .waiting-title-welcome
+//       font-size: 26px
+//   .waiting-brand-name
+//     font-size: 26px
+//     .brand-name
+//       color: red
+//       left: -130px
+//   .form-subscribe
+//     .email
+//       font-size: 17px !important
+//   .waiting-sign-up
+//       font-size: 17px
+//       color: red
