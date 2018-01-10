@@ -130,6 +130,7 @@ export default class Player extends React.Component {
             </div>
             <div className="waiting-date">
               <span>Streaming April 2018</span>
+              <span className="mobile">April 2018</span>
             </div>
           </div>
         </div>
