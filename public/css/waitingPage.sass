@@ -252,17 +252,6 @@
 
     box-shadow: 0 0 50px rgba(255, 0, 0, 0), inset 0 0 10px red
 
-@keyframes shockwave1
-  0%
-    transform: scale(1)
-    box-shadow: none
-    opacity: 1
-
-
-  100%
-    transform: scale(1)
-
-    box-shadow: 0 0 50px rgba(255, 0, 0, 0), inset 0 0 10px green
 
 @keyframes rotating
   from
@@ -307,116 +296,16 @@
     overflow: hidden
   .waitingWrapper1
     +Position(absolute, 20vh, 18vw, 65vw, 65vw)
-  .form-subscribe
-    width: 79vw
-    margin-left: 10vw
-    font-size: 40px
-
-    .email
-      font-size: 40px !important
-    .email::placeholder
-
-  .subscribe-btn
-    right: -10vw !important
-  .subscribe-btn:focus
-
-  .subscribe-btn:hover
-
   #waitingPlay
     +Position(absolute, 22.3vh, 20.3vw, 60vw, 60vw)
-
-  .waiting-title
-    margin-top: 103px
-    width: 92vw
-    left: 12vw
-    .waiting-title-welcome
-      font-size: 80px
-      position: absolute
-      top: -50px
-    .waiting-title-main
-      position: absolute
-      top: 100px
-      font-size: 40px
-      line-height: 50px
-  .waiting-title-line
-    width: 90vw
-    .waiting-title-line-dot
-      left: 10vw
-      &.right
-        left: 90vw
-
-  .waiting-brand-name-line
-    left: 10vw
-    width: 90vw
-    margin-top: 15vh
-    .waiting-brand-name-dot
-      left: 0
-      &.right
-        left: 80vw
-      &.current-time
-        font-size: 25px
-
-        p
-          top: -60px
-
-  .waiting-brand-name
-    top: -4vh
-    margin-top: 0
-    font-size: 26px
-    height: 100px
-    width: 100vw
-    margin-left: 0
-    left: 0
-    text-align: center
-    .brand-name
-      display: none
-      left: 35vw
-      font-size: 60px
-  .waiting-sign-up
-    margin-top: 65vh
-    font-size: 17px
-    color: red
-  .waiting-date
-    position: absolute
-    margin-top: 30vh
-    margin-left: 10vw
-
-    height: 20px
-    width: 80.5vw
-    color: black
-    font-weight: 700
-    text-align: right
-    opacity: 0.5
-    background: linear-gradient(to right, #FF3645, #FEE472)
-
-    text-align: center
-    font-family: 'Asul', sans-serif
-    font-weight: 300
-    z-index: 0
-  span
-    font-weight: 700
-    color: black
-    opacity: 1
-
-
-
-  .red-text
-
-
   .waiting-sign-up-line
-    position: absolute
-    top: 70vh
-    .waiting-sign-up-line-dot
-      left: 10vw
-      top: -1.2vh
-      &.right
-        left: 90vw
-
     .waiting-vertical-line
       left: 10.3vw
-      top: -75vh
+
       &.right
         left: 90.3vw
+
+
 
 // /// IPHONE 7 PLUS
 @media screen and (max-width:736px)
@@ -424,122 +313,20 @@
     +Position(absolute, 28vh, 18vw, 65vw, 65vw)
   #waitingPlay
     +Position(absolute, 30.3vh, 20.3vw, 60vw, 60vw)
-  .waiting-title
-    margin-top: 103px
-    width: 92vw
-    left: 12vw
-    .waiting-title-welcome
-      font-size: 40px
-      position: absolute
-      top: -70px
-    .waiting-title-main
-      position: absolute
-      top: -20px
-      font-size: 25px
-      line-height: 50px
-  .waiting-brand-name
-    .brand-name
-      display: none
-      left: 25vw
-      font-size: 40px
-
-  .waiting-title-line
-    position: absolute
-    top: 100px
-  .waiting-brand-name-line
-    margin-top: 0
-    top: 45vh
-  .waiting-date
-    bottom: 0
-    span
-      &.mobile
-        font-size: 22px
-        margin-left: 5%
-        margin-top: 20px
-
-  .waiting-sign-up
-    margin-top: 62.8vh
-    z-index: -1
-
-  .waiting-title-line
-    .waiting-title-line-dot
-      left: 8vw
-      &.right
-        left: 89vw
-  .waiting-brand-name-line
-    .waiting-brand-name-dot
-      left: -2vw
-      &.right
-        left: 79vw
   .waiting-sign-up-line
-    .waiting-sign-up-line-dot
-      left: 8vw
-      top: -1.5vh
-      &.right
-        left: 89vw
-
     .waiting-vertical-line
-      left: 9.3vw
+      left: 10.3vw
       &.right
         left: 90.3vw
 
-  .waiting-brand-name-line
-    .waiting-brand-name-dot
-      &.current-time
-        font-size: 20px
+  .waiting-sign-up-line
+    .waiting-sign-up-line-dot
+      left: 9.1vw
+      &.right
+        left: 89.1vw
 
-  .form-subscribe
-    width: 77vw
-    margin-left: 10vw
-    font-size: 20px
-    .email
-      font-size: 20px !important
-    .email::placeholder
-// @media (min-width : 736px)
-//   .waitingWrapper1
-//     +Position(absolute, 20vh, 18vw, 20vh, 20vh)
-//   #waitingPlay
-//     +Position(absolute, 23vh, 20vw, 23vh, 23vh)
-//   .waiting-title
-//     margin-top: 103px
-//     .waiting-title-main
-//       color: yellow
-//       font-size: 20px
-//     .waiting-title-welcome
-//       font-size: 26px
-//   .waiting-brand-name
-//     font-size: 26px
-//     .brand-name
-//       color: red
-//       left: -130px
-//   .form-subscribe
-//     .email
-//       font-size: 17px !important
-//   .waiting-sign-up
-//       font-size: 17px
-//       color: red
-//
-// /// IPHONE X
-// @media (min-width : 812px)
-//   .waitingWrapper1
-//     +Position(absolute, 20vh, 18vw, 20vh, 20vh)
-//   #waitingPlay
-//     +Position(absolute, 23vh, 20vw, 23vh, 23vh)
-//   .waiting-title
-//     margin-top: 103px
-//     .waiting-title-main
-//       color: pink
-//       font-size: 20px
-//     .waiting-title-welcome
-//       font-size: 26px
-//   .waiting-brand-name
-//     font-size: 26px
-//     .brand-name
-//       color: red
-//       left: -130px
-//   .form-subscribe
-//     .email
-//       font-size: 17px !important
-//   .waiting-sign-up
-//       font-size: 17px
-//       color: red
+  .waiting-title-line
+    .waiting-title-line-dot
+      left: 9.1vw
+      &.right
+        left: 89.1vw
