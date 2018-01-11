@@ -79,19 +79,11 @@ export default class Player extends React.Component {
             />
 
             <AlbumCover index={this.state.index} />
-
-            <div className="waiting-title">
-              <p className="waiting-title-welcome">WELCOME</p>
-              <p className="waiting-title-main">TO A NEW ECONOMY OF MUSIC PUBLICATION</p>
-            </div>
             <div className="waiting-title-line">
               <div className="waiting-title-line-dot"></div>
               <div className="waiting-title-line-dot right"></div>
             </div>
-            <div className="waiting-brand-name">
-              <div className="  brand-name">MURMUR.fm</div>
-            </div>
-          
+
             <div className="waiting-sign-up">
               <div id="mc_embed_signup_scroll">
               <form action="https://murmur.us17.list-manage.com/subscribe/post?u=8a759dc0e2dd1f954c877c33e&amp;id=22db0bc5df"
@@ -105,26 +97,16 @@ export default class Player extends React.Component {
                     class="validate form-subscribe"
                     target="_blank"
                     noValidate>
-                <input type="email" value=""
-                placeholder= "SIGN UP HERE"
-                value={this.state.data}
-                onChange={this.handleChangeEvent}name="EMAIL" class="required email" id="mce-EMAIL"></input>
 
-                <div class="clear">
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button subscribe-btn"></input>
-                </div>
+
               </form>
               </div>
             </div>
             <div className="waiting-sign-up-line">
               <div className="waiting-sign-up-line-dot"></div>
-                <div className="waiting-sign-up-line-dot right"></div>
+              <div className="waiting-sign-up-line-dot right"></div>
               <div className="waiting-vertical-line"></div>
               <div className="waiting-vertical-line right"></div>
-            </div>
-            <div className="waiting-date">
-              <span>Streaming April 2018</span>
-              <span className="mobile">April 2018</span>
             </div>
           </div>
         </div>
