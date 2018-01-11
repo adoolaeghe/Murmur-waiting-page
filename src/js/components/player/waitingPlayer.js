@@ -91,13 +91,7 @@ export default class Player extends React.Component {
             <div className="waiting-brand-name">
               <div className="  brand-name">MURMUR.fm</div>
             </div>
-            <div className="waiting-brand-name-line">
-              <div className="waiting-brand-name-dot"></div>
-              <div className="waiting-brand-name-dot right"></div>
-              <div className="waiting-brand-name-dot current-time">
-                <p className="red-text">{this.returnCurrentDate()}</p>
-              </div>
-            </div>
+          
             <div className="waiting-sign-up">
               <div id="mc_embed_signup_scroll">
               <form action="https://murmur.us17.list-manage.com/subscribe/post?u=8a759dc0e2dd1f954c877c33e&amp;id=22db0bc5df"

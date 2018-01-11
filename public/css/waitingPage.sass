@@ -26,7 +26,7 @@
 .subscribe-btn
   position: absolute !important
   right: -5px !important
-  top: 22px
+  top: 44px
   font-family: 'chivo', sans-serif
   font-weight: 300
   background-color: transparent
@@ -55,11 +55,11 @@
   background-repeat: no-repeat
   background-size: cover
   outline: none
-  filter: blur(20px)
+  // filter: blur(20px)
 
 .waiting-title
   position: absolute
-  margin-top: 75px
+  margin-top: -40px
   font-size: 40px
   width: 72vw
   left: 22vw
@@ -82,7 +82,7 @@
 
 .waiting-title-line
   position: absolute
-  top: 200px
+  top: 80px
   background: linear-gradient(90deg, black, #4891D9)
   height: 2px
   width: 80vw
@@ -103,7 +103,7 @@
 
 .waiting-brand-name-line
   position: absolute
-  top: 300px
+  top: 150px
   background: linear-gradient(45deg, red, yellow)
   height: 2px
   width: 80vw
@@ -121,12 +121,21 @@
     z-index: 999
 
     &.right
+      height: 10px
+      width: 10px
       background-color: yellow
       left: 60vw
 
     &.current-time
-      background-color: black
+      height: 20px
+      width: 20px
+      background: none
+      animation: none
+      top: -8px
+      background-image: "../content/images/waitingPage/arrow-right.svg"
       left: 24vw
+      &.right
+        left: 31vw
 
       p
         position: absolute
@@ -136,7 +145,7 @@
 
 .waiting-brand-name
   position: absolute
-  margin-top: 220px
+  margin-top: 100px
   left: 80vw
   font-size: 40px
   width: 25vw
@@ -152,7 +161,7 @@
 
 .waiting-sign-up
   position: absolute
-  margin-top: 355px
+  margin-top: 78.8vh
   font-size: 24px
   width: 80vw
   left: 0vw
@@ -164,19 +173,20 @@
 
 .waiting-date
   position: absolute
-  margin-top: 87.8Vh
-  margin-left: 80.3vw
+  margin-top: 85.8vh
+  margin-left: 20vw
   font-size: 20px
-  width: 19.7vw
+  height: 8vh
+  width: 60.5vw
   color: white
   text-align: right
-  background-color: red
+  background-color: #FFD6D6
   text-align: center
   font-family: 'chivo', sans-serif
   font-weight: 300
-  z-index: 999999
+  z-index: 0
   span
-    animation: shockwave 2s infinite
+
     &.mobile
       display: none
 
@@ -185,7 +195,6 @@
 
 .waiting-sign-up-line
   position: absolute
-  top: 400px
   background: none
   height: 1px
   width: 80vw
@@ -196,7 +205,7 @@
     background-color: black
     position: absolute
     left: 20vw
-    top: -4px
+    top: 85vh
     border-radius: 10px
     z-index: 99
 
@@ -204,16 +213,16 @@
       left: 80vw
 
   .waiting-vertical-line
-    height: 99vh
+    height: 90vh
+    top: -5vh
     width: 1px
     background-color: grey
     position: absolute
     left: 20.3vw
-    top: -450px
 
     &.right
       left: 80.3vw
-      height: 100vh
+
 
 
 @keyframes fontbulger
@@ -309,7 +318,7 @@
 
   #waitingPlay
     +Position(absolute, 22.3vh, 20.3vw, 60vw, 60vw)
-    filter: blur(40px)
+
   .waiting-title
     margin-top: 103px
     width: 92vw
@@ -403,6 +412,10 @@
 
 // /// IPHONE 7 PLUS
 @media screen and (max-width:736px)
+  .waitingWrapper1
+    +Position(absolute, 28vh, 18vw, 65vw, 65vw)
+  #waitingPlay
+    +Position(absolute, 30.3vh, 20.3vw, 60vw, 60vw)
   .waiting-title
     margin-top: 103px
     width: 92vw
