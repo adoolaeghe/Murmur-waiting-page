@@ -1,4 +1,4 @@
-.wrapper
+// .wrapper
   margin-top: 0
   position: absolute
 .waiting-main-wrapper
@@ -28,28 +28,6 @@
   .email::placeholder
     color: black
 
-.subscribe-btn
-  position: absolute !important
-  right: -5px !important
-  top: 20px
-  font-family: 'chivo', sans-serif
-  font-weight: 300
-  border: none
-  outline: none
-  border-bottom: 1px solid lightgrey
-  border-left: 1px solid lightgrey
-  box-shadow: none
-  transition: border-left 0.2s ease
-  transition: border-bottom 0.2s ease
-
-.subscribe-btn:focus
-  outline: none
-  color: #4CAF4F
-
-.subscribe-btn:hover
-  color: #26A599
-  border-bottom: 2px solid #26A599
-  border-left: 2px solid #26A599
 
 #waitingPlay
   +Position(absolute, 25vh, 35vw, 55vh, 55vh)
@@ -61,147 +39,6 @@
   outline: none
   // filter: blur(20px)
 
-.waiting-title
-  position: absolute
-  top: 2vh
-  font-size: 40px
-  width: 72vw
-  left: 39.5vw
-  color: black
-  text-align: left
-  font-family: 'Asul', sans-serif
-  font-weight: 400
-  z-index: 999999
-
-  .waiting-title-welcome
-    font-weight: 700
-    font-size: 40px
-    font-family: 'Asul', sans-serif
-    line-height: 0px
-
-  .waiting-title-main
-    font-weight: 300
-    font-size: 36px
-    line-height: 25px
-
-.waiting-title-line
-  position: absolute
-  top: 10vh
-
-  height: 1px
-  width: 80vw
-
-  .waiting-title-line-dot
-    animation: shockwave 2s infinite
-    height: 10px
-    width: 10px
-    background-color: red
-    position: absolute
-    left: 20vw
-    top: -4px
-    border-radius: 10px
-    z-index: 99
-
-    &.right
-      background-color: yellow
-      left: 80vw
-
-
-.waiting-brand-name-line
-  position: absolute
-  top: 150px
-  background: linear-gradient(45deg, red, yellow)
-  height: 2px
-  width: 80vw
-  left: 20vw
-
-  .waiting-brand-name-dot
-    height: 10px
-    width: 10px
-    background-color: #FE0004
-    position: absolute
-    left: 0vw
-    top: -4px
-    border-radius: 10px
-    animation: shockwave 2s infinite
-    z-index: 999
-
-    &.right
-      height: 10px
-      width: 10px
-      background-color: #FDD113
-      left: 60vw
-
-    &.current-time
-      height: 20px
-      width: 20px
-      background: none
-      animation: none
-      top: -8px
-      background-image: "../content/images/waitingPage/arrow-right.svg"
-      left: 24vw
-      &.right
-        left: 31vw
-
-      p
-        position: absolute
-        left: -100px
-        top: -50px
-        width: 200px
-
-.waiting-brand-name
-  position: absolute
-  margin-top: 20vh
-  left: 80vw
-  font-size: 40px
-  width: 25vw
-  color: black
-  text-align: left
-  font-family: 'Asul', sans-serif
-  font-weight: 700
-  z-index: 999999
-  .brand-name
-    position: absolute
-    left: -195px
-
-
-.waiting-sign-up
-  position: absolute
-  margin-top: 87.5vh
-  font-size: 24px
-  width: 80vw
-  left: 0vw
-  color: #777676
-  text-align: left
-  font-family: 'chivo', sans-serif
-  font-weight: light
-  z-index: 0
-
-.waiting-date
-  position: absolute
-  top: 91vh
-  margin-left: 20.3vw
-  font-size: 20px
-  height: 9vh
-  width: 60vw
-  color: black
-  font-weight: 700
-  text-align: right
-  opacity: 0.5
-  background: linear-gradient(to right, #FF3645, #FEE472)
-
-  text-align: center
-  font-family: 'Asul', sans-serif
-  font-weight: 300
-  z-index: -1
-  span
-    font-weight: 700
-    color: black
-    opacity: 1
-
-.red-text
-  font-family: 'chivo', sans-serif
-
 .waiting-sign-up-line
   position: absolute
   background: none
@@ -209,7 +46,7 @@
   width: 80vw
 
   .waiting-sign-up-line-dot
-    animation: shockwave 2s infinite
+
     height: 10px
     width: 10px
     background-color: black
@@ -239,6 +76,27 @@
 
     &.right
       left: 80.3vw
+
+.waiting-title-line
+  position: absolute
+  top: 10vh
+
+  height: 1px
+  width: 80vw
+
+  .waiting-title-line-dot
+    height: 10px
+    width: 10px
+    background-color: red
+    position: absolute
+    left: 20vw
+    top: -4px
+    border-radius: 10px
+    z-index: 99
+
+    &.right
+      background-color: yellow
+      left: 80vw
 
 
 
@@ -304,7 +162,10 @@
 
 @media screen and (max-width:768px)
   .waiting-main-wrapper
-    overflow: hidden
+    position: absolute
+    z-index: -90000
+    height: 100vh
+    background-image: url("http://i.stack.imgur.com/2OrtT.jpg")
   .waitingWrapper1
     +Position(absolute, 20vh, 18vw, 65vw, 65vw)
   #waitingPlay
@@ -344,3 +205,146 @@
       left: 9.1vw
       &.right
         left: 89.1vw
+
+// .waiting-brand-name-line
+//   position: absolute
+//   top: 150px
+//   background: linear-gradient(45deg, red, yellow)
+//   height: 2px
+//   width: 80vw
+//   left: 20vw
+
+  .waiting-brand-name-dot
+    height: 10px
+    width: 10px
+    background-color: #FE0004
+    position: absolute
+    left: 0vw
+    top: -4px
+    border-radius: 10px
+    z-index: 999
+
+    &.right
+      height: 10px
+      width: 10px
+      background-color: #FDD113
+      left: 60vw
+
+    &.current-time
+      height: 20px
+      width: 20px
+      background: none
+      animation: none
+      top: -8px
+      background-image: "../content/images/waitingPage/arrow-right.svg"
+      left: 24vw
+      &.right
+        left: 31vw
+
+      p
+        position: absolute
+        left: -100px
+        top: -50px
+        width: 200px
+
+// .waiting-brand-name
+//   position: absolute
+//   margin-top: 20vh
+//   left: 80vw
+//   font-size: 40px
+//   width: 25vw
+//   color: black
+//   text-align: left
+//   font-family: 'Asul', sans-serif
+//   font-weight: 700
+//   z-index: 999999
+//   .brand-name
+//     position: absolute
+//     left: -195px
+
+//
+// .waiting-sign-up
+//   position: absolute
+//   margin-top: 87.5vh
+//   font-size: 24px
+//   width: 80vw
+//   left: 0vw
+//   color: #777676
+//   text-align: left
+//   font-family: 'chivo', sans-serif
+//   font-weight: light
+//   z-index: 0
+//
+// .waiting-date
+//   position: absolute
+//   top: 91vh
+//   margin-left: 20.3vw
+//   font-size: 20px
+//   height: 9vh
+//   width: 60vw
+//   color: black
+//   font-weight: 700
+//   text-align: right
+//   opacity: 0.5
+//   background: linear-gradient(to right, #FF3645, #FEE472)
+//
+//   text-align: center
+//   font-family: 'Asul', sans-serif
+//   font-weight: 300
+//   z-index: -1
+//   span
+//     font-weight: 700
+//     color: black
+//     opacity: 1
+//
+// .red-text
+//   font-family: 'chivo', sans-serif
+
+
+
+// .waiting-title
+//   position: absolute
+//   top: 2vh
+//   font-size: 40px
+//   width: 72vw
+//   left: 39.5vw
+//   color: black
+//   text-align: left
+//   font-family: 'Asul', sans-serif
+//   font-weight: 400
+//   z-index: 999999
+//
+//   .waiting-title-welcome
+//     font-weight: 700
+//     font-size: 40px
+//     font-family: 'Asul', sans-serif
+//     line-height: 0px
+//
+//   .waiting-title-main
+//     font-weight: 300
+//     font-size: 36px
+//     line-height: 25px
+
+
+// .subscribe-btn
+//   position: absolute !important
+//   right: -5px !important
+//   top: 20px
+//   font-family: 'chivo', sans-serif
+//   font-weight: 300
+//   border: none
+//   outline: none
+//   border-bottom: 1px solid lightgrey
+//   border-left: 1px solid lightgrey
+//   box-shadow: none
+//   transition: border-left 0.2s ease
+//   transition: border-bottom 0.2s ease
+//
+// .subscribe-btn:focus
+//   outline: none
+//   color: #4CAF4F
+//
+// .subscribe-btn:hover
+//   color: #26A599
+//   border-bottom: 2px solid #26A599
+//   border-left: 2px solid #26A599

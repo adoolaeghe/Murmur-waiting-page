@@ -4,15 +4,6 @@ import animation from "../models/data.json";
 import { Doughnut } from "react-chartjs-2";
 
 export default class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    this.switchPlayingIndex = this.switchPlayingIndex.bind(this);
-    this.switchAutoPlay = this.switchAutoPlay.bind(this);
-    this.state = {
-      autoPlay: false,
-      playingIndex: 1
-    };
-  }
 
   switchAutoPlay() {
     this.setState({
