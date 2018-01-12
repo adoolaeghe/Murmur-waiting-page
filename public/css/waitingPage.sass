@@ -6,9 +6,11 @@
   z-index: -90000
   height: 100vh
   width: 100vw
-  animation: fontbulger 4s infinite
+  animation: fontbulger 6s infinite
   &.bis
-    animation: fontbulger 2s infinite
+    animation: fontbulger 4s infinite
+  &.bisbis
+    animation: fontbulger 8s infinite
 
 .waitingWrapper1
   +Position(absolute, 23vh, 33vw, 60vh, 60vh)
@@ -93,7 +95,7 @@
     animation: shockwave 2s infinite
     height: 10px
     width: 10px
-    background-color: black
+    background-color: red
     position: absolute
     left: 20vw
     top: -4px
@@ -101,6 +103,7 @@
     z-index: 99
 
     &.right
+      background-color: yellow
       left: 80vw
 
 
@@ -115,7 +118,7 @@
   .waiting-brand-name-dot
     height: 10px
     width: 10px
-    background-color: red
+    background-color: #FE0004
     position: absolute
     left: 0vw
     top: -4px
@@ -126,7 +129,7 @@
     &.right
       height: 10px
       width: 10px
-      background-color: yellow
+      background-color: #FDD113
       left: 60vw
 
     &.current-time
@@ -215,8 +218,16 @@
     top: 90vh
     border-radius: 10px
     z-index: 99
-
+    span
+      position: absolute
+      font-family: 'chivo', sans-serif
+      font-size: 20px
+      font-weight: 300
+      top: 20px
+      color: grey
+      width: 60vw
     &.right
+      background-color: #4891D9
       left: 80vw
 
   .waiting-vertical-line
@@ -324,6 +335,9 @@
       left: 9.1vw
       &.right
         left: 89.1vw
+      span
+        width: 80vw
+        font-size: 15px
 
   .waiting-title-line
     .waiting-title-line-dot

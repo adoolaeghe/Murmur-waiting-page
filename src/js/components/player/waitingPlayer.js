@@ -103,7 +103,10 @@ export default class Player extends React.Component {
               </div>
             </div>
             <div className="waiting-sign-up-line">
-              <div className="waiting-sign-up-line-dot"></div>
+
+              <div className="waiting-sign-up-line-dot">
+                <span>WE ARE BUILDING A NEW ECONOMY OF MUSIC PUBLICATION</span>
+              </div>
               <div className="waiting-sign-up-line-dot right"></div>
               <div className="waiting-vertical-line"></div>
               <div className="waiting-vertical-line right"></div>

@@ -20,6 +20,9 @@ export default class WaitingPage extends React.Component {
       <img className="waiting-main-wrapper bis"
            src={"./public/content/images/waitingPage/snowFlakes1.svg"}>
       </img>
+      <img className="waiting-main-wrapper bisbis"
+           src={"./public/content/images/waitingPage/snowFlakes2.svg"}>
+      </img>
         <WaitingPageMain
           audioContext={this.audioContext}
           database={this.database}

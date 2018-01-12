@@ -1,0 +1,80 @@
+
+<svg width="1339px" height="754px" viewBox="0 0 1339 754" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0.522305254" offset="0%"></stop>
+            <stop stop-color="#48617A" stop-opacity="0.522305254" offset="100%"></stop>
+        </linearGradient>
+        <filter x="-0.0%" y="-0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-9">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-10">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-11">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-12">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-13">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-14">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-15">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-16">
+            <feGaussianBlur stdDeviation="0 0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LogoGraphic" transform="translate(-69.000000, -32.000000)">
+            <g id="Group" transform="translate(69.000000, 32.000000)">
+                <path d="M269.275139,33.6861838 C271.117872,31.7248901 268.077797,29.1943923 267.243951,28.436213 C266.410106,27.6780337 263.118757,25.3481792 261.488615,26.5776334 C259.858472,27.8070876 261.286505,31.23693 262.373841,32.0536969 C263.461177,32.8704638 267.432407,35.6474774 269.275139,33.6861838 Z" id="Oval-2" fill="#D1C5BD" filter="url(#filter-1)"></path>
+                <path d="M987.996085,566.579834 C989.020457,565.174274 987.761097,562.820185 986.420183,561.597377 C985.079268,560.37457 983.015071,558.992905 980.805932,558.992905 C978.596793,558.992905 979.253231,562.415026 980.805932,564.231632 C982.358634,566.048238 986.971714,567.985393 987.996085,566.579834 Z" id="Oval-2" fill="#D8D8D8" filter="url(#filter-2)"></path>
+                <path d="M1338.14682,226.773859 C1338.75906,225.933793 1338.00638,224.526815 1337.20495,223.795975 C1336.40352,223.065135 1335.1698,222.23935 1333.84946,222.23935 C1332.52911,222.23935 1332.92145,224.284662 1333.84946,225.3704 C1334.77747,226.456138 1337.53458,227.613925 1338.14682,226.773859 Z" id="Oval-2" fill="#FE1921" filter="url(#filter-3)"></path>
+                <path d="M628.22678,60.3565705 C629.846627,59.4266202 628.951642,56.9855373 627.734038,55.9022112 C626.516435,54.8188852 625.643175,54 624.337736,54 C623.032297,54 622.558714,57.1998834 623.476247,58.2733642 C624.393779,59.3468451 626.606933,61.2865208 628.22678,60.3565705 Z" id="Oval-2" fill="url(#linearGradient-4)" filter="url(#filter-5)"></path>
+                <path d="M837.792105,752.94007 C838.898434,752.180058 837.212129,750.45067 836.885493,750.219708 C836.558857,749.988746 835.289677,749.421669 834.826798,749.744504 C834.36392,750.067339 834.529664,752.107413 835.250076,752.619595 C835.970488,753.131778 836.685776,753.700082 837.792105,752.94007 Z" id="Oval-2" fill="#E2CBD7" filter="url(#filter-6)"></path>
+                <path d="M365.472932,707.909089 C366.853644,707.909089 366.635504,705.225902 366.14461,704.150841 C365.653716,703.07578 364.164912,701.259324 363.075103,701.57492 C361.985293,701.890515 361.604814,704.100884 362.041563,705.081774 C362.478312,706.062664 364.092221,707.909089 365.472932,707.909089 Z" id="Oval-2" fill-opacity="0.52" fill="#48617A" filter="url(#filter-7)"></path>
+                <path d="M934.472932,156.909089 C935.853644,156.909089 935.635504,154.225902 935.14461,153.150841 C934.653716,152.07578 933.164912,150.259324 932.075103,150.57492 C930.985293,150.890515 930.604814,153.100884 931.041563,154.081774 C931.478312,155.062664 933.092221,156.909089 934.472932,156.909089 Z" id="Oval-2" fill-opacity="0.27" fill="#FDC612" filter="url(#filter-8)"></path>
+                <path d="M1174.47293,6.9090894 C1175.85364,6.9090894 1175.6355,4.22590198 1175.14461,3.15084082 C1174.65372,2.07577966 1173.16491,0.259323529 1172.0751,0.574919509 C1170.98529,0.890515489 1170.60481,3.10088392 1171.04156,4.08177417 C1171.47831,5.06266443 1173.09222,6.9090894 1174.47293,6.9090894 Z" id="Oval-2" fill-opacity="0.36" fill="#64A2DF" filter="url(#filter-9)"></path>
+                <path d="M5.61880497,326.909089 C7.43795419,326.909089 7.15054448,323.373871 6.50377004,321.95743 C5.8569956,320.540989 3.89542997,318.147728 2.45955765,318.563539 C1.02368533,318.979351 0.522387408,321.89161 1.09782353,323.183976 C1.67325966,324.476342 3.79965575,326.909089 5.61880497,326.909089 Z" id="Oval-2" fill="#C4AAA8" filter="url(#filter-10)"></path>
+                <text id="r" filter="url(#filter-12)" transform="translate(163.500000, 628.000000) rotate(4.000000) translate(-163.500000, -628.000000) " font-family="Chivo-Bold, Chivo" font-size="13" font-weight="bold" fill="#393939">
+                    <tspan x="151" y="616">r</tspan>
+                </text>
+                <text id="r" filter="url(#filter-14)" transform="translate(1026.631068, 152.515748) rotate(64.000000) translate(-1026.631068, -152.515748) " font-family="Chivo-Bold, Chivo" font-size="13" font-weight="bold" fill="#393939">
+                    <tspan x="1014.13107" y="140.515748">r</tspan>
+                </text>
+                <text id="r" filter="url(#filter-16)" transform="translate(1079.631068, 699.515748) rotate(-31.000000) translate(-1079.631068, -699.515748) " font-family="Chivo-Bold, Chivo" font-size="20" font-weight="bold" fill="#393939">
+                    <tspan x="1067.13107" y="694.515748">r</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
