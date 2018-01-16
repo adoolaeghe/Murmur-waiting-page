@@ -1,0 +1,48 @@
+
+<svg width="440px" height="434px" viewBox="0 0 440 434" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-151.0%" y="-151.0%" width="402.0%" height="402.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-151.0%" y="-151.0%" width="402.0%" height="402.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-151.0%" y="-151.0%" width="402.0%" height="402.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-151.0%" y="-151.0%" width="402.0%" height="402.0%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-151.0%" y="-151.0%" width="402.0%" height="402.0%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-151.0%" y="-151.0%" width="402.0%" height="402.0%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-151.0%" y="-151.0%" width="402.0%" height="402.0%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-151.0%" y="-198.0%" width="402.0%" height="495.9%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="LogoGraphic" transform="translate(-469.000000, -238.000000)">
+            <g id="Group" transform="translate(527.000000, 290.000000)">
+                <rect id="Rectangle-3" x="0" y="0" width="324" height="324"></rect>
+                <path d="M261.128072,162.209573 C261.128072,107.346906 216.653094,62.8719276 161.790427,62.8719276 C161.790427,102.288529 161.790427,107.346906 161.790427,162.209573 C167.605431,162.209573 221.400366,162.209573 261.128072,162.209573 Z" id="Oval-2" fill="#FDD113" filter="url(#filter-1)"></path>
+                <path d="M281.701572,211.70416 C281.701572,156.841493 237.226594,112.366514 182.363927,112.366514 C182.363927,151.783116 182.363927,156.841493 182.363927,211.70416 C188.178931,211.70416 241.973866,211.70416 281.701572,211.70416 Z" id="Oval-2" fill="#FE0004" filter="url(#filter-2)" transform="translate(232.032750, 162.035337) rotate(45.000000) translate(-232.032750, -162.035337) "></path>
+                <path d="M261.128072,261.547219 C261.128072,206.684552 216.653094,162.209573 161.790427,162.209573 C161.790427,201.626175 161.790427,206.684552 161.790427,261.547219 C167.605431,261.547219 221.400366,261.547219 261.128072,261.547219 Z" id="Oval-2" fill="#181818" filter="url(#filter-3)" transform="translate(211.459250, 211.878396) rotate(90.000000) translate(-211.459250, -211.878396) "></path>
+                <path d="M211.285014,282.120719 C211.285014,227.258052 166.810035,182.783073 111.947368,182.783073 C111.947368,222.199675 111.947368,227.258052 111.947368,282.120719 C117.762373,282.120719 171.557307,282.120719 211.285014,282.120719 Z" id="Oval-2" fill="#4891D9" filter="url(#filter-4)" transform="translate(161.616191, 232.451896) rotate(135.000000) translate(-161.616191, -232.451896) "></path>
+                <path d="M161.790427,261.547219 C161.790427,206.684552 117.315448,162.209573 62.4527814,162.209573 C62.4527814,201.626175 62.4527814,206.684552 62.4527814,261.547219 C68.2677859,261.547219 122.06272,261.547219 161.790427,261.547219 Z" id="Oval-2" fill="#FE0004" filter="url(#filter-5)" transform="translate(112.121604, 211.878396) rotate(180.000000) translate(-112.121604, -211.878396) "></path>
+                <path d="M141.287601,211.70416 C141.287601,156.841493 96.8126221,112.366514 41.9499554,112.366514 C41.9499554,151.783116 41.9499554,156.841493 41.9499554,211.70416 C47.7649599,211.70416 101.559894,211.70416 141.287601,211.70416 Z" id="Oval-2" fill="#181818" filter="url(#filter-6)" transform="translate(91.618778, 162.035337) rotate(225.000000) translate(-91.618778, -162.035337) "></path>
+                <path d="M161.790427,162.209573 C161.790427,107.346906 117.315448,62.8719276 62.4527814,62.8719276 C62.4527814,102.288529 62.4527814,107.346906 62.4527814,162.209573 C68.2677859,162.209573 122.06272,162.209573 161.790427,162.209573 Z" id="Oval-2" fill="#FDD113" filter="url(#filter-7)" transform="translate(112.121604, 112.540750) rotate(270.000000) translate(-112.121604, -112.540750) "></path>
+                <path d="M173.573027,150.426973 C171.620673,109.578733 154.635069,89.9509874 138.13167,74.6545279 C72.9369664,150.426973 138.13167,74.6545279 74.2353817,150.426973 C80.0503862,150.426973 133.845321,150.426973 173.573027,150.426973 Z" id="Oval-2" fill="#478ED5" filter="url(#filter-8)" transform="translate(123.904204, 112.540750) rotate(270.000000) translate(-123.904204, -112.540750) "></path>
+            </g>
+            <circle id="Oval" fill="#FFFFFF" cx="686" cy="455" r="130"></circle>
+            <circle id="Oval" fill="#FFFFFF" cx="686" cy="455" r="130"></circle>
+        </g>
+    </g>
+</svg>

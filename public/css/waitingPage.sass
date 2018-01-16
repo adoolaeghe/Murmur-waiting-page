@@ -1,6 +1,8 @@
-// .wrapper
-  margin-top: 0
+.flexWrapper
   position: absolute
+  display: flex
+  justify-content: center
+  width: 100vw
 .waiting-main-wrapper
   position: absolute
   z-index: -90000
@@ -13,10 +15,7 @@
     animation: fontbulger 8s infinite
 
 .waitingWrapper1
-  +Position(absolute, 23vh, 33vw, 60vh, 60vh)
-  opacity: 1
-  filter: blur(40px)
-
+  +Position(absolute, 10vh, 30vw, 40vw, 40vw)
 .form-subscribe
   width: 59.3vw
   margin-left: 20vw
@@ -27,17 +26,6 @@
     font-weight: 300 !important
   .email::placeholder
     color: black
-
-
-#waitingPlay
-  +Position(absolute, 25vh, 35vw, 55vh, 55vh)
-  +borderAndRadius(4px, solid, white, 1000px)
-  margin: 0px
-  padding: 0px
-  background-repeat: no-repeat
-  background-size: cover
-  outline: none
-  // filter: blur(20px)
 
 .waiting-sign-up-line
   position: absolute
