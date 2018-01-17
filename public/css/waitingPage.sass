@@ -8,18 +8,18 @@
   z-index: -90000
   height: 100vh
   width: 100vw
-  animation: fontbulger 6s infinite
+
   &.bis
     animation: fontbulger 4s infinite
   &.bisbis
     animation: fontbulger 8s infinite
 
 .waitingWrapper1
-  +Position(absolute, 10vh, 30vw, 40vw, 40vw)
+  +Position(absolute, 13vh, 30vw, 40vw, 40vw)
 .form-subscribe
   width: 59.3vw
   margin-left: 20vw
-  font-family: 'Chivo', sans-serif
+  font-family: 'Cardo', sans-serif
   .email
     font-size: 24px !important
     padding-left: 20px !important
@@ -44,7 +44,7 @@
     border-radius: 10px
     z-index: 99
     p
-      font-family: 'chivo', sans-serif
+      font-family: 'Cardo', sans-serif
       font-size: 20px
       font-weight: 500
       top: 20px
@@ -85,6 +85,31 @@
       background-color: yellow
       left: 80vw
 
+.waiting-top-grid
+  position: absolute
+  top: 0
+  width: 100vw
+  height: 60px
+  background: repeating-linear-gradient(45deg, grey, lightgrey 1px, transparent 0.5px, transparent 8px, grey 1px)
+
+.waiting-bottom-grid
+  position: absolute
+  top: 91vh
+  width: 100vw
+  height: 60px
+  background: repeating-linear-gradient(-45deg, grey, lightgrey 1px, transparent 0.5px, transparent 8px, grey 1px)
+  div
+    position: absolute
+    top: -100px
+    right: 20vw
+    width: 300px
+    height: 100px
+    p
+      position: absolute
+      font-size: 48px
+      right: -73px
+      font-family: "Cardo", sans-serif
+      font-weight: 700
 
 
 @keyframes fontbulger

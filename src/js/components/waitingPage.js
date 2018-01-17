@@ -6,15 +6,10 @@ export default class WaitingPage extends React.Component {
   render() {
     return (
       <div>
-      <img className="waiting-main-wrapper"
-           src={"./public/content/images/waitingPage/snowFlakes.svg"}>
-      </img>
-      <img className="waiting-main-wrapper bis"
-           src={"./public/content/images/waitingPage/snowFlakes1.svg"}>
-      </img>
-      <img className="waiting-main-wrapper bisbis"
-           src={"./public/content/images/waitingPage/snowFlakes2.svg"}>
-      </img>
+      <div className="waiting-main-wrapper"
+          style={{background: 'url(./public/content/images/background.svg) no-repeat',
+                       backgroundSize: 'cover'}}>
+      </div>
         <WaitingPageMain />
       </div>
     );
