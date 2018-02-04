@@ -1,3 +1,7 @@
+.waiting-main-wrapper
+  border-top: 5px solid red
+  border-bottom: 5px solid green
+  z-index: 99
 .flexWrapper
   position: absolute
   display: flex
@@ -104,22 +108,46 @@
   position: absolute
   display: flex
   justify-content: center
-  font-weight: 300
+  font-weight: 500
   top: 91vh
   width: 100vw
   height: 60px
-  font-size: 22px
+  font-size: 28px
   align-items: center
+  font-family: 'Cardo', sans-serif
+  font-style: italic
   background: repeating-linear-gradient(-45deg, grey, lightgrey 1px, transparent 0.5px, transparent 6px, grey 1px)
-
+  .date
+    height: 100%
+    position: absolute
+    width: 30%
+    left: 19.6vw
+    display: flex
+    justify-content: center
+    align-items: center
+  .brand
+    height: 100%
+    position: absolute
+    width: 30%
+    right: 19.6vw
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    div
+      padding-left: 70px
 .row
   position: absolute
   width: 100vw
   top: 87vh
   div
-    text-align: right
   .brand-name
     text-align: left
+  .brand
+    font-family: 'Cardo', sans-serif
+    font-size: 22px
+    padding-left: 55px
+
 
 @keyframes fontbulger
   0%

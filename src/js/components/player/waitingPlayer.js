@@ -10,20 +10,27 @@ export default class Player extends React.Component {
                      src={"./public/content/images/logo1.svg"} >
                 </img>
               </div>
-              <div className="waiting-top-grid">
+              <div className="waiting-top-grid"
+                   style={{backgroundImage: 'url(./public/content/hash-background.svg)'}}>
                 <p className="waiting-header">Publishing</p>
                 <p className="waiting-header sub">together</p>
               </div>
               <div className="row">
                 <div className="col s2"></div>
-                <div className="col s1">FM</div>
-                <div className="col s1">TW</div>
-                <div className="col s1">MD</div>
+                <div className="col s1"></div>
+                <div className="col s1"></div>
+                <div className="col s1"></div>
                 <div className="col s2"></div>
-                <div className="col s2 brand">MURMUR.FM</div>
+                <div className="col s3 brand">
+                </div>
               </div>
-              <div className="waiting-bottom-grid ">
-                STREAMING APRIL 2018
+              <div className="waiting-bottom-grid"
+                   style={{backgroundImage: 'url(./public/content/hash-background.svg)'}}>
+                <div className="date">APRIL 2018</div>
+                <div className="brand"
+                      style={{backgroundImage: 'url(./public/content/brand-background.svg)'}}>
+                  <div>MURMUR.FM</div>
+                </div>
               </div>
               <div className="waiting-title-line"></div>
               <div className="waiting-sign-up-line">
