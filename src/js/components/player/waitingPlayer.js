@@ -28,7 +28,7 @@ export default class Player extends React.Component {
               </div>
               <div className="waiting-bottom-grid"
                    style={{backgroundImage: 'url(./public/content/hash-background.svg)'}}>
-                <div className="date">MURMUR.fm</div>
+                <div className="date"></div>
                 <div className="brand"
                       style={{backgroundImage: 'url(./public/content/brand-background.svg)'}}>
                   <div>APRIL 2018</div>
