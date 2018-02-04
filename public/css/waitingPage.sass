@@ -1,12 +1,21 @@
 .waiting-main-wrapper
-  border-top: 5px solid red
-  border-bottom: 5px solid green
-  z-index: 99
+  border-top: 5px solid #FE0004
+  border-bottom: 5px solid black
+  z-index: 10000000
+  .wrapper1
+    position: absolute
+    top: 0px
+    bottom: 0px
+    height: auto
+    width: 100vw
+    border-top: 5px solid #FDDC4C
+    border-bottom: 5px solid #4891D9
 .flexWrapper
   position: absolute
   display: flex
   justify-content: center
   width: 100vw
+  height: 100vh
 .waiting-main-wrapper
   position: absolute
   z-index: -90000
@@ -18,8 +27,6 @@
   &.bisbis
     animation: fontbulger 8s infinite
 
-.waitingWrapper1
-  +Position(absolute, 22vh, 35vw, 30vw, 30vw)
 .form-subscribe
   width: 59.3vw
   margin-left: 20vw
@@ -102,7 +109,10 @@
     text-transform: uppercase
     &.sub
       font-family: 'Cardo', sans-serif
-
+button
+  background: none
+  border: none
+.waitingWrapper1
 
 .waiting-bottom-grid
   position: absolute
@@ -114,8 +124,6 @@
   height: 60px
   font-size: 28px
   align-items: center
-  font-family: 'Cardo', sans-serif
-  font-style: italic
   background: repeating-linear-gradient(-45deg, grey, lightgrey 1px, transparent 0.5px, transparent 6px, grey 1px)
   .date
     height: 100%
@@ -125,15 +133,21 @@
     display: flex
     justify-content: center
     align-items: center
+    font-family: 'Work sans', sans-serif
+    font-weight: 600
   .brand
+    font-family: 'Cardo', sans-serif
+    font-style: italic
     height: 100%
+    bottom: 6px
     position: absolute
     width: 30%
-    right: 19.6vw
+    right: 19.7vw
     text-align: center
     display: flex
     justify-content: center
     align-items: center
+    z-index: 90
     div
       padding-left: 70px
 .row
@@ -216,7 +230,8 @@
     height: 100vh
 
   .waitingWrapper1
-    +Position(absolute, 20vh, 18vw, 65vw, 65vw)
+    width: 90%
+    overflow: hidden
   #waitingPlay
     +Position(absolute, 22.3vh, 20.3vw, 60vw, 60vw)
   .waiting-sign-up-line
@@ -231,7 +246,8 @@
 // /// IPHONE 7 PLUS
 @media screen and (max-width:736px)
   .waitingWrapper1
-    +Position(absolute, 28vh, 18vw, 65vw, 65vw)
+    width: 70%
+    overflow: hidden
   #waitingPlay
     +Position(absolute, 30.3vh, 20.3vw, 60vw, 60vw)
   .waiting-sign-up-line

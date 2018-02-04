@@ -6,9 +6,11 @@ export default class Player extends React.Component {
           <div className="player">
             <div className="wrapper">
               <div className="flexWrapper">
-                <img className="waitingWrapper1 rotating"
-                     src={"./public/content/images/logo1.svg"} >
-                </img>
+                <button>
+                  <img className="waitingWrapper1 rotating"
+                       src={"./public/content/images/logo1.svg"} >
+                  </img>
+                </button>
               </div>
               <div className="waiting-top-grid"
                    style={{backgroundImage: 'url(./public/content/hash-background.svg)'}}>
@@ -26,10 +28,10 @@ export default class Player extends React.Component {
               </div>
               <div className="waiting-bottom-grid"
                    style={{backgroundImage: 'url(./public/content/hash-background.svg)'}}>
-                <div className="date">APRIL 2018</div>
+                <div className="date">MURMUR.fm</div>
                 <div className="brand"
                       style={{backgroundImage: 'url(./public/content/brand-background.svg)'}}>
-                  <div>MURMUR.FM</div>
+                  <div>APRIL 2018</div>
                 </div>
               </div>
               <div className="waiting-title-line"></div>
