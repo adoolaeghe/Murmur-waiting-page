@@ -1,15 +1,16 @@
 .waiting-main-wrapper
-  border-top: 5px solid #FE0004
-  border-bottom: 5px solid black
-  z-index: 10000000
+  border-top: 3px solid #FE0004
+  border-bottom: 3px solid black
+  z-index: -90000
   .wrapper1
     position: absolute
     top: 0px
     bottom: 0px
     height: auto
     width: 100vw
-    border-top: 5px solid #FDDC4C
-    border-bottom: 5px solid #4891D9
+    z-index: 10000000
+    border-top: 3px solid #FDDC4C
+    border-bottom: 3px solid #4891D9
 .flexWrapper
   position: absolute
   display: flex
@@ -18,7 +19,6 @@
   height: 100vh
 .waiting-main-wrapper
   position: absolute
-  z-index: -90000
   height: 100vh
   width: 100vw
 
@@ -26,6 +26,44 @@
     animation: fontbulger 4s infinite
   &.bisbis
     animation: fontbulger 8s infinite
+.brand-animation
+  position: absolute
+  background-color: white
+  top: 0px
+  font-size: 35px
+  font-family: 'Cardo', sans-serif
+  height: 80px
+  width: 20.3vw
+  display: flex
+  background: no-repeat
+  background-size: contain
+  justify-content: center
+  align-items:  center
+  z-index: 999999
+  &.right
+    right: 0px
+    width: 19.5vw
+  .wrapper
+    background-color: white
+    align-items: center
+    overflow: hidden
+    border-radius: 0px
+    height: 80px
+.sliding-background
+  margin-top: 25px
+  height: 50px
+  width: 412px
+  background-repeat: no-repeat
+  animation: slide 20s linear infinite
+
+@keyframes slide
+  0%
+    transform: translate3d(0, 0, 0)
+
+  100%
+    transform: translate3d(-15vw, 0, 0)
+
+
 
 .form-subscribe
   width: 59.3vw
@@ -103,12 +141,13 @@
   background: repeating-linear-gradient(45deg, grey, lightgrey 1px, transparent 0.5px, transparent 6px, grey 1px)
 
   .waiting-header
-    font-size: 40px
-    line-height: 20px
-    font-weight: 700
+    font-size: 35px
+    line-height: 28px
+    font-weight: 600
     text-transform: uppercase
     &.sub
       font-family: 'Cardo', sans-serif
+      font-weight: 500
 button
   background: none
   border: none
@@ -119,9 +158,9 @@ button
   display: flex
   justify-content: center
   font-weight: 500
-  top: 91vh
+  top: 88vh
   width: 100vw
-  height: 60px
+  height: 80px
   font-size: 28px
   align-items: center
   background: repeating-linear-gradient(-45deg, grey, lightgrey 1px, transparent 0.5px, transparent 6px, grey 1px)
@@ -139,7 +178,7 @@ button
     font-family: 'Cardo', sans-serif
     font-style: italic
     height: 100%
-    bottom: 6px
+    bottom: 1px
     position: absolute
     width: 30%
     right: 19.7vw
@@ -214,21 +253,28 @@ button
 
 
 .rotating
-  animation: fontbulger 2s infinite
-  -webkit-animation: rotating 15s linear infinite
-  -moz-animation: rotating 15s linear infinite
-  -ms-animation: rotating 15s linear infinite
-  -o-animation: rotating 15s linear infinite
-  animation: rotating 15s linear infinite
+  -webkit-animation: rotating 0s linear infinite
+  -moz-animation: rotating 10s linear infinite
+  -ms-animation: rotating 10s linear infinite
+  -o-animation: rotating 10s linear infinite
+  animation: rotating 10s linear infinite
 
 
 
 @media screen and (max-width:768px)
+  .brand-animation
+    width: 15.3vw
+    &.right
+      width: 14.5vw
   .waiting-main-wrapper
     position: absolute
     z-index: -90000
     height: 100vh
-
+  .waiting-bottom-grid
+    .brand
+      right: 15.3vw
+      width: 60%
+      height: 100%
   .waitingWrapper1
     width: 90%
     overflow: hidden
@@ -236,10 +282,10 @@ button
     +Position(absolute, 22.3vh, 20.3vw, 60vw, 60vw)
   .waiting-sign-up-line
     .waiting-vertical-line
-      left: 10.3vw
+      left: 15.3vw
 
       &.right
-        left: 90.3vw
+        left: 85.3vw
 
 
 
@@ -251,10 +297,6 @@ button
   #waitingPlay
     +Position(absolute, 30.3vh, 20.3vw, 60vw, 60vw)
   .waiting-sign-up-line
-    .waiting-vertical-line
-      left: 10.3vw
-      &.right
-        left: 90.3vw
 
   .waiting-sign-up-line
     .waiting-sign-up-line-dot
