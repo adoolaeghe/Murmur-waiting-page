@@ -1,3 +1,8 @@
+$light-grey: #A3A3A3
+.row
+  .col
+    padding: 0
+
 .waiting-main-wrapper
   border-top: 3px solid #FE0004
   border-bottom: 3px solid black
@@ -22,18 +27,13 @@
   height: 100vh
   width: 100vw
 
-  &.bis
-    animation: fontbulger 4s infinite
-  &.bisbis
-    animation: fontbulger 8s infinite
 .brand-animation
-  position: absolute
   background-color: white
   top: 0px
   font-size: 35px
   font-family: 'Cardo', sans-serif
-  height: 80px
-  width: 20.3vw
+  height: 10vh
+  width: 100%
   display: flex
   background: no-repeat
   background-size: contain
@@ -42,19 +42,164 @@
   z-index: 999999
   &.right
     right: 0px
-    width: 19.5vw
   .wrapper
     background-color: white
     align-items: center
     overflow: hidden
     border-radius: 0px
-    height: 70px
+    height: 10vh
 .sliding-background
-  margin-top: 25px
+  margin-top: 2.5vh
   height: 50px
   width: 412px
   background-repeat: no-repeat
   animation: slide 20s linear infinite
+
+.sub-header
+  border-bottom: 1px solid lightgrey
+  height: 10vh
+
+.waiting-top-grid
+  display: flex
+  position: relative
+  justify-content: center
+  align-items: center
+  border-bottom: 1px solid lightgrey
+  height: 10vh
+  top: 0
+  &.bis
+    justify-content: center
+    .waiting-header
+      font-size: 20px
+      padding-left: 15px
+      font-weight: 500
+      text-transform: uppercase
+
+  .waiting-header
+    font-size: 35px
+    font-weight: 600
+    text-transform: uppercase
+    &.sub
+      font-family: 'Cardo', sans-serif
+      font-weight: 500
+
+
+////SUBSCRIPTION
+
+input[type=email]:not(.browser-default)
+  border-bottom: black solid 1px
+
+input[type=email]:not(.browser-default):focus:not([readonly])
+  border-bottom: black solid 1px
+
+.subscribe-modal
+  position: relative
+  height: 60vh
+  border-bottom: 1px solid lightgrey
+  p
+    padding: 10px
+  .input-field
+    margin-top: 25vh
+    input
+      text-align: center
+    input::placeholder
+      text-align: left
+      padding-left: 15px
+      color: grey
+  .label
+    text-align: right
+    font-size: 15px
+    button
+      background: none
+      border: none
+      border-bottom: 2px solid lightgrey
+      padding-bottom: 15px !important
+      .dot-right
+        border: 1px solid red
+        background-color: white
+#button:hover
+  color: black
+  .dot-right
+    border: 1px solid black
+    background-color: darkgrey
+.sub-wrapper-grid
+  border-top: 1px solid lightgrey
+  margin-top: 80vh
+  height: 10vh
+.waiting-bottom-grid
+  font-weight: 500
+  height: 10vh
+  font-size: 28px
+  .col
+    height: 100%
+  .date
+    background-color: white
+    height: 90%
+    z-index: -1
+    display: flex
+    position: relative
+    border-left: 1px solid lightgrey
+    justify-content: center
+    align-items: center
+    font-style: italic
+    font-family: 'Cardo', sans-serif
+    font-weight: 300
+
+
+//// DOTS CSS
+.dot-left
+  width: 14px
+  height: 14px
+  border-radius: 10px
+  background-color: white
+  border: 1.3px solid grey
+  position: absolute
+  bottom: -0.45rem
+  left: -0.5rem
+  &.small
+    width: 10px
+    height: 10px
+    border: 1.3px solid lightgrey
+    bottom: -0.35rem
+    left: -0.35rem
+  &.top
+    width: 10px
+    height: 10px
+    border: 1.3px solid lightgrey
+    bottom: none
+    top: -0.35rem
+    left: -0.35rem
+  &.middle
+    top: 2.60rem
+    background-color: white
+    right: -0.45rem
+.dot-right
+  width: 14px
+  height: 14px
+  border-radius: 10px
+  background: white
+  border: 1.3px solid lightgrey
+  position: absolute
+  bottom: -6px
+  right: -7px
+  &.small
+    width: 10px
+    height: 10px
+    border: 1.3px solid lightgrey
+    bottom: -0.35rem
+    right: -0.35rem
+  &.top
+    width: 10px
+    height: 10px
+    border: 1.3px solid lightgrey
+    bottom: none
+    top: -0.35rem
+    right: -0.35rem
+  &.middle
+    top: 2.60rem
+
+    right: -0.45rem
+
 
 @keyframes slide
   0%
@@ -63,400 +208,21 @@
   100%
     transform: translate3d(-15vw, 0, 0)
 
-
-
-.form-subscribe
-  width: 59.3vw
-  margin-left: 20vw
-  font-family: 'Cardo', sans-serif
-  .email
-    font-size: 24px !important
-    padding-left: 20px !important
-    font-weight: 300 !important
-  .email::placeholder
-    color: black
-
-.waiting-sign-up-line
-  position: absolute
-  background: none
-  height: 1px
-  width: 80vw
-
-  .waiting-sign-up-line-dot
-    height: 10px
-    width: 10px
-    background-color: black
-    position: absolute
-    left: 20vw
-    top: 85vh
-    border-radius: 10px
-    z-index: 99
-    p
-      font-family: 'Cardo', sans-serif
-      font-size: 20px
-      font-weight: 500
-      top: 20px
-      color: grey
-      width: 60vw
-    &.right
-      background-color: #4891D9
-      left: 80vw
-
-  .waiting-vertical-line
-    height: 100vh
-    width: 1px
-    position: absolute
-    background: grey
-    left: 20.3vw
-
-    &.right
-      left: 80.3vw
-
-.waiting-title-line
-  position: absolute
-  top: 10vh
-
-  height: 1px
-  width: 80vw
-
-  .waiting-title-line-dot
-    height: 10px
-    width: 10px
-    background-color: red
-    position: absolute
-    left: 20vw
-    top: -4px
-    border-radius: 10px
-    z-index: 99
-
-    &.right
-      background-color: yellow
-      left: 80vw
-
-.waiting-top-grid
-  position: absolute
-  top: 0
-  width: 100vw
-  height: 70px
-  background: repeating-linear-gradient(45deg, grey, lightgrey 1px, transparent 0.5px, transparent 6px, grey 1px)
-
-  .waiting-header
-    font-size: 35px
-    margin-top: 25px
-    line-height: 28px
-    font-weight: 600
-    text-transform: uppercase
-    &.sub
-      font-family: 'Cardo', sans-serif
-      font-weight: 500
-button
-  background: none
-  border: none
-.waitingWrapper1
-
-.waiting-bottom-grid
-  position: absolute
-  display: flex
-  justify-content: center
-  font-weight: 500
-  top: 88vh
-  width: 100vw
-  height: 80px
-  font-size: 28px
-  align-items: center
-  background: repeating-linear-gradient(-45deg, grey, lightgrey 1px, transparent 0.5px, transparent 6px, grey 1px)
-  .date
-    height: 100%
-    position: absolute
-    width: 30%
-    left: 19.6vw
-    display: flex
-    justify-content: center
-    align-items: center
-    font-family: 'Work sans', sans-serif
-    font-weight: 600
-  .brand
-    font-family: 'Cardo', sans-serif
-    font-style: italic
-    height: 100%
-    bottom: 1px
-    position: absolute
-    width: 30%
-    right: 19.7vw
-    text-align: center
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 90
-    div
-      padding-left: 70px
 .row
-  position: absolute
-  width: 100vw
-  top: 87vh
-  div
-  .brand-name
-    text-align: left
-  .brand
-    font-family: 'Cardo', sans-serif
-    font-size: 22px
-    padding-left: 55px
+  height: 100vh
+  .sub-wrapper
+    height: 100%
+    &.left,&.main
+      border-right: 1px solid lightgrey
 
-
-@keyframes fontbulger
-  0%
-    opacity: 0
-  50%
-    opacity: 1
-  100%
-    opacity: 0
-
-
-@keyframes shockwave
-  0%
-    transform: scale(1)
-    box-shadow: 0 0 2px red
-    opacity: 1
-
-
-  100%
-    transform: scale(1)
-
-    box-shadow: 0 0 50px rgba(255, 0, 0, 0), inset 0 0 10px red
-
-
-@keyframes rotating
-  from
-    -webkit-transform: rotate(0deg)
-    -o-transform: rotate(0deg)
-    transform: rotate(0deg)
-
-  to
-    -webkit-transform: rotate(360deg)
-    -o-transform: rotate(360deg)
-    transform: rotate(360deg)
-
-
-@keyframes rotating
-  from
-    -ms-transform: rotate(0deg)
-    -moz-transform: rotate(0deg)
-    -webkit-transform: rotate(0deg)
-    -o-transform: rotate(0deg)
-    transform: rotate(0deg)
-
-  to
-    -ms-transform: rotate(360deg)
-    -moz-transform: rotate(360deg)
-    -webkit-transform: rotate(360deg)
-    -o-transform: rotate(360deg)
-    transform: rotate(360deg)
-
-
-.rotating
-  -webkit-animation: rotating 0s linear infinite
-  -moz-animation: rotating 10s linear infinite
-  -ms-animation: rotating 10s linear infinite
-  -o-animation: rotating 10s linear infinite
-  animation: rotating 10s linear infinite
-
-
-
-@media screen and (max-width:768px)
-  .brand-animation
-    width: 15.3vw
-    &.right
-      width: 14.5vw
-  .waiting-main-wrapper
-    position: absolute
-    z-index: -90000
-    height: 100vh
-  .waiting-bottom-grid
-    top: 89vh
-    .brand
-      right: 15.3vw
-      width: 75%
-      height: 100%
+// /// IPHONE 4
+@media screen and (max-width:320px) and (max-height:568px)
   .waitingWrapper1
     width: 90%
-    overflow: hidden
-  #waitingPlay
-    +Position(absolute, 22.3vh, 20.3vw, 60vw, 60vw)
-  .waiting-sign-up-line
-    .waiting-vertical-line
-      left: 15.3vw
-
-      &.right
-        left: 85.3vw
-
-
-
 // /// IPHONE 7 PLUS
 @media screen and (max-width:736px)
-  .waitingWrapper1
-    width: 70%
-    overflow: hidden
-  #waitingPlay
-    +Position(absolute, 30.3vh, 20.3vw, 60vw, 60vw)
-  .waiting-sign-up-line
-
-  .waiting-sign-up-line
-    .waiting-sign-up-line-dot
-      top: 85vh
-      left: 9.1vw
-      &.right
-        left: 89.1vw
-      p
-        font-family: 'Chivo', sans-serif
-        font-weight: 500
-        width: 80vw
-        font-size: 15px
-
-  .waiting-title-line
-    .waiting-title-line-dot
-      left: 9.1vw
-      &.right
-        left: 89.1vw
-
-// .waiting-brand-name-line
-//   position: absolute
-//   top: 150px
-//   background: linear-gradient(45deg, red, yellow)
-//   height: 2px
-//   width: 80vw
-//   left: 20vw
-
-  .waiting-brand-name-dot
-    height: 10px
-    width: 10px
-    background-color: #FE0004
-    position: absolute
-    left: 0vw
-    top: -4px
-    border-radius: 10px
-    z-index: 999
-
-    &.right
-      height: 10px
-      width: 10px
-      background-color: #FDD113
-      left: 60vw
-
-    &.current-time
-      height: 20px
-      width: 20px
-      background: none
-      animation: none
-      top: -8px
-      background-image: "../content/images/waitingPage/arrow-right.svg"
-      left: 24vw
-      &.right
-        left: 31vw
-
-      p
-        position: absolute
-        left: -100px
-        top: -50px
-        width: 200px
-
-// .waiting-brand-name
-//   position: absolute
-//   margin-top: 20vh
-//   left: 80vw
-//   font-size: 40px
-//   width: 25vw
-//   color: black
-//   text-align: left
-//   font-family: 'Asul', sans-serif
-//   font-weight: 700
-//   z-index: 999999
-//   .brand-name
-//     position: absolute
-//     left: -195px
-
-//
-// .waiting-sign-up
-//   position: absolute
-//   margin-top: 87.5vh
-//   font-size: 24px
-//   width: 80vw
-//   left: 0vw
-//   color: #777676
-//   text-align: left
-//   font-family: 'chivo', sans-serif
-//   font-weight: light
-//   z-index: 0
-//
-// .waiting-date
-//   position: absolute
-//   top: 91vh
-//   margin-left: 20.3vw
-//   font-size: 20px
-//   height: 9vh
-//   width: 60vw
-//   color: black
-//   font-weight: 700
-//   text-align: right
-//   opacity: 0.5
-//   background: linear-gradient(to right, #FF3645, #FEE472)
-//
-//   text-align: center
-//   font-family: 'Asul', sans-serif
-//   font-weight: 300
-//   z-index: -1
-//   span
-//     font-weight: 700
-//     color: black
-//     opacity: 1
-//
-// .red-text
-//   font-family: 'chivo', sans-serif
-
-
-
-// .waiting-title
-//   position: absolute
-//   top: 2vh
-//   font-size: 40px
-//   width: 72vw
-//   left: 39.5vw
-//   color: black
-//   text-align: left
-//   font-family: 'Asul', sans-serif
-//   font-weight: 400
-//   z-index: 999999
-//
-//   .waiting-title-welcome
-//     font-weight: 700
-//     font-size: 40px
-//     font-family: 'Asul', sans-serif
-//     line-height: 0px
-//
-//   .waiting-title-main
-//     font-weight: 300
-//     font-size: 36px
-//     line-height: 25px
-
-
-// .subscribe-btn
-//   position: absolute !important
-//   right: -5px !important
-//   top: 20px
-//   font-family: 'chivo', sans-serif
-//   font-weight: 300
-//   border: none
-//   outline: none
-//   border-bottom: 1px solid lightgrey
-//   border-left: 1px solid lightgrey
-//   box-shadow: none
-//   transition: border-left 0.2s ease
-//   transition: border-bottom 0.2s ease
-//
-// .subscribe-btn:focus
-//   outline: none
-//   color: #4CAF4F
-//
-// .subscribe-btn:hover
-//   color: #26A599
-//   border-bottom: 2px solid #26A599
-//   border-left: 2px solid #26A599
+  .waiting-top-grid
+    &.bis
+      .waiting-header
+        text-align: left
+        font-size: 12px
