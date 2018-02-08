@@ -1,6 +1,18 @@
 import React from "react";
 
 export default class Player extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChangeEvent = this.handleChangeEvent.bind(this);
+    this.state = {
+      data: "",
+    }
+  }
+
+  handleChangeEvent(event) {
+    this.setState({data: event.target.value});
+  }
+
   handleMainButton() {
     document.getElementById("button").className += ' hover';
   }
@@ -41,21 +53,30 @@ export default class Player extends React.Component {
                   <div className="subscribe-modal col s12"
                        id="grid"
                        style={{backgroundImage: 'url(./public/content/hash-background-double.svg)'}}>
-                    <form className="col s12">
-                        <div className="input-field col s12">
-                          <input id="password" placeholder="YOUR EMAIL" type="email" className="validate" autoFocus>
-                          </input>
-                          <div className="dot-left middle"></div>
-                          <div className="dot-right middle"></div>
-                        </div>
-                        <label className="label col push-s6 s6 push-m8 m4 push-l10 l2">
-                          <button id="button"onMouseOver={() => {console.log('here')}}
-                           className="col s12">WHATS NEXT
-                          <div className="dot-left"></div>
-                          <div className="dot-right"></div>
-                          </button>
-                        </label>
-                    </form>
+                    <form action="signup"
+                      method="post"
+                      defaultValue={this.state.data}
+                      placeholder= "SIGN UP HERE"
+                      value={this.state.data}
+                      onChange={this.handleChangeEvent}>
+                      <div className="input-field col s12">
+
+                <input type="email" value=""
+                      placeholder= "SIGN UP HERE"
+                      value={this.state.data}
+                      onChange={this.handleChangeEvent}name="EMAIL" className="required email" id="mce-EMAIL" required></input>
+                      <div className="dot-left middle"></div>
+                      <div className="dot-right middle"></div>
+                      </div>
+                      <label className="label col push-s6 s6 push-m8 m4 push-l10 l2">
+                      <input type="submit" className="col s12" id="button" onMouseOver={() => {console.log('here')}} value="WHATS NEXT" name="subscribe">
+                      </input>
+                      <div className="dot-left"></div>
+                      <div className="dot-right"></div>
+
+                      </label>
+
+              </form>
                     <div className="dot-left small"></div>
                     <div className="dot-right small"></div>
                   </div>
