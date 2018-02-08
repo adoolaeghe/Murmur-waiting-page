@@ -1,0 +1,18 @@
+import React from "react";
+import WaitingPageMain from "./articles/waitingPageMainThankYou"
+
+export default class WaitingPage extends React.Component {
+
+  render() {
+    return (
+      <div>
+        <div className="waiting-main-wrapper"
+            style={{background: 'url(./public/content/images/background.svg) no-repeat',
+                         backgroundSize: 'cover'}}>
+          <div className="wrapper1"></div>
+        </div>
+        <WaitingPageMain />
+      </div>
+    );
+  }
+}
