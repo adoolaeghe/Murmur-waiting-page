@@ -72,13 +72,14 @@ export default class Player extends React.Component {
                       placeholder= "SIGN UP HERE"
                       value={this.state.data}
 
-                      onChange={this.handleChangeEvent} name="EMAIL" className="required email" id="mce-EMAIL" autocomplete="off" required></input>
+                      onChange={this.handleChangeEvent} name="EMAIL" className="required email" id="mce-EMAIL" autoComplete="off" required></input>
                       <div className="dot-left middle"></div>
                       <div className="dot-right middle"></div>
                       </div>
-                      <label className="label col push-s6 s6 m12  l12"
-                      style={{backgroundImage: this.state.backgroundImage}}>
-                        <input type="submit" className="col s12" id="button" onMouseOver={() => {this.handleMouseOver()}} onMouseOut={() => {this.handleMouseOut()}} value="Next" name="subscribe">
+                      <label className="label col push-s0 s12 m12  l12"
+                        style={{backgroundImage: this.state.backgroundImage,
+                                height: "100%"}}>
+                        <input type="submit" className="col push-s8 s4" id="button"  value="Next" name="subscribe">
                         </input>
 
                       </label>
@@ -97,7 +98,7 @@ export default class Player extends React.Component {
                     style={{backgroundImage: 'url(./public/content/hash-background.svg)'}}></div>
                     <div className="date col s12 m6"
                           style={{backgroundImage: 'url(./public/content/brand-background.svg)'}}>
-                      <div>April 2018</div>
+                      <div>APRIL 2018</div>
                       <div className="dot-left top small"></div>
                     </div>
                   </div>
