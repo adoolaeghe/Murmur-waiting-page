@@ -6,6 +6,7 @@ export default class Player extends React.Component {
     this.handleChangeEvent = this.handleChangeEvent.bind(this);
     this.state = {
       data: "",
+      backgroundImage: 'url(./public/content/hash-background-horizontal.svg)'
     }
   }
 
@@ -13,9 +14,18 @@ export default class Player extends React.Component {
     this.setState({data: event.target.value});
   }
 
+  handleMouseOver() {
+    this.setState({backgroundImage: 'url(./public/content/hash-background-horizontal-bis.svg)'});
+  }
+
+  handleMouseOut() {
+    this.setState({backgroundImage: 'url(./public/content/hash-background-horizontal.svg)'});
+  }
+
   handleMainButton() {
     document.getElementById("button").className += ' hover';
   }
+
   render() {
     return (
           <div className="player">
@@ -52,7 +62,7 @@ export default class Player extends React.Component {
                   </div>
                   <div className="subscribe-modal col s12"
                        id="grid"
-                       style={{backgroundImage: 'url(./public/content/hash-background-double.svg)'}}>
+                       style={{backgroundImage: 'url(./public/content/hash-background-vertical.svg)'}}>
                     <form action="signup"
                       method="post"
                       defaultValue={this.state.data}
@@ -68,11 +78,10 @@ export default class Player extends React.Component {
                       <div className="dot-left middle"></div>
                       <div className="dot-right middle"></div>
                       </div>
-                      <label className="label col push-s6 s6 push-m8 m4 push-l10 l2">
-                      <input type="submit" className="col s12" id="button" onMouseOver={() => {console.log('here')}} value="WHATS NEXT" name="subscribe">
-                      </input>
-                      <div className="dot-left"></div>
-                      <div className="dot-right"></div>
+                      <label className="label col push-s6 s6 m12  l12"
+                      style={{backgroundImage: this.state.backgroundImage}}>
+                        <input type="submit" className="col s12" id="button" onMouseOver={() => {this.handleMouseOver()}} onMouseOut={() => {this.handleMouseOut()}} value="Next" name="subscribe">
+                        </input>
 
                       </label>
 

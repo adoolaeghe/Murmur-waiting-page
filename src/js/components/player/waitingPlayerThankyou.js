@@ -41,47 +41,24 @@ export default class Player extends React.Component {
                 <div className="sub-wrapper main row col s8">
                   <div className="waiting-top-grid col s12"
                        style={{backgroundImage: 'url(./public/content/hash-background-bis.svg)'}}>
-                    <div className="waiting-header">Thank</div>
+                    <div className="waiting-header">PUBLISHING</div>
                     <div className="dot-left small"></div>
                     <div className="dot-right small"></div>
                   </div>
                   <div className="waiting-top-grid col s12">
-                    <div className="waiting-header sub">You</div>
+                    <div className="waiting-header sub">TOGETHER</div>
                     <div className="dot-left small"></div>
                     <div className="dot-right small"></div>
                   </div>
-                  <div className="subscribe-modal col s12"
+                  <div className="subscribe-modal flex col s12"
                        id="grid"
-                       style={{backgroundImage: 'url(./public/content/hash-background-double.svg)'}}>
-                    <form action="signup"
-                      method="post"
-                      defaultValue={this.state.data}
-                      placeholder= "SIGN UP HERE"
-                      value={this.state.data}
-                      onChange={this.handleChangeEvent}>
-                      <div className="input-field col s12">
-
-                <input type="email" value=""
-                      placeholder= "SIGN UP HERE"
-                      value={this.state.data}
-                      onChange={this.handleChangeEvent}name="EMAIL" className="required email" id="mce-EMAIL" required></input>
-                      <div className="dot-left middle"></div>
-                      <div className="dot-right middle"></div>
-                      </div>
-                      <label className="label col push-s6 s6 push-m8 m4 push-l10 l2">
-                      <input type="submit" className="col s12" id="button" onMouseOver={() => {console.log('here')}} value="WHATS NEXT" name="subscribe">
-                      </input>
-                      <div className="dot-left"></div>
-                      <div className="dot-right"></div>
-
-                      </label>
-
-              </form>
+                       style={{backgroundImage:'url(./public/content/hash-background-double.svg)'}}>
+                    <div className="letter" style={{backgroundImage: 'url(./public/content/thankYou.svg)'}}></div>
                     <div className="dot-left small"></div>
                     <div className="dot-right small"></div>
                   </div>
                   <div className="waiting-top-grid bis col s12">
-                    <div className="waiting-header">We are building a new economy of music publication</div>
+                    <div className="waiting-header">THANK YOU</div>
                     <div className="dot-left small"></div>
                     <div className="dot-right small"></div>
                   </div>
