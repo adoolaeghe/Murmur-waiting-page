@@ -27,6 +27,7 @@ export default class Player extends React.Component {
   }
 
   render() {
+    console.log(this.state.data)
     return (
           <div className="player">
             <div className="wrapper">
@@ -63,18 +64,15 @@ export default class Player extends React.Component {
                   <div className="subscribe-modal col s12"
                        id="grid"
                        style={{backgroundImage: 'url(./public/content/hash-background-vertical.svg)'}}>
-                    <form action="signup"
-                      method="post"
-                      defaultValue={this.state.data}
-                      placeholder= "SIGN UP HERE"
-                      value={this.state.data}
-                      onChange={this.handleChangeEvent}>
+                    <form action="https://murmur.us17.list-manage.com/subscribe/post?u=8a759dc0e2dd1f954c877c33e&amp;id=22db0bc5df"
+                          method="get">
                       <div className="input-field col s12">
 
-                <input type="email" value=""
+                <input type="email"
                       placeholder= "SIGN UP HERE"
                       value={this.state.data}
-                      onChange={this.handleChangeEvent}name="EMAIL" className="required email" id="mce-EMAIL" required></input>
+
+                      onChange={this.handleChangeEvent} name="EMAIL" className="required email" id="mce-EMAIL" autocomplete="off" required></input>
                       <div className="dot-left middle"></div>
                       <div className="dot-right middle"></div>
                       </div>
@@ -90,7 +88,7 @@ export default class Player extends React.Component {
                     <div className="dot-right small"></div>
                   </div>
                   <div className="waiting-top-grid bis col s12">
-                    <div className="waiting-header">We are building a new economy of music publication</div>
+                    <div className="waiting-header header-bottom">We are building a new economy of music publication</div>
                     <div className="dot-left small"></div>
                     <div className="dot-right small"></div>
                   </div>

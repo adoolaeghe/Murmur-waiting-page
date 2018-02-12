@@ -4,8 +4,10 @@ var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var routes = require("./routes/index");
+var admin = require('firebase-admin');
 
-//init APP
+
+
 var routes = require("./routes/index");
 
 var allowCrossDomain = function(req, res, next) {
@@ -19,6 +21,7 @@ var allowCrossDomain = function(req, res, next) {
 };
 
 var app = express();
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 // View Engine
 app.set("views", path.join(__dirname, "views/layouts"));
