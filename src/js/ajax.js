@@ -25,7 +25,7 @@ function register($form) {
           type: 'POST',
           data: JSON.stringify(data),
           contentType: 'application/json',
-          url: 'http://localhost:5000/signup',
+          url: 'http://murmur.fm/signup',
           success: function(data) {
             $('.dot-right').addClass("success");
             $('.dot-left').addClass("success");
