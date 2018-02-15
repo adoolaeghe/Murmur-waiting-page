@@ -11,6 +11,11 @@ var config = {
 firebase.initializeApp(config);
 var ref = firebase.app().database().ref();
 
+router.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 router.get('/', function(req,res) {
   res.render('index');

@@ -1,7 +1,6 @@
 $(document).ready( function () {
     // I only have one form on the page but you can be more specific if need be.
     var $form = $('form');
-    console.log($form)
     if ( $form.length > 0 ) {
         $('form input[type="submit"]').bind('click', function ( event ) {
             if ( event ) event.preventDefault();
@@ -17,7 +16,6 @@ $(document).ready( function () {
 });
 
 function register($form) {
-  console.log($("#mce-EMAIL").val())
   var data = {};
 					data.title = "title";
 					data.message = $("#mce-EMAIL").val();
@@ -25,6 +23,7 @@ function register($form) {
           type: 'POST',
           data: JSON.stringify(data),
           contentType: 'application/json',
+          headers: {  'Access-Control-Allow-Origin': "http://murmur.fm" },
           url: 'http://murmur.fm/signup',
           success: function(data) {
             $('.dot-right').addClass("success");

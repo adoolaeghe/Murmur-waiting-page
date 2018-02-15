@@ -64,8 +64,7 @@ export default class Player extends React.Component {
                   <div className="subscribe-modal col s12"
                        id="grid"
                        style={{backgroundImage: 'url(./public/content/hash-background-vertical.svg)'}}>
-                    <form action="https://murmur.us17.list-manage.com/subscribe/post?u=8a759dc0e2dd1f954c877c33e&amp;id=22db0bc5df"
-                          method="get">
+                    <form>
                       <div className="input-field col s12">
 
                 <input type="email"
