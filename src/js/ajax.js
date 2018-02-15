@@ -24,7 +24,7 @@ function register($form) {
           data: JSON.stringify(data),
           contentType: 'application/json',
           headers: {  'Access-Control-Allow-Origin': "http://localhost:5000" },
-          url: 'http://murmur.fm/signup',
+          url: 'http://www.murmur.fm/signup',
           success: function(data) {
             $('.dot-right').addClass("success");
             $('.dot-left').addClass("success");
