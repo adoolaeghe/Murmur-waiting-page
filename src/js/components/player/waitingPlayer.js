@@ -1,4 +1,7 @@
 import React from "react";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
 
 export default class Player extends React.Component {
   constructor(props) {
@@ -6,7 +9,8 @@ export default class Player extends React.Component {
     this.handleChangeEvent = this.handleChangeEvent.bind(this);
     this.state = {
       data: "",
-      backgroundImage: 'url(./public/content/hash-background-horizontal.svg)'
+      backgroundImage: 'url(./public/content/hash-background-horizontal.svg)',
+      disable: true
     }
   }
 
@@ -29,6 +33,7 @@ export default class Player extends React.Component {
   render() {
     console.log(this.state.data)
     return (
+      <MuiThemeProvider>
           <div className="player">
             <div className="wrapper">
               <div className="flexWrapper">
@@ -70,16 +75,25 @@ export default class Player extends React.Component {
                 <input type="email"
                       placeholder= "SIGN UP HERE"
                       value={this.state.data}
-
+                      onFocus={()=> {this.setState({disable: false})}}
                       onChange={this.handleChangeEvent} name="EMAIL" className="required email" id="mce-EMAIL" autoComplete="off" required></input>
                       <div className="dot-left middle"></div>
                       <div className="dot-right middle"></div>
                       </div>
                       <label className="label col push-s0 s12 m12  l12"
-                        style={{backgroundImage: this.state.backgroundImage,
+                        style={{
                                 height: "100%"}}>
-                        <input type="submit" className="col push-s8 s4" id="button"  value="Next" name="subscribe">
-                        </input>
+
+                               <FloatingActionButton mini={true} backgroundColor={"#B2B2B2"} zDepth={2} disabled={this.state.disable} style={{width: "40px",
+                                       height: "40px",
+                                       position: "absolute",
+                                       right: "-20px",
+                                       top: "-20px",
+
+                                       }}>
+                               <ContentAdd/>
+                            </FloatingActionButton>
+
 
                       </label>
 
@@ -88,7 +102,7 @@ export default class Player extends React.Component {
                     <div className="dot-right small"></div>
                   </div>
                   <div className="waiting-top-grid bis col s12">
-                    <div className="waiting-header header-bottom">We are building a new economy of music publication</div>
+                    <div className="waiting-header header-bottom"><span className='noline'>WE are building</span><span className='line'> a </span><span className='noline'>NEW economy</span><span className='line'> of </span><span className='noline'>music publication</span></div>
                     <div className="dot-left small"></div>
                     <div className="dot-right small"></div>
                   </div>
@@ -117,6 +131,7 @@ export default class Player extends React.Component {
               </div>
             </div>
           </div>
+        </MuiThemeProvider>
       )}
 
 }
