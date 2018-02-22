@@ -9,7 +9,7 @@ $(document).ready( function () {
             if (testEmail.test($("#mce-EMAIL").val())) {
               $('.dot-right').addClass("success");
               $('.dot-left').addClass("success");
-
+              register($form)
               $('.header-bottom').text("Thank you ");
               $('.waiting-header').addClass("error-header")
               $('.label').hide();
